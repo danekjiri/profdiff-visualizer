@@ -1,0 +1,146 @@
+/* Container for the whole node (self + children). */
+.node-container {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+}
+
+/* The row representing the current node. */
+.node-content {
+  display: flex;
+  align-items: flex-start;
+  padding: 2px 4px;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 13px;
+  border-radius: 3px;
+
+  white-space: nowrap;   
+  flex-wrap: nowrap;
+  width: max-content;
+}
+
+/* Hover effect for clickable nodes. */
+.node-content.clickable {
+  cursor: pointer;
+}
+
+/* Subtle hover background for clickable nodes to indicate interactivity. */
+.node-content.clickable:hover {
+   background-color: #dcdee0;
+}
+
+/* Expander symbol for nodes with children. */
+.expander {
+  width: 16px;
+  font-size: 10px;
+  color: #6e7781;
+  margin-top: 2px;
+  text-align: center;
+}
+
+/* Column for the marker symbol (e.g., +, -, ~). */
+.marker-col {
+  width: 16px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Indentation & Hierarchy */
+.children-container {
+  margin-left: 20px; /* indentation for every level deep */
+  padding-left: 4px;
+  border-left: 1px dashed #e1e4e8; /* vertical line to indicate hierarchy */
+}
+
+.node-content.insert {
+  background-color: #e6ffec;
+  color: #1a7f37;
+}
+.node-content.insert .marker-col {
+  color: #1a7f37;
+}
+
+.node-content.delete {
+  background-color: #ffebe9;
+  color: #cf222e;
+}
+.node-content.delete .marker-col {
+  color: #cf222e;
+}
+
+.node-content.relabel {
+  background-color: #ddf4ff;
+  color: #0969da;
+}
+.node-content.relabel .marker-col {
+  color: #0969da;
+}
+
+.node-content.identity,
+.node-content.neutral {
+  color: #24292f;
+}
+
+.node-content.info {
+  color: #6e7781;
+}
+
+/* The compiler inlining action prefixed method names. */
+.action {
+  color: #666;
+  font-style: italic;
+  margin-right: 6px;
+}
+
+/* The target method name in style of hyperlink to navigate */
+.method-link {
+  color: #1976d2;
+  cursor: pointer;
+  border-bottom: 1px dashed transparent;
+  transition: border-bottom 0.2s;
+}
+.method-link:hover {
+  border-bottom-color: #1976d2;
+}
+
+
+.bci, .properties {
+  color: #888;
+  font-size: 0.85em;
+  margin-left: 4px;
+}
+
+/* Arrow indicator to separate the 'before' state from the 'after' state. */
+.relabel-arrow {
+  margin: 0 8px;
+  color: #999;
+  font-weight: bold;
+}
+
+/* Base style for execution profile badges, showing the total hotness of the method. */
+.hotness-badge {
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-right: 4px;
+  font-weight: 500;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Badge for the Left/Base run (Run 1) */
+.badge-r1 {
+  background-color: rgba(244, 67, 54, 0.15);
+  color: #d32f2f;
+}
+
+/* Badge for the Right/Compared run (Run 2). */
+.badge-r2 {
+  background-color: rgba(76, 175, 80, 0.15);
+  color: #2e7d32;
+}
+
+/* Shift the text by exactly 3 monospaced characters to bypass the '|_ ' */
+.text.indented {
+  padding-left: 3ch; 
+}

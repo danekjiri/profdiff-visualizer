@@ -1,0 +1,60 @@
+/* Make the host element fill the height of its parent column */
+:host {
+  display: block;
+  height: 100%;
+}
+
+/* Overall vertical layout for the metadata section. */
+.general-run-metadata {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Push the last group (Benchmark Metadata) to the very bottom */
+.metadata-group-wrapper:last-child {
+  margin-top: auto;
+}
+
+/* Align grid tiles to the start of their container */
+.metadata-group-wrapper {
+  margin-bottom: 16px; 
+}
+
+/* Aligns metadata tiles to the left instead of centered. */
+::ng-deep .metadata-grid .mat-grid-tile-content {
+  justify-content: flex-start;
+}
+
+/* Container for the label/value pair inside a tile. */
+.tile-content {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  overflow: hidden;
+  padding: 10px;
+}
+
+/* Prevents the multi-word label from wrapping. */
+.tile-label {
+  white-space: nowrap;
+}
+
+/* Truncate long values with ellipsis and show full value on hover. */
+.tile-value {
+  display: block;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Link styling for clickable metadata values */
+.metadata-link {
+  color: #3f51b5;
+  text-decoration: none;
+}
+
+.metadata-link:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,157 @@
+<div class="options-container-wrapper">
+  @if (areOptionsOpen()) {
+    <form class="options-panel" #optionsForm="ngForm">
+      <h3>Hot Policy Options</h3>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Hot Min Limit</mat-label>
+        <input
+          matInput
+          type="number"
+          name="hotMinLimit"
+          min="0"
+          step="1"
+          [ngModel]="tempHotMinLimit()"
+          (ngModelChange)="tempHotMinLimit.set($event)"
+          [disabled]="disabledHotPolicyOptions()"
+          #minLimit="ngModel"
+        />
+        @if (minLimit.invalid) {
+          <mat-error>Must be 0 or greater.</mat-error>
+        }
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Hot Max Limit</mat-label>
+        <input
+          matInput
+          type="number"
+          name="hotMaxLimit"
+          min="0"
+          step="1"
+          [ngModel]="tempHotMaxLimit()"
+          (ngModelChange)="tempHotMaxLimit.set($event)"
+          [disabled]="disabledHotPolicyOptions()"
+          #maxLimit="ngModel"
+        />
+        @if (maxLimit.invalid) {
+          <mat-error>Must be 0 or greater.</mat-error>
+        }
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Hot Percentile</mat-label>
+        <input
+          matInput
+          type="number"
+          name="hotPercentile"
+          min="0"
+          max="1"
+          step="0.01"
+          [ngModel]="tempHotPercentile()"
+          (ngModelChange)="tempHotPercentile.set($event)"
+          [disabled]="disabledHotPolicyOptions()"
+          #percentile="ngModel"
+        />
+        @if (percentile.invalid) {
+          <mat-error>Must be between 0.0 and 1.0.</mat-error>
+        }
+      </mat-form-field>
+
+      <h3>Experiment Processing Options</h3>
+
+      <div class="checkbox-column">
+        <mat-checkbox
+          class="example-margin"
+          name="createFragments"
+          [ngModel]="tempCreateFragments()"
+          (ngModelChange)="tempCreateFragments.set($event)"
+        >
+          Create Fragments
+        </mat-checkbox>
+
+        <mat-checkbox
+          class="example-margin"
+          name="longBci"
+          [ngModel]="tempLongBci()"
+          (ngModelChange)="tempLongBci.set($event)"
+        >
+          BCI Long Form (OptimizationTree)
+        </mat-checkbox>
+
+        <mat-checkbox
+          class="example-margin"
+          name="sortInliningTree"
+          [ngModel]="tempSortInliningTree()"
+          (ngModelChange)="tempSortInliningTree.set($event)"
+        >
+          Sort Inlining Trees
+        </mat-checkbox>
+
+        <mat-checkbox
+          class="example-margin"
+          name="sortUnorderedPhases"
+          [ngModel]="tempSortUnorderedPhases()"
+          (ngModelChange)="tempSortUnorderedPhases.set($event)"
+        >
+          Sort Unordered Phases
+        </mat-checkbox>
+
+        <mat-checkbox
+          name="removeDetailedPhases"
+          [ngModel]="tempRemoveDetailedPhases()"
+          (ngModelChange)="tempRemoveDetailedPhases.set($event)"
+        >
+          Remove Detailed Phases
+        </mat-checkbox>
+
+        @if (forcedPruneIdentities() !== undefined) {
+          <mat-checkbox 
+            name="forcedPruneIdentities"
+            [ngModel]="forcedPruneIdentities()"
+            disabled="true"
+          >
+            Prune Identities
+          </mat-checkbox>
+        } @else {
+          <mat-checkbox
+            name="tempPruneIdentities"
+            [ngModel]="tempPruneIdentities()"
+            (ngModelChange)="tempPruneIdentities.set($event)"
+          >
+            Prune Identities
+          </mat-checkbox>
+        }
+
+        <mat-checkbox
+          class="example-margin"
+          name="inlinerReasoning"
+          [ngModel]="tempInlinerReasoning()"
+          (ngModelChange)="tempInlinerReasoning.set($event)"
+        >
+          Print Inliner Reasoning
+        </mat-checkbox>
+      </div>
+
+      <div class="actions-row">
+        <button 
+          mat-flat-button 
+          color="primary" 
+          type="button" 
+          (click)="applyChanges()" 
+          [disabled]="optionsForm.invalid"
+        >
+          APPLY
+        </button>
+      </div>
+    </form>
+  }
+
+  <button mat-fab
+    (click)="toggleOptions()"
+    [matTooltip]="areOptionsOpen() ? 'Close Experiment Options' : 'Open Experiment Options'"
+    matTooltipPosition="above"
+  >
+    <mat-icon>{{ areOptionsOpen() ? 'close' : 'settings' }}</mat-icon>
+  </button>
+</div>

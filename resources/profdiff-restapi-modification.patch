@@ -1,0 +1,492 @@
+From daf7c7941463f3e1f62a32ab754b6ce33b0e8f12 Mon Sep 17 00:00:00 2001
+From: Danek Jiri <jirkadanek@icloud.com>
+Date: Fri, 10 Apr 2026 23:04:26 +0200
+Subject: [PATCH] Refactor Profdiff CLI for concurrent REST API integration
+
+Changes:
+* Add thread safety: Implement deepCopy() constructors for core data classes and add synchronized to getMethodOrCreate() and addCompilationFragment() to prevent race conditions during caching.
+* Stabilize fragment IDs: Change fragmentId from sequential integers to String hashes of the inlining path so IDs stay the same across API requests.
+* Optimize parsing: Split tree parsing into independent loadInliningTree() and loadOptimizationTree() methods to allow lazy loading.
+* Improve API support: Add getHotMethodsNames(), add getters/setters for caching and diffing logic, and change the Writer constructor to protected for easier extension.
+---
+ .../profdiff/command/ExperimentMatcher.java   |  2 +-
+ .../profdiff/core/CompilationFragment.java    | 23 ++++---
+ .../profdiff/core/CompilationUnit.java        | 42 ++++++++++++
+ .../org/graalvm/profdiff/core/Experiment.java | 68 +++++++++++++++++--
+ .../core/HotCompilationUnitPolicy.java        | 27 ++++++++
+ .../src/org/graalvm/profdiff/core/Method.java | 44 +++++++++++-
+ .../graalvm/profdiff/core/ProftoolMethod.java |  8 +++
+ .../src/org/graalvm/profdiff/core/Writer.java |  2 +-
+ .../profdiff/core/pair/ExperimentPair.java    | 17 +----
+ .../parser/CompilationUnitTreeParser.java     | 24 +++++++
+ 10 files changed, 224 insertions(+), 33 deletions(-)
+
+diff --git a/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/command/ExperimentMatcher.java b/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/command/ExperimentMatcher.java
+index 0851ea081f0..5da4edbd81c 100644
+--- a/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/command/ExperimentMatcher.java
++++ b/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/command/ExperimentMatcher.java
+@@ -193,7 +193,7 @@ public class ExperimentMatcher {
+      * @param treePair1 the tree pair from the first experiment
+      * @param treePair2 the tree pair from the second experiment
+      */
+-    private void createOptimizationContextTreeAndMatch(CompilationUnit.TreePair treePair1, CompilationUnit.TreePair treePair2) {
++    public void createOptimizationContextTreeAndMatch(CompilationUnit.TreePair treePair1, CompilationUnit.TreePair treePair2) {
+         treePair1.getInliningTree().preprocess(writer.getOptionValues());
+         treePair2.getInliningTree().preprocess(writer.getOptionValues());
+         treePair1.getOptimizationTree().preprocess(writer.getOptionValues());
+diff --git a/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/core/CompilationFragment.java b/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/core/CompilationFragment.java
+index b539a0d12d0..b42366e0dbb 100644
+--- a/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/core/CompilationFragment.java
++++ b/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/core/CompilationFragment.java
+@@ -31,6 +31,7 @@ import org.graalvm.profdiff.core.optimization.OptimizationTree;
+ import org.graalvm.profdiff.parser.ExperimentParserError;
+ 
+ import java.util.List;
++import java.util.Objects;
+ 
+ /**
+  * Represents a fragment of a full compilation unit in terms of optimization scope.
+@@ -47,11 +48,6 @@ import java.util.List;
+  * unit.
+  */
+ public class CompilationFragment extends CompilationUnit {
+-    /**
+-     * The ID that will be assigned the fragment created next.
+-     */
+-    private static int nextFragmentId = 0;
+-
+     /**
+      * The compilation unit from which this fragment was created.
+      */
+@@ -72,7 +68,7 @@ public class CompilationFragment extends CompilationUnit {
+     /**
+      * The ID of this fragment.
+      */
+-    private final int fragmentId;
++    private final String fragmentId;
+ 
+     /**
+      * Constructs a compilation fragment.
+@@ -87,14 +83,13 @@ public class CompilationFragment extends CompilationUnit {
+         this.parentCompilationUnit = parentCompilationUnit;
+         this.index = rootNode.getIndex();
+         this.pathFromRoot = InliningPath.fromRootToNode(rootNode);
+-        this.fragmentId = ++nextFragmentId;
++        this.fragmentId = String.valueOf(Math.abs(Objects.hash(index)));
+         setHot(parentCompilationUnit.isHot());
+     }
+ 
+     /**
+      * Gets the compilation ID of this compilation fragment. Includes the compilation ID of the
+-     * parent compilation unit, followed by {@code "#"}, and the fragment ID, e.g. {@code "123#42"}.
+-     *
++     * parent compilation unit, followed by {@code "#"}, and the fragment ID - hash of inliningPath, e.g. {@code "123#948231"}.
+      * @return the compilation ID
+      */
+     @Override
+@@ -115,6 +110,16 @@ public class CompilationFragment extends CompilationUnit {
+         return pathFromRoot;
+     }
+ 
++    @Override
++    public InliningTree loadInliningTree() throws ExperimentParserError {
++        return parentCompilationUnit.loadInliningTree().cloneSubtreeAt(index);
++    }
++
++    @Override
++    public OptimizationTree loadOptimizationTree() throws ExperimentParserError {
++        return new OptimizationTree(parentCompilationUnit.loadOptimizationTree().getRoot().cloneMatchingPath(pathFromRoot));
++    }
++
+     @Override
+     public TreePair loadTrees() throws ExperimentParserError {
+         TreePair treePair = parentCompilationUnit.loadTrees();
+diff --git a/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/core/CompilationUnit.java b/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/core/CompilationUnit.java
+index f6f3ad2a3eb..42cee55618c 100644
+--- a/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/core/CompilationUnit.java
++++ b/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/core/CompilationUnit.java
+@@ -65,6 +65,15 @@ public class CompilationUnit {
+      * demand.
+      */
+     public interface TreeLoader {
++        /** Loads only the inlining tree associated with a compilation unit. */
++        default InliningTree loadInliningTree() throws ExperimentParserError {
++            return load().getInliningTree();
++        }
++        /** Loads only the optimization tree associated with a compilation unit. */
++        default OptimizationTree loadOptimizationTree() throws ExperimentParserError {
++            return load().getOptimizationTree();
++        }
++
+         /**
+          * Loads and returns a pair of trees associated with a compilation unit.
+          *
+@@ -119,6 +128,19 @@ public class CompilationUnit {
+         this(method, compilationId, period, loader, null);
+     }
+ 
++    private CompilationUnit(CompilationUnit other, Method parentMethod) {
++        this.method = parentMethod;
++        this.compilationId = other.compilationId;
++        this.period = other.period;
++        this.loader = other.loader;
++        this.methodVariantKey = other.methodVariantKey;
++        this.hot = other.hot;
++    }
++
++    public CompilationUnit deepCopy(Method parentMethod) {
++        return new CompilationUnit(this, parentMethod);
++    }
++
+     /**
+      * Gets the root method of this compilation unit.
+      */
+@@ -165,6 +187,26 @@ public class CompilationUnit {
+         return period;
+     }
+ 
++    /**
++     * Loads only the {@link InliningTree} of this compilation unit.
++     *
++     * @return the loaded inlining tree
++     * @throws ExperimentParserError the tree could not be loaded
++     */
++    public InliningTree loadInliningTree() throws ExperimentParserError {
++        return loader.loadInliningTree();
++    }
++
++    /**
++     * Loads only the {@link OptimizationTree} of this compilation unit.
++     *
++     * @return the loaded optimization tree
++     * @throws ExperimentParserError the tree could not be loaded
++     */
++    public OptimizationTree loadOptimizationTree() throws ExperimentParserError {
++        return loader.loadOptimizationTree();
++    }
++
+     /**
+      * Loads the {@link OptimizationTree} and the {@link InliningTree} of this compilation units.
+      *
+diff --git a/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/core/Experiment.java b/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/core/Experiment.java
+index 630130bab2c..dd94a5f720b 100644
+--- a/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/core/Experiment.java
++++ b/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/core/Experiment.java
+@@ -24,10 +24,8 @@
+  */
+ package org.graalvm.profdiff.core;
+ 
+-import java.util.Comparator;
+-import java.util.Iterator;
+-import java.util.List;
+-import java.util.Objects;
++import java.util.*;
++import java.util.stream.Stream;
+ import java.util.stream.StreamSupport;
+ 
+ import org.graalvm.collections.EconomicMap;
+@@ -70,7 +68,7 @@ public class Experiment {
+     /**
+      * The ID of this experiment.
+      */
+-    private final ExperimentId experimentId;
++    private ExperimentId experimentId;
+ 
+     /**
+      * {@code true} if proftool data of the experiment is available, i.e., {@link #totalPeriod} and
+@@ -140,6 +138,32 @@ public class Experiment {
+         methods = EconomicMap.create();
+     }
+ 
++
++    private Experiment(Experiment other) {
++        this.compilationKind = other.compilationKind;
++        this.executionId = other.executionId;
++        this.experimentId = other.experimentId;
++        this.profileAvailable = other.profileAvailable;
++        this.totalPeriod = other.totalPeriod;
++        this.graalPeriod = other.graalPeriod;
++
++        var copiedProftoolMethods = new ArrayList<ProftoolMethod>(other.proftoolMethods.size());
++        for (ProftoolMethod oldProftoolMethod : other.proftoolMethods) {
++            copiedProftoolMethods.add(oldProftoolMethod.deepCopy());
++        }
++        this.proftoolMethods = copiedProftoolMethods;
++
++        EconomicMap<String, Method> copiedMethods = EconomicMap.create(other.methods.size());
++        for (var oldMethod : other.methods.getValues()) {
++            copiedMethods.put(oldMethod.getMethodName(), oldMethod.deepCopy(this));
++        }
++        this.methods = copiedMethods;
++    }
++
++    public Experiment deepCopy() {
++        return new Experiment(this);
++    }
++
+     /**
+      * Gets the experiment ID.
+      */
+@@ -147,6 +171,13 @@ public class Experiment {
+         return experimentId;
+     }
+ 
++    /**
++     * Sets the experiment ID.
++     */
++    public void setExperimentId(ExperimentId experimentId) {
++        this.experimentId = experimentId;
++    }
++
+     /**
+      * Gets the execution ID or {@code null} if unknown.
+      */
+@@ -287,7 +318,7 @@ public class Experiment {
+      * @param methodName the name of the method
+      * @return the method with the given name
+      */
+-    public Method getMethodOrCreate(String methodName) {
++    public synchronized Method getMethodOrCreate(String methodName) {
+         Method method = methods.get(methodName);
+         if (method == null) {
+             method = new Method(methodName, this);
+@@ -347,4 +378,29 @@ public class Experiment {
+     public Iterable<Method> getMethodsByDescendingPeriod() {
+         return () -> StreamSupport.stream(methods.getValues().spliterator(), false).sorted(Comparator.comparingLong(method -> -method.getTotalPeriod())).iterator();
+     }
++
++    public Stream<ProftoolMethod> getTopMethods(int topLimit) {
++        return proftoolMethods.stream()
++                .sorted((method1, method2) -> Long.compare(method2.getPeriod(), method1.getPeriod()))
++                .limit(topLimit);
++    }
++
++    /**
++     * Gets the methods' names containing at least one hot compilation unit in the experiment.
++     *
++     * @return methods' names with at least one hot compilation unit
++     */
++    public Set<String> getHotMethodsNames() {
++        if (!isProfileAvailable())  {
++            return Set.of();
++        }
++
++        Set<String> set = new HashSet<>();
++        for (Method method : methods.getValues()) {
++            if (method.getHotCompilationUnits().iterator().hasNext()) {
++                set.add(method.getMethodName());
++            }
++        }
++        return set;
++    }
+ }
+diff --git a/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/core/HotCompilationUnitPolicy.java b/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/core/HotCompilationUnitPolicy.java
+index 60b1cd8c364..a8515f92af0 100644
+--- a/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/core/HotCompilationUnitPolicy.java
++++ b/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/core/HotCompilationUnitPolicy.java
+@@ -95,4 +95,31 @@ public class HotCompilationUnitPolicy {
+     public void setHotPercentile(double hotPercentile) {
+         this.hotPercentile = hotPercentile;
+     }
++
++    /**
++     * Gets the minimum number of compilation units to mark as hot.
++     *
++     * @return the minimum number of methods to mark as hot
++     */
++    public int getHotMinLimit() {
++        return hotMinLimit;
++    }
++
++    /**
++     * Gets the maximum number of compilation units to mark as hot.
++     *
++     * @return the maximum number of methods to mark as hot
++     */
++    public int getHotMaxLimit() {
++        return hotMaxLimit;
++    }
++
++    /**
++     * Gets the percentile of the execution period that is spent executing hot compilation units.
++     *
++     * @return the percentile of the execution period that is spent executing hot compilation units
++     */
++    public double getHotPercentile() {
++        return hotPercentile;
++    }
+ }
+diff --git a/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/core/Method.java b/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/core/Method.java
+index 8f85c44b34c..ff8da90fd09 100644
+--- a/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/core/Method.java
++++ b/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/core/Method.java
+@@ -27,6 +27,7 @@ package org.graalvm.profdiff.core;
+ import java.util.ArrayList;
+ import java.util.Comparator;
+ import java.util.List;
++import java.util.function.Predicate;
+ 
+ import org.graalvm.collections.Pair;
+ import org.graalvm.profdiff.core.inlining.InliningPath;
+@@ -34,6 +35,7 @@ import org.graalvm.profdiff.core.inlining.InliningTreeNode;
+ import org.graalvm.profdiff.core.optimization.Optimization;
+ 
+ import jdk.graal.compiler.java.StableMethodNameFormatter;
++import org.graalvm.profdiff.parser.ExperimentParserError;
+ 
+ /**
+  * Represents a named Java method, which may have been compiled by Graal several times. The class is
+@@ -83,6 +85,46 @@ public class Method {
+         totalPeriod = 0;
+     }
+ 
++    private Method(Method other, Experiment newParentExperiment) {
++        this.methodName = other.methodName;
++        this.experiment = newParentExperiment;
++
++        var copiedCompilationUnits = new ArrayList<CompilationUnit>(other.compilationUnits.size());
++        for (var oldCompilationUnit : other.compilationUnits) {
++            copiedCompilationUnits.add(oldCompilationUnit.deepCopy(this));
++        }
++        this.compilationUnits = copiedCompilationUnits;
++        this.totalPeriod = other.totalPeriod;
++    }
++
++    public Method deepCopy(Experiment newParentExperiment) {
++        return new Method(this, newParentExperiment);
++    }
++
++    /**
++     * Generates compilation fragments for all hot compilation units in this method based on predicate.
++     */
++    public void createFragments(Predicate<String> isMethodHotPredicate) throws ExperimentParserError {
++        List<CompilationUnit> compilationUnitsSnapshot = new ArrayList<>();
++        for (CompilationUnit unit : getHotCompilationUnits()) {
++            if (!(unit instanceof CompilationFragment)) {
++                compilationUnitsSnapshot.add(unit);
++            }
++        }
++
++        for (CompilationUnit compilationUnit : compilationUnitsSnapshot) {
++            compilationUnit.loadTrees().getInliningTree().getRoot().forEach(node -> {
++                if (node.getParent() != null
++                        && node.isPositive()
++                        && node.getName() != null
++                        && isMethodHotPredicate.test(node.getName())) {
++                    Method inlineeMethod = experiment.getMethodOrCreate(node.getName());
++                    inlineeMethod.addCompilationFragment(compilationUnit, node);
++                }
++            });
++        }
++    }
++
+     /**
+      * Gets the experiment to which this compilation unit belongs.
+      */
+@@ -129,7 +171,7 @@ public class Method {
+      * @param rootNode the root inlining node of the compilation fragment
+      * @return the added compilation fragment
+      */
+-    public CompilationFragment addCompilationFragment(CompilationUnit parentCompilationUnit, InliningTreeNode rootNode) {
++    public synchronized CompilationFragment addCompilationFragment(CompilationUnit parentCompilationUnit, InliningTreeNode rootNode) {
+         CompilationFragment compilationFragment = new CompilationFragment(this, parentCompilationUnit, rootNode);
+         compilationUnits.add(compilationFragment);
+         return compilationFragment;
+diff --git a/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/core/ProftoolMethod.java b/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/core/ProftoolMethod.java
+index e0d10c209ef..a01e2b8cfa4 100644
+--- a/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/core/ProftoolMethod.java
++++ b/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/core/ProftoolMethod.java
+@@ -64,6 +64,14 @@ public class ProftoolMethod {
+         this.period = period;
+     }
+ 
++    private ProftoolMethod(ProftoolMethod other) {
++        this(other.compilationId, other.name, other.level, other.period);
++    }
++
++    public ProftoolMethod deepCopy() {
++        return new ProftoolMethod(this);
++    }
++
+     /**
+      * Gets the compilation ID of this method. Returns {@code null} if no compilation ID is assigned
+      * or the ID is unknown. The IDs are unknown in Native Image profiles.
+diff --git a/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/core/Writer.java b/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/core/Writer.java
+index 1a6a3ebc0ef..a98a8f9413d 100644
+--- a/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/core/Writer.java
++++ b/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/core/Writer.java
+@@ -49,7 +49,7 @@ public abstract class Writer {
+      */
+     private final OptionValues optionValues;
+ 
+-    private Writer(OptionValues optionValues) {
++    protected Writer(OptionValues optionValues) {
+         this.indentLevel = 0;
+         this.indentWritten = false;
+         this.prefix = null;
+diff --git a/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/core/pair/ExperimentPair.java b/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/core/pair/ExperimentPair.java
+index 6b6dc7993e6..92fc52e6758 100644
+--- a/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/core/pair/ExperimentPair.java
++++ b/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/core/pair/ExperimentPair.java
+@@ -99,21 +99,8 @@ public class ExperimentPair {
+      */
+     public void createCompilationFragments() throws ExperimentParserError {
+         for (MethodPair methodPair : getHotMethodPairs()) {
+-            for (Method method : List.of(methodPair.getMethod1(), methodPair.getMethod2())) {
+-                List<CompilationUnit> compilationUnitsSnapshot = new ArrayList<>();
+-                for (CompilationUnit compilationUnit : method.getHotCompilationUnits()) {
+-                    if (!(compilationUnit instanceof CompilationFragment)) {
+-                        compilationUnitsSnapshot.add(compilationUnit);
+-                    }
+-                }
+-                for (CompilationUnit compilationUnit : compilationUnitsSnapshot) {
+-                    compilationUnit.loadTrees().getInliningTree().getRoot().forEach(node -> {
+-                        if (node.getParent() != null && node.isPositive() && node.getName() != null && isHot(node.getName())) {
+-                            method.getExperiment().getMethodOrCreate(node.getName()).addCompilationFragment(compilationUnit, node);
+-                        }
+-                    });
+-                }
+-            }
++            methodPair.getMethod1().createFragments(this::isHot);
++            methodPair.getMethod2().createFragments(this::isHot);
+         }
+     }
+ 
+diff --git a/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/parser/CompilationUnitTreeParser.java b/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/parser/CompilationUnitTreeParser.java
+index 0bbc81123e4..21c7d35efbe 100644
+--- a/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/parser/CompilationUnitTreeParser.java
++++ b/compiler/src/org.graalvm.profdiff/src/org/graalvm/profdiff/parser/CompilationUnitTreeParser.java
+@@ -62,6 +62,30 @@ public class CompilationUnitTreeParser implements CompilationUnit.TreeLoader {
+         this.fileView = fileView;
+     }
+ 
++    @Override
++    public InliningTree loadInliningTree() throws ExperimentParserError {
++        try {
++            ExperimentJSONParser parser = new ExperimentJSONParser(experimentId, fileView);
++            List<String> allowedKeys = List.of(OptimizationLogImpl.INLINING_TREE_PROPERTY);
++            ExperimentJSONParser.JSONMap map = parser.parseAllowedKeys(allowedKeys, fileView.readFully());
++            return new InliningTree(parseInliningTreeNode(map.property(OptimizationLogImpl.INLINING_TREE_PROPERTY).asMap()));
++        } catch (IOException e) {
++            throw new ExperimentParserError(experimentId, "compilation unit", e.getMessage());
++        }
++    }
++
++    @Override
++    public OptimizationTree loadOptimizationTree() throws ExperimentParserError {
++        try {
++            ExperimentJSONParser parser = new ExperimentJSONParser(experimentId, fileView);
++            List<String> allowedKeys = List.of(OptimizationLogImpl.OPTIMIZATION_TREE_PROPERTY);
++            ExperimentJSONParser.JSONMap map = parser.parseAllowedKeys(allowedKeys, fileView.readFully());
++            return new OptimizationTree(parseOptimizationPhase(map.property(OptimizationLogImpl.OPTIMIZATION_TREE_PROPERTY).asMap()));
++        } catch (IOException e) {
++            throw new ExperimentParserError(experimentId, "compilation unit", e.getMessage());
++        }
++    }
++
+     @Override
+     public CompilationUnit.TreePair load() throws ExperimentParserError {
+         try {
+-- 
+2.53.0
+

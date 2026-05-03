@@ -1,0 +1,62 @@
+<div class="chart-container-wrapper">
+  @if (isChartOpen()) {
+    <div class="chart-panel">
+      <ngx-charts-line-chart
+        [view]="chartView"
+        [results]="filteredChartData()"
+        [legend]="true"
+        [xAxis]="true"
+        [yAxis]="true"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        xAxisLabel="Iteration"
+        yAxisLabel="Metric Value"
+        [autoScale]="true"
+        [timeline]="false"
+      />
+
+      <div class="chart-controls">
+        <mat-form-field appearance="outline">
+          <mat-label>From</mat-label>
+          <input
+            matInput
+            type="number"
+            [ngModel]="sliceStartInput()"
+            (ngModelChange)="setFromByInput($event)"
+            (blur)="validateRange()"
+            min="0"
+            [max]="sliceEndInput()"
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>To</mat-label>
+          <input
+            matInput
+            type="number"
+            [ngModel]="sliceEndInput()"
+            (ngModelChange)="setToByInput($event)"
+            (blur)="validateRange()"
+            [min]="sliceStartInput() + 1"
+            [max]="maxIterations()"
+          />
+        </mat-form-field>
+      </div>
+    </div>
+  }
+  <button
+    mat-fab
+    (click)="toggleChart()"
+    [disabled]="!canOpen() && !isChartOpen()"
+    [matTooltip]="
+      canOpen()
+        ? isChartOpen()
+          ? 'Close Chart'
+          : 'Open Chart'
+        : 'Select runs with metric data to view chart'
+    "
+    matTooltipPosition="above"
+  >
+    <mat-icon>{{ isChartOpen() ? 'close' : 'show_chart' }}</mat-icon>
+  </button>
+</div>

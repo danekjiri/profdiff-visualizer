@@ -1,0 +1,23 @@
+/* Adds spacing around the search bar inside the dropdown panel. */
+.dropdown-search-container {
+  padding: 8px 16px;
+}
+
+/* Forces the form field to span the full width of the container. */
+.dropdown-search-field {
+  width: 100%;
+}
+
+/* Centers and styles the fallback text when a search yields no matches. */
+.no-results-message {
+  padding: 16px;
+  text-align: center;
+  color: #999;
+  font-style: italic;
+}
+
+/* Chips displayed in the dropdown next to the method name. */
+.methods-chips {
+  display: inline-flex;
+  gap: 4px;
+}

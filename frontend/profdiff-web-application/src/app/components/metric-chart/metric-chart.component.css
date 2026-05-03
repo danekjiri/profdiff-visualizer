@@ -1,0 +1,26 @@
+/* Wrapper to establish a positioning context for the floating panel. */
+.chart-container-wrapper {
+  position: relative;
+}
+
+/* Styles the floating pop-up panel anchored to the bottom-right. */
+.chart-panel {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px 0 0 0;
+  margin-bottom: 10px;
+
+  /* Absolute positioning to float above the button. */
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+}
+
+/* Flexbox layout for the range filter inputs. */
+.chart-controls {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+  justify-content: center;
+}

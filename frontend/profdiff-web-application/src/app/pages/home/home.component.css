@@ -1,0 +1,58 @@
+/* Flexbox row for the input field and 'Show Runs' button. */
+.path-input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Spacing wrapper for the table and warnings. */
+.content-container {
+  margin: 0 0 20px 0;
+}
+
+/* Specific width constraint for the main path input. */
+.root-directory-input {
+  width: 700px;
+}
+
+/* Increases button padding/font for better visibility. */
+.btn-large {
+  font-size: 15px;
+  padding: 18px;
+}
+
+/* Additional spacing for the buttons in the input container. */
+.path-input-container .btn-large,
+.path-input-container .refresh-button {
+  margin-bottom: 22px;
+}
+
+.refresh-button {
+  transform: scale(1.1);
+}
+
+/* Styles the 'has runs' icon next to directories that contain benchmark runs. */
+.has-runs-icon {
+  color: green;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+/* Highlights the actively Tab-cycled autocomplete option */
+.tab-highlighted {
+  background-color: rgba(26, 27, 31, 0.12) !important;
+}
+
+/* Container for the warmup slider and label */
+.slider-container {
+  border: 2px solid #1976D2;
+  background-color: white;
+  border-radius: 8px;
+  margin: 0 20px 2px 0;
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}

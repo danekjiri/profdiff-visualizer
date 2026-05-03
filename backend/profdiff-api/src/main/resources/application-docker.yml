@@ -1,0 +1,5 @@
+app:
+  security:
+    allowed-path-prefixes:
+      - "/workspace"
+      - "/default-benchmarks"

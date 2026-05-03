@@ -1,0 +1,18 @@
+<mat-toolbar color="primary" class="app-toolbar">
+  <div class="title-container" [class.no-button]="pageTitle().toLowerCase() === 'home'">
+    <span class="main-title">Profdiff Visualizer</span>
+    <span class="separator">/</span>
+    <span class="sub-title">{{ pageTitle() }}</span>
+  </div>
+
+    @if (pageTitle().toLowerCase() !== 'home') {
+    <button
+      mat-button
+      class="home-button"
+      [routerLink]="['/']"
+      [queryParams]="returnPath ? { path: returnPath } : null"
+    >
+      HOME
+    </button>
+  }
+</mat-toolbar>

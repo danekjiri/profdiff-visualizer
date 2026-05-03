@@ -1,0 +1,245 @@
+<app-view-header
+  [pageTitle]="'Comparison: ' + runs[0].name() + ' vs ' + runs[1].name()"
+></app-view-header>
+
+<div class="container page-with-floating-dock">
+  @if (isLoading()) {
+    <p>Loading data...</p>
+  } @else if (errorMessage()) {
+    <app-error-message [error]="errorMessage()!"></app-error-message>
+  } @else {
+    <app-warnings [warnings]="mergedWarnings" />
+
+    <mat-card>
+      <mat-expansion-panel [expanded]="true">
+        <mat-expansion-panel-header>
+          <mat-card-header>
+            <mat-card-title><b>General Metadata</b></mat-card-title>
+          </mat-card-header>
+        </mat-expansion-panel-header>
+
+        <div class="side-by-side-container tab-content">
+          <div class="column">
+            <h3 class="column-title">{{ runs[0].name() || 'Run 1' }}</h3>
+            <app-general-run-metadata
+              [metadata]="runs[0].metadata()"
+              [warmupIterations]="warmupIterations()"
+            >
+            </app-general-run-metadata>
+          </div>
+          <div class="column">
+            <h3 class="column-title">{{ runs[1].name() || 'Run 2' }}</h3>
+            <app-general-run-metadata
+              [metadata]="runs[1].metadata()"
+              [warmupIterations]="warmupIterations()"
+            >
+            </app-general-run-metadata>
+          </div>
+        </div>
+      </mat-expansion-panel>
+    </mat-card>
+    <br />
+
+    @if (isProfilerAvailable()) {
+      <mat-card>
+        <mat-expansion-panel [expanded]="true">
+          <mat-expansion-panel-header>
+            <mat-card-header>
+              <mat-card-title><b>Top Methods Table</b></mat-card-title>
+            </mat-card-header>
+          </mat-expansion-panel-header>
+
+          <div class="side-by-side-container tab-content">
+            <div class="column">
+              <h3 class="column-title">{{ runs[0].name() || 'Run 1' }}</h3>
+              <app-top-methods-table
+                [highlightedMethodName]="hoveredMethodName()"
+                (methodHovered)="onTopMethodHovered($event)"
+                [topMethods]="coloredTopMethods0()"
+                [isAot]="isAnyAot()"
+                (methodSelected)="onTopMethodClicked($event, 0)"
+                [disabled]="isLoadingTrees()"
+              />
+            </div>
+            <div class="column">
+              <h3 class="column-title">{{ runs[1].name() || 'Run 2' }}</h3>
+              <app-top-methods-table
+                [highlightedMethodName]="hoveredMethodName()"
+                (methodHovered)="onTopMethodHovered($event)"
+                [topMethods]="coloredTopMethods1()"
+                [isAot]="isAnyAot()"
+                (methodSelected)="onTopMethodClicked($event, 1)"
+                [disabled]="isLoadingTrees()"
+              />
+            </div>
+          </div>
+        </mat-expansion-panel>
+      </mat-card>
+      <br />
+    }
+
+    <mat-card #methodsDetail>
+      <mat-card-header>
+        <mat-card-title>
+          <b>Methods Union Detail</b>
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="card-content">
+        <app-method-selector
+          [label]="'Select Method to Compare'"
+          [items]="diffSelectorItems()"
+          [selectedItem]="selectedSelectorItem()"
+          [disabled]="isLoadingTrees()"
+          (selectionChange)="onPairSelected($event)"
+        >
+        </app-method-selector>
+
+        @if (selectedDiffPair(); as pair) {
+          <div class="side-by-side-container">
+            <div class="column diff-minus-column" [class.faded]="!pair.methodFromRun1">
+              <h4 class="column-title">Compilations for {{ runs[0].name() }}</h4>
+
+              @if (pair.methodFromRun1) {
+                <div class="compilations-container">
+                  @for (compilation of pair.methodFromRun1.compilationUnitMetadata; track compilation.id) {
+                    <app-compilation-unit-card
+                      [compilation]="compilation"
+                      [totalPeriod]="runs[0].metadata()?.totalPeriod"
+                      [isProfilerAvailable]="isProfilerAvailable()"
+                      [isSelected]="compilation.id === runs[0].selectedCompilationId()"
+                      [disabled]="isLoadingTrees()"
+                      [parentMethodResolver]="resolveParentMethodName"
+                      (parentCompilationSelected)="onCompilationFragmentParentClicked($event, 0)"
+                      (compilationSelected)="onCompilationSelected($event, null)"
+                    />
+                  }
+                </div>
+              } @else {
+                <p class="no-data-msg">Method not compiled in this run</p>
+              }
+            </div>
+
+            <div class="column diff-plus-column" [class.faded]="!pair.methodFromRun2">
+              <h4 class="column-title">Compilations for {{ runs[1].name() }}</h4>
+
+              @if (pair.methodFromRun2) {
+                <div class="compilations-container">
+                  @for (compilation of pair.methodFromRun2.compilationUnitMetadata; track compilation.id) {
+                    <app-compilation-unit-card
+                      [compilation]="compilation"
+                      [totalPeriod]="runs[1].metadata()?.totalPeriod"
+                      [isProfilerAvailable]="isProfilerAvailable()"
+                      [isSelected]="compilation.id === runs[1].selectedCompilationId()"
+                      [disabled]="isLoadingTrees()"
+                      [parentMethodResolver]="resolveParentMethodName"
+                      (parentCompilationSelected)="onCompilationFragmentParentClicked($event, 1)"
+                      (compilationSelected)="onCompilationSelected(null, $event)"
+                    />
+                  }
+                </div>
+              } @else {
+                <p class="no-data-msg">Method not compiled in this run</p>
+              }
+            </div>
+          </div>
+        }
+
+        <div class="trees-section">
+          @if (isLoadingTrees()) {
+            <div class="loading-overlay">
+              <span>Loading trees...</span>
+            </div>
+          } @else {
+            <div class="tree-actions-toolbar">
+              <button
+                mat-button
+                (click)="copyActiveTree()"
+                [disabled]="!inliningTree() && !optimizationTree() && !optimizationContextTree()">
+                <mat-icon>content_copy</mat-icon>
+                Copy Raw Tree
+              </button>
+            </div>
+            <mat-tab-group
+              [selectedIndex]="activeTabIndex()"
+              (selectedIndexChange)="onTabChange($event)"
+            >
+              <mat-tab
+                [label]="
+                  runs[0].selectedCompilationId() && runs[1].selectedCompilationId()
+                    ? 'Inlining Tree Comparison'
+                    : 'Inlining Tree'
+                "
+              >
+                <div class="tree-viewport">
+                  @if (inliningTree()) {
+                    <app-rendered-tree-node-text
+                      [node]="inliningTree()!.tree"
+                      [hotnessMap]="treeHotnessMap()"
+                      (methodClicked)="onTreeMethodClicked($event)"
+                    />
+                  }
+                </div>
+              </mat-tab>
+              <mat-tab
+                [label]="
+                  runs[0].selectedCompilationId() && runs[1].selectedCompilationId()
+                    ? 'Optimization Tree Comparison'
+                    : 'Optimization Tree'
+                "
+              >
+                <div class="tree-viewport">
+                  @if (optimizationTree()) {
+                    <app-rendered-tree-node-text
+                      [node]="optimizationTree()!.tree"
+                      [hotnessMap]="treeHotnessMap()"
+                      (methodClicked)="onTreeMethodClicked($event)"
+                    />
+                  }
+                </div>
+              </mat-tab>
+              <mat-tab
+                [label]="
+                  runs[0].selectedCompilationId() && runs[1].selectedCompilationId()
+                    ? 'OptimizationContext Tree Comparison'
+                    : 'OptimizationContext Tree'
+                "
+              >
+                <div class="tree-viewport">
+                  @if (optimizationContextTree()) {
+                    <app-rendered-tree-node-text
+                      [node]="optimizationContextTree()!.tree"
+                      [hotnessMap]="treeHotnessMap()"
+                      (methodClicked)="onTreeMethodClicked($event)"
+                    />
+                  }
+                </div>
+              </mat-tab>
+            </mat-tab-group>
+          }
+        </div>
+      </mat-card-content>
+    </mat-card>
+  }
+
+  <app-floating-dock>
+    <div dock-actions>
+      <app-experiment-options
+        (optionsApplied)="loadAllData()"
+        [disabledHotPolicyOptions]="!isProfilerAvailable()"
+      />
+    </div>
+    <div dock-actions>
+      <button mat-fab
+        [routerLink]="['/']"
+        [queryParams]="returnPath ? { path: returnPath } : null"
+        matTooltip="Return Home"
+        matTooltipPosition="above"
+      >
+        <mat-icon>home</mat-icon>
+      </button>
+    </div>
+    <div dock-content>
+      <app-metric-chart [chartData]="chartData()" />
+    </div>
+  </app-floating-dock>
+</div>

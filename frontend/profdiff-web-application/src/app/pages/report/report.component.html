@@ -1,0 +1,171 @@
+<app-view-header [pageTitle]="'Report: ' + runName()"></app-view-header>
+
+<div class="container page-with-floating-dock">
+  @if (isLoading()) {
+    <p>Loading data...</p>
+  } @else if (errorMessage()) {
+    <app-error-message [error]="errorMessage()!"></app-error-message>
+  } @else {
+    <app-warnings [warnings]="mergedWarnings" />
+
+    <mat-card>
+      <mat-expansion-panel [expanded]="true">
+        <mat-expansion-panel-header>
+          <mat-card-header>
+            <mat-card-title>
+              <b>Run Metadata</b>
+            </mat-card-title>
+          </mat-card-header>
+        </mat-expansion-panel-header>
+        <mat-card-content class="card-content">
+          <app-general-run-metadata 
+            [metadata]="metadata()"
+            [warmupIterations]="warmupIterations()"
+          >
+          </app-general-run-metadata>
+        </mat-card-content>
+      </mat-expansion-panel>
+    </mat-card>
+    <br />
+
+    @if (isProfilerAvailable()) {
+      <mat-card>
+        <mat-expansion-panel [expanded]="true">
+          <mat-expansion-panel-header>
+            <mat-card-header>
+              <mat-card-title>
+                <b>Top Methods Table</b>
+              </mat-card-title>
+            </mat-card-header>
+          </mat-expansion-panel-header>
+          <mat-card-content class="card-content">
+            <app-top-methods-table
+              [class.ui-blocked]="isLoadingTrees()"
+              [topMethods]="coloredTopMethods()"
+              [isAot]="metadata()?.benchmarkRunMetadata?.profileMetadata?.compilationKind === 'AOT'"
+              (methodSelected)="onTopMethodClicked($event)"
+              [disabled]="isLoadingTrees()"
+            />
+          </mat-card-content>
+        </mat-expansion-panel>
+      </mat-card>
+      <br />
+    }
+
+    <mat-card #methodsDetail>
+      <mat-card-header>
+        <mat-card-title>
+          <b>Methods Detail</b>
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="card-content">
+        <app-method-selector
+          [label]="'Choose a method'"
+          [items]="methodSelectorItems()"
+          [selectedItem]="selectedSelectorItem()"
+          (selectionChange)="onMethodSelected($event)"
+          [disabled]="isLoadingTrees()"
+        >
+        </app-method-selector>
+
+        @if (selectedMethod()) {
+          <div class="compilations-container">
+            @for (compilation of selectedMethod()?.compilationUnitMetadata; track compilation.id) {
+              <app-compilation-unit-card
+                [compilation]="compilation"
+                [totalPeriod]="metadata()?.totalPeriod"
+                [isProfilerAvailable]="isProfilerAvailable()"
+                [isSelected]="compilation.id === selectedCompilationId()"
+                [disabled]="isLoadingTrees()"
+                [parentMethodResolver]="resolveParentMethodName"
+                (parentCompilationSelected)="onCompilationFragmentClicked($event)"
+                (compilationSelected)="onCompilationSelected($event)"
+              />
+            }
+          </div>
+
+          <div class="trees-section">
+          @if (isLoadingTrees()) {
+            <div class="loading-overlay">
+              <span>Loading trees...</span>
+            </div>
+          } @else {
+            <div class="tree-actions-toolbar">
+              <button 
+                mat-button 
+                (click)="copyActiveTree()" 
+                [disabled]="!inliningTree() && !optimizationTree() && !optimizationContextTree()">
+                <mat-icon>content_copy</mat-icon>
+                Copy Raw Tree
+              </button>
+            </div>
+            <mat-tab-group
+              [selectedIndex]="activeTabIndex()"
+              (selectedIndexChange)="onTabChange($event)"
+            >
+              <mat-tab label="Inlining Tree">
+                <div class="tree-viewport">
+                  @if (inliningTree()) {
+                    <app-rendered-tree-node-text 
+                      [node]="inliningTree()!.tree" 
+                      [hotnessMap]="treeHotnessMap()"
+                      (methodClicked)="onTreeMethodClicked($event)"
+                    />
+                  }
+                </div>
+              </mat-tab>
+              <mat-tab label="Optimization Tree">
+                <div class="tree-viewport">
+                  @if (optimizationTree()) {
+                    <app-rendered-tree-node-text 
+                      [node]="optimizationTree()!.tree" 
+                      [hotnessMap]="treeHotnessMap()"
+                      (methodClicked)="onTreeMethodClicked($event)"
+                    />
+                  }
+                </div>
+              </mat-tab>
+              <mat-tab label="OptimizationContext Tree">
+                <div class="tree-viewport">
+                  @if (optimizationContextTree()) {
+                    <app-rendered-tree-node-text 
+                      [node]="optimizationContextTree()!.tree" 
+                      [hotnessMap]="treeHotnessMap()"
+                      (methodClicked)="onTreeMethodClicked($event)"
+                    />
+                  }
+                </div>
+              </mat-tab>
+            </mat-tab-group>
+          }
+          </div>
+        }
+      </mat-card-content>
+    </mat-card>
+  }
+
+  <app-floating-dock>
+    <div dock-actions>
+      <app-experiment-options 
+        (optionsApplied)="loadReportData()"
+        [forcedPruneIdentities]="false"
+        [disabledHotPolicyOptions]="!isProfilerAvailable()" 
+      />
+    </div>
+        <div dock-actions>
+      <button mat-fab 
+        [routerLink]="['/']"
+        [queryParams]="returnPath ? { path: returnPath } : null"
+        matTooltip="Return Home"
+        matTooltipPosition="above"
+      >
+        <mat-icon>home</mat-icon>
+      </button>
+    </div>
+    @if (isBenchResultsAvailable()) {
+      <div dock-content>
+        <app-metric-chart [chartData]="chartData()" />
+      </div>
+    }
+  </app-floating-dock>
+</div>

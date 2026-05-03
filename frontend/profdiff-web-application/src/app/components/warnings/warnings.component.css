@@ -1,0 +1,31 @@
+/* Container styling for the warning panel. */
+.warning-card {
+  background-color: #fff3e0;
+  color: #bf360c;
+  margin-bottom: 16px;
+  border-left: 5px solid #ff9800;
+}
+
+/* Flex layout for the icon and title. */
+.warning-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+}
+
+/* Spacing for the warning icon. */
+.warning-icon {
+  margin-right: 8px;
+}
+
+/* List styling for individual messages. */
+.warning-list {
+  margin: 8px 0 0 0;
+  padding-left: 20px;
+}
+
+/* Sub-style for specific warning types. */
+.warning-type {
+  font-size: 0.8em;
+  opacity: 0.8;
+}

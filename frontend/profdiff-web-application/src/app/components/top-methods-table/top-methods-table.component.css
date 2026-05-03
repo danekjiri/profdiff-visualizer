@@ -1,0 +1,69 @@
+/* Enforce fixed layout so column widths are respected. */
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+/* Disable clicks on the table */
+.table-disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Reduce row height for a compact view. */
+.mat-mdc-table .mat-mdc-row {
+  height: 36px;
+}
+
+/* Target both header and data cells to shrink spacing between columns. */
+.mat-mdc-header-cell,
+.mat-mdc-cell {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* Execution: Centered and slightly wider to fit header. */
+.mat-column-executionPercentage {
+  width: 90px;
+  text-align: center; /* centers both the header and the values */
+}
+
+/* Cycles: Compact width */
+.mat-column-cycles {
+  width: 70px;
+}
+
+/* ID: Fixed width to ensure the whole number is always visible. */
+.mat-column-id {
+  width: 60px;
+}
+
+/* Method Name: Takes all remaining space and truncates with ellipsis. */
+.mat-column-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Force all headers to display fully (no ellipsis). */
+.mat-mdc-header-cell {
+  white-space: nowrap;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+/* Top methods should be clickable to navigate to the method details page. */
+.clickable-row {
+  cursor: pointer;
+  transition: filter 0.2s ease;
+}
+
+/* Darkens the dynamically generated pastel hue slightly. */
+.clickable-row:hover {
+  filter: brightness(0.90); 
+}
+
+/* Highlighting for rows that are twins (same method in both runs). */
+.twin-highlight {
+  filter: brightness(0.85);
+}

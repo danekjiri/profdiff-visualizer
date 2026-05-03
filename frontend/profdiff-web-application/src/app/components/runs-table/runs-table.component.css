@@ -1,0 +1,28 @@
+/* Flex container for the dropdown filters */
+.filters-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+/* Make each dropdown take equal space */
+.filters-row mat-form-field {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Fixed width for utility columns to preserve space for data. */
+.mat-column-select,
+.mat-column-report,
+.mat-column-status {
+  width: 50px;
+  padding-inline: 8px;
+}
+
+/* Styling for the empty state message. */
+.no-runs-message {
+  padding: 20px;
+  font-style: italic;
+  color: #999;
+}

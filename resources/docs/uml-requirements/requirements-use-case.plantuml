@@ -1,0 +1,55 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+skinparam usecase {
+    BackgroundColor #85bbf0
+    BorderColor #08427b
+    ArrowColor #08427b
+}
+skinparam actor {
+    BackgroundColor #08427b
+    BorderColor #08427b
+}
+
+actor "Compiler Engineer" as CE
+
+package "Profdiff Visualizer System" {
+
+        usecase "Mount local workspace / demo data" as UC_Mount
+        usecase "Navigate local directories" as UC_Nav
+        usecase "View and filter runs & metadata" as UC_Runs
+        usecase "View execution time charts" as UC_Charts
+
+        usecase "Identify hottest methods via perf data" as UC_Hot
+        usecase "Search and filter compiled methods" as UC_Search
+        usecase "Extract & map compilation fragments" as UC_Fragments
+        usecase "Interact with structured trees\n(Inlining, Optimization)" as UC_Trees
+        usecase "Toggle tree verbosity & hotness thresholds" as UC_Toggle
+        usecase "Retain focus on selected compilation unit" as UC_Focus
+
+        usecase "Compare benchmark runs side-by-side" as UC_Compare
+        usecase "View union of compiled methods" as UC_Union
+        usecase "View Delta Trees\n(Insertions, Deletions, Relabels)" as UC_DeltaTrees
+}
+
+' Navigation interactions
+CE --> UC_Mount
+CE --> UC_Nav
+CE --> UC_Runs
+CE --> UC_Charts
+
+' Analysis interactions
+CE --> UC_Hot
+CE --> UC_Search
+CE --> UC_Trees
+
+' Advanced analysis dependencies
+UC_Trees <.. UC_Fragments : <<extends>>
+UC_Trees <.. UC_Toggle : <<extends>>
+UC_Toggle ..> UC_Focus : <<includes>>
+
+' Comparison interactions
+CE --> UC_Compare
+UC_Compare ..> UC_Union : <<includes>>
+UC_Compare ..> UC_DeltaTrees : <<includes>>
+@enduml

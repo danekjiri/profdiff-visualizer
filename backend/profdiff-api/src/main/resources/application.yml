@@ -1,0 +1,25 @@
+micronaut:
+  application:
+    name: "profdiff-api"
+  caches:
+    runs-metadata-cache:
+      maximum-size: 3
+      expire-after-write: 60s
+  router:
+    static-resources:
+      swagger:
+        paths: "classpath:META-INF/swagger"
+        mapping: "/swagger/**"
+      swagger-ui:
+        paths: "classpath:META-INF/swagger/views/swagger-ui"
+        mapping: "/swagger-ui/**"
+
+app:
+  security:
+    allowed-path-prefixes: []   # unrestricted in dev
+
+cache:
+  parsed-experiment:
+    size: 7
+  prepared-experiment:
+    size: 4

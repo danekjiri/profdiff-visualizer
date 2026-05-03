@@ -1,0 +1,141 @@
+@if (dataSource.data.length > 0) {
+  <div class="table-container">
+
+    <div class="filters-row">
+      <mat-form-field appearance="outline">
+        <mat-label>Filter Status</mat-label>
+        <mat-select multiple [(ngModel)]="columnFilters.status" (selectionChange)="applyFilters()">
+          @for (status of statusOptions; track status) {
+            <mat-option [value]="status">{{ status }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Filter Benchmark</mat-label>
+        <mat-select multiple [(ngModel)]="columnFilters.benchmark" (selectionChange)="applyFilters()">
+          @for (benchmark of uniqueBenchmarks; track benchmark) {
+            <mat-option [value]="benchmark">{{ benchmark }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Filter Compilation</mat-label>
+        <mat-select multiple [(ngModel)]="columnFilters.compilationKind" (selectionChange)="applyFilters()">
+          @for (compilationKind of uniqueCompilations; track compilationKind) {
+            <mat-option [value]="compilationKind">{{ compilationKind }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Filter Graal Version</mat-label>
+        <mat-select multiple [(ngModel)]="columnFilters.graalVersion" (selectionChange)="applyFilters()">
+          @for (graalVersion of uniqueGraalVersions; track graalVersion) {
+            <mat-option [value]="graalVersion">{{ graalVersion }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="scrolling-table-container">
+      <table mat-table [dataSource]="dataSource" matSort>
+
+        <ng-container matColumnDef="select">
+          <th mat-header-cell *matHeaderCellDef>
+            <mat-checkbox
+              (change)="$event ? toggleAllRows() : null"
+              [checked]="isSomeSelected() && isAllSelected()"
+              [indeterminate]="isSomeSelected() && !isAllSelected()">
+            </mat-checkbox>
+          </th>
+          <td mat-cell *matCellDef="let row">
+            <mat-checkbox
+              (click)="$event.stopPropagation()"
+              (change)="$event ? selection.toggle(row) : null"
+              [checked]="selection.isSelected(row)"
+            />
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="report">
+          <th mat-header-cell *matHeaderCellDef></th>
+          <td mat-cell *matCellDef="let row">
+            <button mat-button (click)="generateReport(row, $event)">REPORT</button>
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="status">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Status</th>
+          <td mat-cell *matCellDef="let run">
+            @if (hasProfilerInfo(run) && hasBenchResultsInfo(run)) {
+              <mat-chip matTooltip="Run contains all required profile and benchmark data.">
+                Healthy
+              </mat-chip>
+            }
+            @if (!hasProfilerInfo(run)) {
+              <mat-chip matTooltip="Profile data is missing. Some metadata and 'hot' methods cannot be identified.">
+                Missing profile
+              </mat-chip>
+            }
+            @if (!hasBenchResultsInfo(run)) {
+              <mat-chip matTooltip="Benchmark results are missing. Some metadata and metric chart unavailable.">
+                No bench-results.json
+              </mat-chip>
+            }
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="runName">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Run Name</th>
+          <td mat-cell *matCellDef="let run">{{ run.runName }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="benchmark">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Benchmark</th>
+          <td mat-cell *matCellDef="let run">{{ getBenchmarkName(run) }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="compilationKind">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Compilation</th>
+          <td mat-cell *matCellDef="let run">
+            {{ run?.profileMetadata?.compilationKind || '' }}
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="graalVersion">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Graal version</th>
+          <td mat-cell *matCellDef="let run">
+            {{ run?.benchResultsMetadata?.graalVersion || '' }}
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="totalPeriod">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Total Period</th>
+          <td mat-cell *matCellDef="let run">
+            {{ run?.profileMetadata?.totalPeriod?.toLocaleString() || '' }}
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="averageTime">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Avg Run Time</th>
+          <td mat-cell *matCellDef="let run">
+            {{ calculateAverageTime(run) | number:'1.2-2' }}
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr
+          mat-row
+          *matRowDef="let row; columns: displayedColumns"
+          (click)="selection.toggle(row)"
+        ></tr>
+      </table>
+    </div>
+
+    <mat-paginator [pageSizeOptions]="[8, dataSource.data.length]" showFirstLastButtons />
+  </div>
+} @else {
+  <p class="no-runs-message">In this directory no runs were found.</p>
+}

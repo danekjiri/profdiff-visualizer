@@ -1,0 +1,9 @@
+/* Wrapper for the error display card. */
+.error-card {
+  background-color: #f5d1d1;
+}
+
+/* Emphasize the error title with a dark red color. */
+.error-card mat-card-title {
+  color: firebrick;
+}

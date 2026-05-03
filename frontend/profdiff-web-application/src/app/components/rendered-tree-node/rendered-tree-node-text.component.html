@@ -1,0 +1,97 @@
+<div class="node-container">
+  <div class="node-content" 
+       [class]="node().marker.toLowerCase()" 
+       [class.clickable]="hasChildren()"
+       (click)="toggleExpand($event)">
+    
+    <span class="expander" [style.visibility]="hasChildren() ? 'visible' : 'hidden'">
+      {{ isExpanded() ? '▼' : '▶' }}
+    </span>
+    
+    <span 
+      class="marker-col"
+      [matTooltip]="markerTooltip"
+      matTooltipPosition="above"
+    >
+      {{ markerSymbol }}
+    </span>
+
+    @if (node().content) {
+    <span>
+      @if (node().content.action) {
+        <span class="action">{{ node().content.action }}</span> 
+      }
+
+      @if (node().content.methodName; as methodName) { 
+        <span 
+          class="method-link" 
+          (click)="onMethodClick(methodName, $event)"
+        >
+          {{ methodName }}
+        </span> 
+        
+        @if (hotnessMap()[methodName]; as hotnessMapEntry) {
+          @if (hotnessMapEntry.hotness1 !== undefined) {
+            <span class="hotness-badge badge-r1">
+              {{ node().marker === 'NEUTRAL' ? 'Hotness' : 'R1' }}: {{ hotnessMapEntry.hotness1 | percent:'1.2' }}
+            </span>
+          }
+          @if (hotnessMapEntry.hotness2 !== undefined) {
+            <span class="hotness-badge badge-r2">
+              R2: {{ hotnessMapEntry.hotness2 | percent:'1.2' }}
+            </span>
+          }
+        }
+      }
+
+      @if (!node().content.methodName && node().content.rawText) { 
+        <span class="text">{{ node().content.rawText }}</span> 
+      }
+
+      @if (node().content.bci) {
+        <span class="bci">at bci {{ node().content.bci }}</span>
+      }
+      @if (node().content.additionalInfo) {
+        <span class="properties">with {{ node().content.additionalInfo }}</span>
+      }
+      
+    </span>
+  }
+  </div>
+
+  @if (isExpanded() && hasChildren()) {
+    <div class="children-container">
+      
+      @if (infoChildren().length > 0) {
+        
+        <div class="node-content info clickable" 
+             (click)="toggleInfo($event)">
+          <span class="expander">
+            {{ isInfoExpanded() ? '▼' : '▶' }}
+          </span>
+          <span class="marker-col"></span>
+          <span class="text">RECEIVER-TYPE-PROFILER || REASONING</span>
+        </div>
+        
+        @if (isInfoExpanded()) {
+          @for (detail of infoChildren(); track detail) {
+            <div class="node-content info">
+              <span class="expander"></span> <span class="marker-col"></span>
+              <span class="text" [class.indented]="!detail.content.rawText!.trim().startsWith('|_')">
+                {{ detail.content.rawText }}
+              </span>
+            </div>
+          }
+        }
+      }
+
+      @for (child of regularChildren(); track child) {
+        <app-rendered-tree-node-text 
+           [node]="child" 
+           [hotnessMap]="hotnessMap()"
+           (methodClicked)="onChildMethodClicked($event)" 
+        />
+      }
+    </div>
+  }
+</div>

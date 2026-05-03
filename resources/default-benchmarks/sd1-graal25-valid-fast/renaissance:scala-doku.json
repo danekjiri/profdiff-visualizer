@@ -1,0 +1,2569 @@
+{
+    "compilationKind": "JIT",
+    "totalPeriod": 158853410585,
+    "executionId": "856320",
+    "code": [
+        {
+            "compileId": null,
+            "name": "flush_icache_final_stub",
+            "level": null,
+            "period": 3692845
+        },
+        {
+            "compileId": null,
+            "name": "I2C/C2I adapters(0xb)",
+            "level": null,
+            "period": 31639938
+        },
+        {
+            "compileId": null,
+            "name": "I2C/C2I adapters(0xba)",
+            "level": null,
+            "period": 10272650
+        },
+        {
+            "compileId": null,
+            "name": "I2C/C2I adapters(0xbb)",
+            "level": null,
+            "period": 11310377
+        },
+        {
+            "compileId": null,
+            "name": "Interpreter",
+            "level": null,
+            "period": 852113080
+        },
+        {
+            "compileId": null,
+            "name": "I2C/C2I adapters(0xbbb)",
+            "level": null,
+            "period": 3461735
+        },
+        {
+            "compileId": null,
+            "name": "jbyte_disjoint_arraycopy",
+            "level": null,
+            "period": 3501113
+        },
+        {
+            "compileId": null,
+            "name": "jint_disjoint_arraycopy",
+            "level": null,
+            "period": 150042778
+        },
+        {
+            "compileId": null,
+            "name": "jint_arraycopy",
+            "level": null,
+            "period": 3266362
+        },
+        {
+            "compileId": null,
+            "name": "oop_disjoint_arraycopy",
+            "level": null,
+            "period": 213583348
+        },
+        {
+            "compileId": null,
+            "name": "oop_arraycopy",
+            "level": null,
+            "period": 10436493
+        },
+        {
+            "compileId": null,
+            "name": "checkcast_arraycopy",
+            "level": null,
+            "period": 7106389
+        },
+        {
+            "compileId": null,
+            "name": "_invokeBasic",
+            "level": null,
+            "period": 3532207
+        },
+        {
+            "compileId": null,
+            "name": "I2C/C2I adapters(0xaaa)",
+            "level": null,
+            "period": 3493610
+        },
+        {
+            "compileId": null,
+            "name": "I2C/C2I adapters(0xbab)",
+            "level": null,
+            "period": 3492806
+        },
+        {
+            "compileId": null,
+            "name": "C1 Runtime slow_subtype_check_blob",
+            "level": null,
+            "period": 43806436
+        },
+        {
+            "compileId": null,
+            "name": "C1 Runtime counter_overflow_blob",
+            "level": null,
+            "period": 3494478
+        },
+        {
+            "compileId": null,
+            "name": "g1_post_barrier_slow",
+            "level": null,
+            "period": 24435060
+        },
+        {
+            "compileId": null,
+            "name": "itable stub",
+            "level": null,
+            "period": 108446672
+        },
+        {
+            "compileId": null,
+            "name": "itable stub",
+            "level": null,
+            "period": 3476439
+        },
+        {
+            "compileId": "45",
+            "name": "45: java.util.concurrent.ConcurrentHashMap.tabAt(java.util.concurrent.ConcurrentHashMap$Node[], int)",
+            "level": 3,
+            "period": 2740619
+        },
+        {
+            "compileId": "50",
+            "name": "50: java.util.concurrent.ConcurrentHashMap.putVal(java.lang.Object, java.lang.Object, boolean)",
+            "level": 3,
+            "period": 3410889
+        },
+        {
+            "compileId": "54",
+            "name": "54: java.lang.Object.hashCode()",
+            "level": 0,
+            "period": 6986582
+        },
+        {
+            "compileId": "58",
+            "name": "58: java.lang.invoke.MethodHandle.linkToStatic(java.lang.invoke.MemberName)",
+            "level": 0,
+            "period": 3494858
+        },
+        {
+            "compileId": "62",
+            "name": "62: jdk.internal.util.StrongReferenceKey.get()",
+            "level": 1,
+            "period": 3198709
+        },
+        {
+            "compileId": "71",
+            "name": "71: jdk.internal.classfile.impl.AbstractPoolEntry.index()",
+            "level": 1,
+            "period": 3496535
+        },
+        {
+            "compileId": "75",
+            "name": "75: java.lang.String.getBytes(byte[], int, byte)",
+            "level": 3,
+            "period": 3776305
+        },
+        {
+            "compileId": "81",
+            "name": "81: java.lang.invoke.MethodType.hashCode()",
+            "level": 3,
+            "period": 3555812
+        },
+        {
+            "compileId": "27",
+            "name": "27: java.lang.String.hashCode()",
+            "level": 4,
+            "period": 3492262
+        },
+        {
+            "compileId": "92",
+            "name": "92: java.util.Objects.requireNonNull(java.lang.Object, java.lang.String)",
+            "level": 3,
+            "period": 3280032
+        },
+        {
+            "compileId": "102",
+            "name": "102: java.util.HashMap.newNode(int, java.lang.Object, java.lang.Object, java.util.HashMap$Node)",
+            "level": 3,
+            "period": 3371398
+        },
+        {
+            "compileId": "147",
+            "name": "147: java.lang.Object.equals(java.lang.Object)",
+            "level": 3,
+            "period": 3451389
+        },
+        {
+            "compileId": "175",
+            "name": "175: java.util.Arrays.copyOfRange(byte[], int, int)",
+            "level": 3,
+            "period": 2021023
+        },
+        {
+            "compileId": "204",
+            "name": "204: java.util.zip.ZipUtils.get16(byte[], int)",
+            "level": 3,
+            "period": 3687631
+        },
+        {
+            "compileId": "222",
+            "name": "222: java.util.zip.ZipFile.zipCoderFor(byte[], int, java.util.zip.ZipCoder)",
+            "level": 3,
+            "period": 3494234
+        },
+        {
+            "compileId": "261",
+            "name": "261: jdk.internal.misc.Unsafe.allocateUninitializedArray0(java.lang.Class, int)",
+            "level": 3,
+            "period": 3490912
+        },
+        {
+            "compileId": "269",
+            "name": "269: java.lang.String.indexOf(int)",
+            "level": 3,
+            "period": 3177435
+        },
+        {
+            "compileId": "271",
+            "name": "271: java.lang.AbstractStringBuilder.append(java.lang.String)",
+            "level": 3,
+            "period": 3769320
+        },
+        {
+            "compileId": "286",
+            "name": "286: jdk.internal.util.ArraysSupport.unsignedHashCode(int, byte[], int, int)",
+            "level": 4,
+            "period": 3454458
+        },
+        {
+            "compileId": "326",
+            "name": "326: java.lang.StringCoding.countPositives(byte[], int, int)",
+            "level": 4,
+            "period": 3493722
+        },
+        {
+            "compileId": "348",
+            "name": "348: jdk.internal.jimage.ImageStringsReader.unmaskedHashCode(java.lang.String, int)",
+            "level": 3,
+            "period": 3542005
+        },
+        {
+            "compileId": "168",
+            "name": "168: java.lang.String.equals(java.lang.Object)",
+            "level": 4,
+            "period": 424609
+        },
+        {
+            "compileId": "360",
+            "name": "360: java.lang.invoke.MethodHandleNatives.resolve(java.lang.invoke.MemberName, java.lang.Class, int, boolean)",
+            "level": 0,
+            "period": 3480664
+        },
+        {
+            "compileId": "369",
+            "name": "369: java.lang.StringLatin1.replace(byte[], char, char)",
+            "level": 3,
+            "period": 2414932
+        },
+        {
+            "compileId": "404",
+            "name": "404: java.lang.Class.getPackageName()",
+            "level": 3,
+            "period": 6776681
+        },
+        {
+            "compileId": null,
+            "name": "vtable stub",
+            "level": null,
+            "period": 3494853
+        },
+        {
+            "compileId": "423",
+            "name": "423: java.lang.Record.<init>()",
+            "level": 3,
+            "period": 3484494
+        },
+        {
+            "compileId": "426",
+            "name": "426: java.lang.invoke.MethodTypeForm.canonicalizeAll(java.lang.Class[], int)",
+            "level": 3,
+            "period": 3778167
+        },
+        {
+            "compileId": null,
+            "name": "itable stub",
+            "level": null,
+            "period": 17839559
+        },
+        {
+            "compileId": "438",
+            "name": "438: java.util.concurrent.ConcurrentHashMap.tabAt(java.util.concurrent.ConcurrentHashMap$Node[], int)",
+            "level": 4,
+            "period": 3686619
+        },
+        {
+            "compileId": "447",
+            "name": "447: jdk.internal.classfile.impl.AbstractPoolEntry$Utf8EntryImpl.writeTo(jdk.internal.classfile.impl.BufWriterImpl)",
+            "level": 3,
+            "period": 3383022
+        },
+        {
+            "compileId": "448",
+            "name": "448: jdk.internal.classfile.impl.BufWriterImpl.writeUtfEntry(java.lang.String)",
+            "level": 3,
+            "period": 4977188
+        },
+        {
+            "compileId": "453",
+            "name": "453: java.lang.StringLatin1.getBytes(byte[], int, int, byte[], int)",
+            "level": 3,
+            "period": 3446356
+        },
+        {
+            "compileId": "452",
+            "name": "452: java.lang.String.getBytes(int, int, byte[], int)",
+            "level": 3,
+            "period": 4512731
+        },
+        {
+            "compileId": "479",
+            "name": "479: java.util.Arrays.copyOf(byte[], int)",
+            "level": 3,
+            "period": 6964105
+        },
+        {
+            "compileId": null,
+            "name": "itable stub",
+            "level": null,
+            "period": 17455003
+        },
+        {
+            "compileId": "499",
+            "name": "499: java.lang.reflect.Array.newArray(java.lang.Class, int)",
+            "level": 0,
+            "period": 3464937
+        },
+        {
+            "compileId": "466",
+            "name": "466: java.util.HashMap.getNode(java.lang.Object)",
+            "level": 4,
+            "period": 3370380
+        },
+        {
+            "compileId": "530",
+            "name": "530: java.lang.invoke.MemberName.getMethodOrFieldType()",
+            "level": 3,
+            "period": 3392964
+        },
+        {
+            "compileId": "540",
+            "name": "540: jdk.internal.classfile.impl.BufWriterImpl.writeU1U2(int, int)",
+            "level": 3,
+            "period": 3394994
+        },
+        {
+            "compileId": null,
+            "name": "Stub<IntrinsicStubsGen.vectorizedHashCodeBoolean>",
+            "level": null,
+            "period": 3429637
+        },
+        {
+            "compileId": null,
+            "name": "itable stub",
+            "level": null,
+            "period": 45421913
+        },
+        {
+            "compileId": "598",
+            "name": "598: jdk.internal.classfile.impl.StackMapGenerator$Frame.pushStack(jdk.internal.classfile.impl.StackMapGenerator$Type)",
+            "level": 3,
+            "period": 3226474
+        },
+        {
+            "compileId": "547",
+            "name": "547: java.lang.StringConcatHelper.prepend(int, byte, byte[], java.lang.String, java.lang.String)",
+            "level": 3,
+            "period": 3678418
+        },
+        {
+            "compileId": "570",
+            "name": "570: java.util.ArrayList$Itr.next()",
+            "level": 3,
+            "period": 3493890
+        },
+        {
+            "compileId": "623",
+            "name": "623: java.io.RandomAccessFile.readBytes0(byte[], int, int)",
+            "level": 0,
+            "period": 3491337
+        },
+        {
+            "compileId": "621",
+            "name": "621: java.lang.ref.Reference.refersTo(java.lang.Object)",
+            "level": 3,
+            "period": 5018799
+        },
+        {
+            "compileId": "666",
+            "name": "666: java.util.zip.InflaterInputStream.read(byte[], int, int)",
+            "level": 3,
+            "period": 3950142
+        },
+        {
+            "compileId": "704",
+            "name": "704: java.nio.ByteBuffer.putBuffer(int, java.nio.ByteBuffer, int, int)",
+            "level": 3,
+            "period": 3493308
+        },
+        {
+            "compileId": "710",
+            "name": "710: java.util.zip.ZipFile$ZipFileInputStream.initDataOffset()",
+            "level": 3,
+            "period": 3493071
+        },
+        {
+            "compileId": "708",
+            "name": "708: java.util.zip.ZipFile$ZipFileInputStream.read(byte[], int, int)",
+            "level": 3,
+            "period": 3490545
+        },
+        {
+            "compileId": "727",
+            "name": "727: java.util.zip.Inflater.inflate(byte[], int, int)",
+            "level": 3,
+            "period": 6900645
+        },
+        {
+            "compileId": "734",
+            "name": "734: jdk.internal.classfile.impl.Util.parameterSlots(java.lang.constant.MethodTypeDesc)",
+            "level": 3,
+            "period": 3270800
+        },
+        {
+            "compileId": "737",
+            "name": "737: java.lang.Class.descriptorString()",
+            "level": 3,
+            "period": 3489357
+        },
+        {
+            "compileId": "751",
+            "name": "751: jdk.internal.classfile.impl.DirectClassBuilder.constantPool()",
+            "level": 3,
+            "period": 2973041
+        },
+        {
+            "compileId": "802",
+            "name": "802: java.util.jar.Manifest.parseName(byte[], int)",
+            "level": 3,
+            "period": 6984390
+        },
+        {
+            "compileId": "807",
+            "name": "807: jdk.internal.util.ArraysSupport.mismatch(byte[], int, byte[], int, int)",
+            "level": 3,
+            "period": 6659626
+        },
+        {
+            "compileId": "815",
+            "name": "815: java.lang.StringLatin1.indexOfChar(byte[], int, int, int)",
+            "level": 4,
+            "period": 3479607
+        },
+        {
+            "compileId": "821",
+            "name": "821: jdk.internal.misc.Unsafe.putLong(java.lang.Object, long, long)",
+            "level": 0,
+            "period": 3744834
+        },
+        {
+            "compileId": null,
+            "name": "Stub<new_array_or_null(KlassPointer,int)Object>",
+            "level": null,
+            "period": 3494255
+        },
+        {
+            "compileId": "827",
+            "name": "827: jdk.internal.loader.URLClassPath.getLoader(int)",
+            "level": 3,
+            "period": 3589519
+        },
+        {
+            "compileId": "829",
+            "name": "829: java.util.zip.ZipFile$Source.getEntryPos(java.lang.String, boolean, java.util.zip.ZipCoder)",
+            "level": 3,
+            "period": 6731258
+        },
+        {
+            "compileId": "841",
+            "name": "841: java.lang.ClassLoader.getClassLoadingLock(java.lang.String)",
+            "level": 3,
+            "period": 3469992
+        },
+        {
+            "compileId": "868",
+            "name": "868: jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(java.lang.String, boolean)",
+            "level": 3,
+            "period": 3487828
+        },
+        {
+            "compileId": "889",
+            "name": "889: java.util.zip.ZipFile$ZipFileInputStream.close()",
+            "level": 3,
+            "period": 3417174
+        },
+        {
+            "compileId": "903",
+            "name": "903: jdk.internal.loader.BuiltinClassLoader.findLoadedModule(java.lang.String)",
+            "level": 3,
+            "period": 3249704
+        },
+        {
+            "compileId": "917",
+            "name": "917: java.net.URL.<init>(java.net.URL, java.lang.String, java.net.URLStreamHandler)",
+            "level": 3,
+            "period": 3491112
+        },
+        {
+            "compileId": "932",
+            "name": "932: java.lang.String.getBytesNoRepl1(java.lang.String, java.nio.charset.Charset)",
+            "level": 3,
+            "period": 3490691
+        },
+        {
+            "compileId": "951",
+            "name": "951: java.util.zip.ZipCoder$UTF8ZipCoder.compare(java.lang.String, byte[], int, int, boolean)",
+            "level": 3,
+            "period": 3401849
+        },
+        {
+            "compileId": "952",
+            "name": "952: java.util.Arrays.mismatch(byte[], int, int, byte[], int, int)",
+            "level": 3,
+            "period": 3507938
+        },
+        {
+            "compileId": "956",
+            "name": "956: java.lang.ClassLoader.loadClass(java.lang.String, boolean)",
+            "level": 3,
+            "period": 3489104
+        },
+        {
+            "compileId": "969",
+            "name": "969: java.net.URL.set(java.lang.String, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)",
+            "level": 3,
+            "period": 3413949
+        },
+        {
+            "compileId": "980",
+            "name": "980: java.util.zip.ZipFile$CleanableResource.releaseInflater(java.util.zip.Inflater)",
+            "level": 3,
+            "period": 3461385
+        },
+        {
+            "compileId": "987",
+            "name": "987: java.net.URLStreamHandler.toExternalForm(java.net.URL)",
+            "level": 3,
+            "period": 3475307
+        },
+        {
+            "compileId": "1006",
+            "name": "1006: java.security.SecureClassLoader$CodeSourceKey.hashCode()",
+            "level": 3,
+            "period": 3491169
+        },
+        {
+            "compileId": "1038",
+            "name": "1038: java.net.URLClassLoader.defineClass(java.lang.String, jdk.internal.loader.Resource)",
+            "level": 3,
+            "period": 6922320
+        },
+        {
+            "compileId": "1043",
+            "name": "1043: java.net.URLClassLoader.isSealed(java.lang.String, java.util.jar.Manifest)",
+            "level": 3,
+            "period": 3489504
+        },
+        {
+            "compileId": "1055",
+            "name": "1055: jdk.internal.classfile.impl.AttributeHolder.withAttribute(java.lang.classfile.Attribute)",
+            "level": 3,
+            "period": 3411509
+        },
+        {
+            "compileId": "1057",
+            "name": "1057: jdk.internal.misc.Unsafe.allocateInstance(java.lang.Class)",
+            "level": 0,
+            "period": 17649607
+        },
+        {
+            "compileId": "1059",
+            "name": "1059: java.lang.Integer.intValue()",
+            "level": 1,
+            "period": 3493899
+        },
+        {
+            "compileId": "1062",
+            "name": "1062: jdk.internal.classfile.impl.AbstractPoolEntry$MethodRefEntryImpl.tag()",
+            "level": 1,
+            "period": 3477625
+        },
+        {
+            "compileId": "1113",
+            "name": "1113: jdk.internal.classfile.impl.SplitConstantPool.entryByIndex(int, java.lang.Class)",
+            "level": 3,
+            "period": 3360945
+        },
+        {
+            "compileId": "1131",
+            "name": "1131: jdk.internal.classfile.impl.BufWriterImpl.writeInt(int)",
+            "level": 3,
+            "period": 3409365
+        },
+        {
+            "compileId": "1135",
+            "name": "1135: java.lang.invoke.MethodHandles$Lookup.checkAccess(byte, java.lang.Class, java.lang.invoke.MemberName)",
+            "level": 3,
+            "period": 3486900
+        },
+        {
+            "compileId": "1154",
+            "name": "1154: jdk.internal.classfile.impl.BytecodeHelpers.ldcOpcode(java.lang.classfile.constantpool.LoadableConstantEntry)",
+            "level": 3,
+            "period": 3353551
+        },
+        {
+            "compileId": null,
+            "name": "itable stub",
+            "level": null,
+            "period": 3469937
+        },
+        {
+            "compileId": "1201",
+            "name": "1201: jdk.internal.classfile.impl.StackMapGenerator.detectFrames()",
+            "level": 3,
+            "period": 3481995
+        },
+        {
+            "compileId": "1243",
+            "name": "1243: jdk.internal.classfile.impl.StackMapGenerator.processInvokeInstructions(jdk.internal.classfile.impl.RawBytecodeHelper, boolean, boolean)",
+            "level": 3,
+            "period": 3508473
+        },
+        {
+            "compileId": "1192",
+            "name": "1192: jdk.internal.classfile.impl.DirectCodeBuilder.buildContent()",
+            "level": 3,
+            "period": 3485657
+        },
+        {
+            "compileId": "1264",
+            "name": "1264: java.lang.invoke.MethodHandleNatives.findMethodHandleType(java.lang.Class, java.lang.Class[])",
+            "level": 3,
+            "period": 3483020
+        },
+        {
+            "compileId": "1345",
+            "name": "1345: jdk.internal.classfile.impl.AbstractPoolEntry$Utf8EntryImpl.equalsString(java.lang.String)",
+            "level": 3,
+            "period": 3480138
+        },
+        {
+            "compileId": "1391",
+            "name": "1391: java.lang.invoke.LambdaForm$Holder.constant_L(java.lang.Object)",
+            "level": 3,
+            "period": 2893894
+        },
+        {
+            "compileId": "1410",
+            "name": "1410: java.lang.System.currentTimeMillis()",
+            "level": 0,
+            "period": 3483262
+        },
+        {
+            "compileId": "1413%",
+            "name": "1413%: org.renaissance.harness.RenaissanceSuite$.getVmStartNanos()",
+            "level": 4,
+            "period": 3496074
+        },
+        {
+            "compileId": null,
+            "name": "Stub<IntrinsicStubsGen.vectorizedMismatch>",
+            "level": null,
+            "period": 5482501
+        },
+        {
+            "compileId": "1494",
+            "name": "1494: scala.runtime.ScalaRunTime$.array_update(java.lang.Object, int, java.lang.Object)",
+            "level": 3,
+            "period": 7005155
+        },
+        {
+            "compileId": "1521",
+            "name": "1521: cafesat.api.Formulas$Formula.<init>(cafesat.asts.core.Trees$Formula)",
+            "level": 3,
+            "period": 3507529
+        },
+        {
+            "compileId": "1525",
+            "name": "1525: java.lang.reflect.Array.getLength(java.lang.Object)",
+            "level": 0,
+            "period": 28608988
+        },
+        {
+            "compileId": "1612",
+            "name": "1612: scala.collection.immutable.List.length()",
+            "level": 3,
+            "period": 3268558
+        },
+        {
+            "compileId": "1619",
+            "name": "1619: scala.collection.immutable.RangeIterator.next()",
+            "level": 3,
+            "period": 3449145
+        },
+        {
+            "compileId": "1622",
+            "name": "1622: cafesat.asts.fol.Trees$Not$.apply(cafesat.asts.core.Trees$Formula)",
+            "level": 3,
+            "period": 6645307
+        },
+        {
+            "compileId": "1635",
+            "name": "1635: scala.collection.immutable.List.prependedAll(scala.collection.IterableOnce)",
+            "level": 3,
+            "period": 17081152
+        },
+        {
+            "compileId": "1642",
+            "name": "1642: scala.collection.immutable.Range.<init>(int, int, int)",
+            "level": 3,
+            "period": 2937461
+        },
+        {
+            "compileId": "1675",
+            "name": "1675: scala.collection.immutable.Range.map(scala.Function1)",
+            "level": 3,
+            "period": 3236371
+        },
+        {
+            "compileId": "1682",
+            "name": "1682: scala.collection.StrictOptimizedIterableOps.flatMap(scala.Function1)",
+            "level": 3,
+            "period": 10175684
+        },
+        {
+            "compileId": "1647",
+            "name": "1647: scala.collection.immutable.Vector$.newBuilder()",
+            "level": 3,
+            "period": 6365641
+        },
+        {
+            "compileId": "1637",
+            "name": "1637: scala.collection.immutable.ArraySeq$ofRef.iterator()",
+            "level": 3,
+            "period": 6825962
+        },
+        {
+            "compileId": "1662",
+            "name": "1662: cafesat.api.Formulas$Formula.$bar$bar(cafesat.api.Formulas$Formula)",
+            "level": 3,
+            "period": 3513904
+        },
+        {
+            "compileId": "1726",
+            "name": "1726: org.renaissance.scala.sat.Solver$.$anonfun$solve$20(cafesat.api.Formulas$PropVar[][][], int, int, int, int, int, int, int)",
+            "level": 3,
+            "period": 3400781
+        },
+        {
+            "compileId": "1729",
+            "name": "1729: org.renaissance.scala.sat.Solver$.$anonfun$solve$19(int, cafesat.api.Formulas$PropVar[][][], int, int, int, int, int)",
+            "level": 3,
+            "period": 3481525
+        },
+        {
+            "compileId": "1735",
+            "name": "1735: org.renaissance.scala.sat.Solver$$$Lambda.0x000000008b165b88.apply(java.lang.Object)",
+            "level": 3,
+            "period": 3195865
+        },
+        {
+            "compileId": "1737",
+            "name": "1737: org.renaissance.scala.sat.Solver$.$anonfun$solve$18(int, cafesat.api.Formulas$PropVar[][][], int, int, int, int)",
+            "level": 3,
+            "period": 7114690
+        },
+        {
+            "compileId": "1741",
+            "name": "1741: scala.collection.immutable.$colon$colon.tail()",
+            "level": 4,
+            "period": 9204519
+        },
+        {
+            "compileId": "1762",
+            "name": "1762: org.renaissance.scala.sat.Solver$.$anonfun$solve$24$adapted(cafesat.api.Formulas$PropVar[][][], int, int, int, java.lang.Object)",
+            "level": 3,
+            "period": 6936521
+        },
+        {
+            "compileId": "1748",
+            "name": "1748: jdk.internal.classfile.impl.DirectClassBuilder.build()",
+            "level": 3,
+            "period": 3321107
+        },
+        {
+            "compileId": "1763",
+            "name": "1763: org.renaissance.scala.sat.Solver$.$anonfun$solve$24(cafesat.api.Formulas$PropVar[][][], int, int, int, int)",
+            "level": 3,
+            "period": 2812441
+        },
+        {
+            "compileId": "1760",
+            "name": "1760: scala.collection.immutable.List.length()",
+            "level": 4,
+            "period": 212876280
+        },
+        {
+            "compileId": "1766",
+            "name": "1766: cafesat.asts.core.Trees$ConnectiveApplication.<init>(cafesat.asts.core.Trees$ConnectiveSymbol, scala.collection.immutable.List)",
+            "level": 4,
+            "period": 57409512
+        },
+        {
+            "compileId": "1799",
+            "name": "1799: scala.collection.immutable.NewVectorIterator.advance()",
+            "level": 3,
+            "period": 3270085
+        },
+        {
+            "compileId": "1809",
+            "name": "1809: scala.collection.immutable.ArraySeq.map(scala.Function1)",
+            "level": 3,
+            "period": 3492786
+        },
+        {
+            "compileId": "1812",
+            "name": "1812: scala.collection.immutable.$colon$colon.head()",
+            "level": 1,
+            "period": 17465718
+        },
+        {
+            "compileId": "1820",
+            "name": "1820: scala.collection.StrictOptimizedLinearSeqOps$$anon$1.hasNext()",
+            "level": 3,
+            "period": 3493024
+        },
+        {
+            "compileId": "1818",
+            "name": "1818: scala.Option.isEmpty()",
+            "level": 3,
+            "period": 3361701
+        },
+        {
+            "compileId": "1830",
+            "name": "1830: scala.collection.StrictOptimizedLinearSeqOps$$anon$1.next()",
+            "level": 3,
+            "period": 3390367
+        },
+        {
+            "compileId": "1773",
+            "name": "1773: java.lang.Integer.valueOf(int)",
+            "level": 4,
+            "period": 3493691
+        },
+        {
+            "compileId": "1833",
+            "name": "1833: cafesat.asts.core.Manip$.mapPostorder(cafesat.asts.core.Trees$Formula, scala.Function1, scala.Function1, scala.collection.immutable.List)",
+            "level": 3,
+            "period": 16298963
+        },
+        {
+            "compileId": "1841",
+            "name": "1841: cafesat.asts.fol.Manip$$$Lambda.0x000000008b1726b0.apply(java.lang.Object)",
+            "level": 3,
+            "period": 13440784
+        },
+        {
+            "compileId": "1843",
+            "name": "1843: cafesat.asts.fol.Manip$.simplifyOne$1(cafesat.asts.core.Trees$Formula)",
+            "level": 3,
+            "period": 3493073
+        },
+        {
+            "compileId": "1877",
+            "name": "1877: cafesat.asts.fol.Trees$NotSymbol$.unapply(cafesat.asts.core.Trees$ConnectiveSymbol)",
+            "level": 3,
+            "period": 3475709
+        },
+        {
+            "compileId": "1876",
+            "name": "1876: cafesat.asts.fol.Trees$Not$.unapply(cafesat.asts.core.Trees$ConnectiveApplication)",
+            "level": 3,
+            "period": 20748378
+        },
+        {
+            "compileId": "1871",
+            "name": "1871: cafesat.asts.fol.Trees$Or$.unapply(cafesat.asts.core.Trees$ConnectiveApplication)",
+            "level": 3,
+            "period": 7491409
+        },
+        {
+            "compileId": "1848",
+            "name": "1848: scala.collection.mutable.ListBuffer.addOne(java.lang.Object)",
+            "level": 3,
+            "period": 12408151
+        },
+        {
+            "compileId": "1872",
+            "name": "1872: cafesat.asts.fol.Trees$OrSymbol$.unapply(cafesat.asts.core.Trees$ConnectiveSymbol)",
+            "level": 3,
+            "period": 8965638
+        },
+        {
+            "compileId": "1858",
+            "name": "1858: cafesat.asts.fol.Manip$.isTrue(cafesat.asts.core.Trees$Formula)",
+            "level": 3,
+            "period": 3479707
+        },
+        {
+            "compileId": "1879",
+            "name": "1879: cafesat.asts.fol.Manip$.simplifyOneNot$1(cafesat.asts.core.Trees$Formula)",
+            "level": 3,
+            "period": 14807270
+        },
+        {
+            "compileId": "1883",
+            "name": "1883: cafesat.asts.fol.Trees$Implies$.apply(cafesat.asts.core.Trees$Formula, cafesat.asts.core.Trees$Formula)",
+            "level": 3,
+            "period": 10357169
+        },
+        {
+            "compileId": "1862",
+            "name": "1862: cafesat.asts.fol.Manip$.isFalse(cafesat.asts.core.Trees$Formula)",
+            "level": 3,
+            "period": 3494569
+        },
+        {
+            "compileId": "1882",
+            "name": "1882: cafesat.asts.fol.Manip$.simplifyOneOr$1(cafesat.asts.core.Trees$Formula)",
+            "level": 3,
+            "period": 17502461
+        },
+        {
+            "compileId": "1908",
+            "name": "1908: scala.collection.immutable.List.exists(scala.Function1)",
+            "level": 2,
+            "period": 2950840
+        },
+        {
+            "compileId": "1909",
+            "name": "1909: cafesat.asts.fol.Manip$$$Lambda.0x000000008b174b98.apply(java.lang.Object)",
+            "level": 3,
+            "period": 6197383
+        },
+        {
+            "compileId": "1910",
+            "name": "1910: cafesat.asts.fol.Trees$False$.unapply(cafesat.asts.core.Trees$ConnectiveApplication)",
+            "level": 3,
+            "period": 3493822
+        },
+        {
+            "compileId": "1916",
+            "name": "1916: cafesat.asts.fol.Trees$TrueSymbol$.unapply(cafesat.asts.core.Trees$ConnectiveSymbol)",
+            "level": 2,
+            "period": 3266782
+        },
+        {
+            "compileId": "1922",
+            "name": "1922: cafesat.asts.fol.Manip$$$Lambda.0x000000008b175bb8.apply(java.lang.Object)",
+            "level": 3,
+            "period": 3494688
+        },
+        {
+            "compileId": "1923",
+            "name": "1923: cafesat.asts.fol.Manip$.$anonfun$simplify$8(cafesat.asts.core.Trees$Formula)",
+            "level": 3,
+            "period": 3505774
+        },
+        {
+            "compileId": "1930",
+            "name": "1930: scala.collection.immutable.List.listEq$1(scala.collection.immutable.List, scala.collection.immutable.List)",
+            "level": 3,
+            "period": 47667
+        },
+        {
+            "compileId": "1967",
+            "name": "1967: scala.collection.StrictOptimizedLinearSeqOps.loop$2(int, scala.collection.LinearSeq)",
+            "level": 3,
+            "period": 7761382
+        },
+        {
+            "compileId": "1969",
+            "name": "1969: scala.collection.immutable.List.drop(int)",
+            "level": 3,
+            "period": 3494631
+        },
+        {
+            "compileId": "1970",
+            "name": "1970: scala.collection.LinearSeqOps.apply(int)",
+            "level": 3,
+            "period": 3497068
+        },
+        {
+            "compileId": "1973",
+            "name": "1973: cafesat.asts.fol.Trees$ImpliesSymbol$.unapply(cafesat.asts.core.Trees$ConnectiveSymbol)",
+            "level": 3,
+            "period": 3494029
+        },
+        {
+            "compileId": "1972",
+            "name": "1972: scala.collection.immutable.List.loop$2(int, scala.collection.immutable.List, int)",
+            "level": 3,
+            "period": 6982358
+        },
+        {
+            "compileId": "1974",
+            "name": "1974: cafesat.asts.fol.Trees$Implies$.unapply(cafesat.asts.core.Trees$ConnectiveApplication)",
+            "level": 3,
+            "period": 27983793
+        },
+        {
+            "compileId": "1978",
+            "name": "1978: cafesat.asts.fol.Manip$.simplifyOneImplies$1(cafesat.asts.core.Trees$Formula)",
+            "level": 3,
+            "period": 10866240
+        },
+        {
+            "compileId": "1983%",
+            "name": "1983%: scala.collection.immutable.List.exists(scala.Function1)",
+            "level": 3,
+            "period": 3511168
+        },
+        {
+            "compileId": "1988",
+            "name": "1988: scala.runtime.BoxesRunTime.equals2(java.lang.Object, java.lang.Object)",
+            "level": 3,
+            "period": 6940157
+        },
+        {
+            "compileId": "1989",
+            "name": "1989: cafesat.asts.core.Trees$PredicateApplication.equals(java.lang.Object)",
+            "level": 3,
+            "period": 6900462
+        },
+        {
+            "compileId": "1991",
+            "name": "1991: cafesat.asts.core.Trees$ConnectiveSymbol.equals(java.lang.Object)",
+            "level": 3,
+            "period": 3494381
+        },
+        {
+            "compileId": "1992",
+            "name": "1992: cafesat.asts.core.Trees$ConnectiveApplication.equals(java.lang.Object)",
+            "level": 3,
+            "period": 16791786
+        },
+        {
+            "compileId": "1979",
+            "name": "1979: scala.collection.immutable.List.listEq$1(scala.collection.immutable.List, scala.collection.immutable.List)",
+            "level": 4,
+            "period": 3356253
+        },
+        {
+            "compileId": "1998",
+            "name": "1998: scala.collection.immutable.List.exists(scala.Function1)",
+            "level": 3,
+            "period": 13947804
+        },
+        {
+            "compileId": "1997",
+            "name": "1997: cafesat.asts.core.Manip$.mapPostorder(cafesat.asts.core.Trees$Formula, scala.Function1, scala.Function1, scala.collection.immutable.List)",
+            "level": 3,
+            "period": 41885551
+        },
+        {
+            "compileId": "2001",
+            "name": "2001: scala.collection.immutable.List.flatMap(scala.Function1)",
+            "level": 3,
+            "period": 36968858
+        },
+        {
+            "compileId": "1889",
+            "name": "1889: scala.Some.get()",
+            "level": 4,
+            "period": 1545910
+        },
+        {
+            "compileId": "1891",
+            "name": "1891: cafesat.asts.fol.Trees$Not$.unapply(cafesat.asts.core.Trees$ConnectiveApplication)",
+            "level": 4,
+            "period": 165495997
+        },
+        {
+            "compileId": "2022",
+            "name": "2022: cafesat.asts.core.Trees$PredicateApplication.productArity()",
+            "level": 1,
+            "period": 3469596
+        },
+        {
+            "compileId": "2027",
+            "name": "2027: cafesat.asts.core.Trees$PredicateSymbol.productArity()",
+            "level": 1,
+            "period": 3492604
+        },
+        {
+            "compileId": null,
+            "name": "itable stub",
+            "level": null,
+            "period": 9901400
+        },
+        {
+            "compileId": "2057",
+            "name": "2057: scala.collection.immutable.Set$EmptySet$.size()",
+            "level": 1,
+            "period": 3492988
+        },
+        {
+            "compileId": "2058",
+            "name": "2058: scala.collection.immutable.Set$Set1.size()",
+            "level": 1,
+            "period": 6997851
+        },
+        {
+            "compileId": "2066",
+            "name": "2066: java.lang.Integer.bitCount(int)",
+            "level": 2,
+            "period": 6938321
+        },
+        {
+            "compileId": "2067",
+            "name": "2067: scala.collection.Hashing$.improve(int)",
+            "level": 2,
+            "period": 3821484
+        },
+        {
+            "compileId": "2124",
+            "name": "2124: scala.util.hashing.MurmurHash3.productHash(scala.Product, int, boolean)",
+            "level": 3,
+            "period": 10553364
+        },
+        {
+            "compileId": "2123",
+            "name": "2123: scala.util.hashing.MurmurHash3$.seqHash(scala.collection.Seq)",
+            "level": 3,
+            "period": 3424987
+        },
+        {
+            "compileId": "2129",
+            "name": "2129: scala.collection.immutable.SetBuilderImpl.addOne(java.lang.Object)",
+            "level": 3,
+            "period": 10261416
+        },
+        {
+            "compileId": "2131",
+            "name": "2131: cafesat.sat.Literal.<init>(int, int, int, cafesat.sat.LiteralType)",
+            "level": 3,
+            "period": 3148980
+        },
+        {
+            "compileId": "2132",
+            "name": "2132: scala.collection.immutable.SetBuilderImpl.addOne(java.lang.Object)",
+            "level": 3,
+            "period": 13261150
+        },
+        {
+            "compileId": "2143",
+            "name": "2143: scala.collection.immutable.SetBuilderImpl.result()",
+            "level": 3,
+            "period": 6971840
+        },
+        {
+            "compileId": "2145",
+            "name": "2145: scala.collection.immutable.Set$Set1.incl(java.lang.Object)",
+            "level": 3,
+            "period": 17065665
+        },
+        {
+            "compileId": "1896",
+            "name": "1896: scala.collection.mutable.ListBuffer.addOne(java.lang.Object)",
+            "level": 4,
+            "period": 6591207
+        },
+        {
+            "compileId": "2146",
+            "name": "2146: scala.collection.mutable.Growable.addAll(scala.collection.IterableOnce)",
+            "level": 3,
+            "period": 6950278
+        },
+        {
+            "compileId": "2147",
+            "name": "2147: cafesat.asts.core.Trees$PredicateSymbol.hashCode()",
+            "level": 3,
+            "period": 3393214
+        },
+        {
+            "compileId": "2148",
+            "name": "2148: cafesat.asts.core.Trees$PredicateApplication.hashCode()",
+            "level": 3,
+            "period": 3461442
+        },
+        {
+            "compileId": "2149",
+            "name": "2149: scala.collection.immutable.Set$.from(scala.collection.IterableOnce)",
+            "level": 3,
+            "period": 17384035
+        },
+        {
+            "compileId": "2155",
+            "name": "2155: scala.collection.mutable.HashMap.get(java.lang.Object)",
+            "level": 3,
+            "period": 17198287
+        },
+        {
+            "compileId": "1927",
+            "name": "1927: scala.collection.StrictOptimizedLinearSeqOps$$anon$1.hasNext()",
+            "level": 4,
+            "period": 3492466
+        },
+        {
+            "compileId": "2151",
+            "name": "2151: cafesat.sat.ConjunctiveNormalForm$.rec$1(cafesat.asts.core.Trees$Formula, scala.collection.mutable.ListBuffer, scala.runtime.ObjectRef, scala.runtime.LazyRef)",
+            "level": 3,
+            "period": 10290639
+        },
+        {
+            "compileId": "2175",
+            "name": "2175: cafesat.sat.ConjunctiveNormalForm$$$Lambda.0x000000008b18a008.apply(java.lang.Object)",
+            "level": 3,
+            "period": 6974366
+        },
+        {
+            "compileId": "2176",
+            "name": "2176: cafesat.sat.ConjunctiveNormalForm$.$anonfun$apply$2(scala.collection.mutable.ListBuffer, int, int)",
+            "level": 3,
+            "period": 3491864
+        },
+        {
+            "compileId": "2177",
+            "name": "2177: cafesat.sat.ConjunctiveNormalForm$$$Lambda.0x000000008b18a3e0.apply(java.lang.Object)",
+            "level": 2,
+            "period": 3494117
+        },
+        {
+            "compileId": "2180",
+            "name": "2180: cafesat.sat.ConjunctiveNormalForm$$$Lambda.0x000000008b18a3e0.apply(java.lang.Object)",
+            "level": 3,
+            "period": 6967870
+        },
+        {
+            "compileId": "2192",
+            "name": "2192: scala.collection.immutable.HashSetBuilder.addOne(java.lang.Object)",
+            "level": 3,
+            "period": 10460065
+        },
+        {
+            "compileId": "2190",
+            "name": "2190: scala.collection.immutable.HashSetBuilder.update(scala.collection.immutable.SetNode, java.lang.Object, int, int, int)",
+            "level": 3,
+            "period": 20710158
+        },
+        {
+            "compileId": "2194",
+            "name": "2194: scala.collection.immutable.HashSetBuilder.insertValue(scala.collection.immutable.BitmapIndexedSetNode, int, java.lang.Object, int, int)",
+            "level": 3,
+            "period": 6903636
+        },
+        {
+            "compileId": "2193",
+            "name": "2193: scala.collection.immutable.HashSetBuilder.insertElement(int[], int, int)",
+            "level": 3,
+            "period": 13586837
+        },
+        {
+            "compileId": "2198",
+            "name": "2198: scala.collection.immutable.Node.removeElement(int[], int)",
+            "level": 3,
+            "period": 3493064
+        },
+        {
+            "compileId": "2228",
+            "name": "2228: scala.collection.immutable.Set$SetNIterator.hasNext()",
+            "level": 3,
+            "period": 7078358
+        },
+        {
+            "compileId": "2232",
+            "name": "2232: scala.collection.immutable.Set$Set2.scala$collection$immutable$Set$Set2$$getElem(int)",
+            "level": 3,
+            "period": 10473648
+        },
+        {
+            "compileId": "2233",
+            "name": "2233: scala.collection.immutable.Set$SetNIterator.next()",
+            "level": 3,
+            "period": 3492531
+        },
+        {
+            "compileId": "2234",
+            "name": "2234: scala.collection.immutable.BitmapIndexedSetNode.mergeTwoKeyValPairs(java.lang.Object, int, int, java.lang.Object, int, int, int)",
+            "level": 3,
+            "period": 10478159
+        },
+        {
+            "compileId": "2242",
+            "name": "2242: scala.util.hashing.MurmurHash3.unorderedHash(scala.collection.IterableOnce, int)",
+            "level": 3,
+            "period": 31172605
+        },
+        {
+            "compileId": "2235",
+            "name": "2235: scala.collection.immutable.Set$Set2$$anon$1.apply(int)",
+            "level": 3,
+            "period": 6578319
+        },
+        {
+            "compileId": "2240",
+            "name": "2240: scala.collection.AbstractSet.hashCode()",
+            "level": 3,
+            "period": 3453926
+        },
+        {
+            "compileId": "2244",
+            "name": "2244: scala.collection.immutable.Set$Set3$$anon$2.apply(int)",
+            "level": 3,
+            "period": 3383028
+        },
+        {
+            "compileId": "2246",
+            "name": "2246: scala.collection.immutable.BitmapIndexedSetNode.migrateFromInlineToNodeInPlace(int, int, scala.collection.immutable.SetNode)",
+            "level": 3,
+            "period": 6945571
+        },
+        {
+            "compileId": "2248",
+            "name": "2248: scala.collection.immutable.Set$Set3.iterator()",
+            "level": 3,
+            "period": 3467716
+        },
+        {
+            "compileId": "2258",
+            "name": "2258: scala.collection.immutable.ChampBaseIterator.hasNext()",
+            "level": 3,
+            "period": 34949446
+        },
+        {
+            "compileId": "2257",
+            "name": "2257: scala.collection.immutable.BitmapIndexedSetNode.payloadArity()",
+            "level": 2,
+            "period": 6989903
+        },
+        {
+            "compileId": "2305",
+            "name": "2305: scala.runtime.java8.JFunction0$mcI$sp.apply()",
+            "level": 3,
+            "period": 3487625
+        },
+        {
+            "compileId": "2334",
+            "name": "2334: cafesat.sat.Solver.$anonfun$watched$1()",
+            "level": 3,
+            "period": 10741320
+        },
+        {
+            "compileId": "2335",
+            "name": "2335: scala.reflect.ClassTag$.apply(java.lang.Class)",
+            "level": 3,
+            "period": 3276121
+        },
+        {
+            "compileId": "2337",
+            "name": "2337: java.lang.ClassValue.get(java.lang.Class)",
+            "level": 3,
+            "period": 10463088
+        },
+        {
+            "compileId": "2340",
+            "name": "2340: scala.Array$.fill(int, scala.Function0, scala.reflect.ClassTag)",
+            "level": 3,
+            "period": 6998230
+        },
+        {
+            "compileId": "2348",
+            "name": "2348: scala.runtime.java8.JFunction0$mcZ$sp.apply()",
+            "level": 3,
+            "period": 3493248
+        },
+        {
+            "compileId": "2352",
+            "name": "2352: scala.collection.immutable.Set$Set2.knownSize()",
+            "level": 1,
+            "period": 3458895
+        },
+        {
+            "compileId": "2392",
+            "name": "2392: scala.runtime.BoxesRunTime.typeCode(java.lang.Object)",
+            "level": 3,
+            "period": 6983163
+        },
+        {
+            "compileId": null,
+            "name": "itable stub",
+            "level": null,
+            "period": 3495372
+        },
+        {
+            "compileId": "2393",
+            "name": "2393: cafesat.sat.Solver$Clause$$anonfun$$lessinit$greater$1.apply(java.lang.Object)",
+            "level": 3,
+            "period": 6971881
+        },
+        {
+            "compileId": "2395",
+            "name": "2395: scala.runtime.BoxesRunTime.equalsNumNum(java.lang.Number, java.lang.Number)",
+            "level": 3,
+            "period": 3618971
+        },
+        {
+            "compileId": "2396",
+            "name": "2396: scala.runtime.BoxesRunTime.equalsNumObject(java.lang.Number, java.lang.Object)",
+            "level": 3,
+            "period": 3486050
+        },
+        {
+            "compileId": "2401",
+            "name": "2401: scala.collection.StrictOptimizedIterableOps.map(scala.Function1)",
+            "level": 3,
+            "period": 10422149
+        },
+        {
+            "compileId": "2398",
+            "name": "2398: scala.reflect.ManifestFactory$IntManifest.newArray(int)",
+            "level": 3,
+            "period": 3770905
+        },
+        {
+            "compileId": "2397",
+            "name": "2397: scala.collection.immutable.AbstractSet.iterableFactory()",
+            "level": 3,
+            "period": 6907574
+        },
+        {
+            "compileId": "2402",
+            "name": "2402: scala.collection.IterableOnceOps.copyToArray(java.lang.Object, int, int)",
+            "level": 3,
+            "period": 10451135
+        },
+        {
+            "compileId": "2405",
+            "name": "2405: cafesat.api.Solver$$$Lambda.0x000000008b1a1d68.apply(java.lang.Object)",
+            "level": 3,
+            "period": 20837078
+        },
+        {
+            "compileId": "2399",
+            "name": "2399: scala.collection.immutable.Set$.newBuilder()",
+            "level": 3,
+            "period": 6929541
+        },
+        {
+            "compileId": "2403",
+            "name": "2403: scala.collection.AbstractIterable.toArray(scala.reflect.ClassTag)",
+            "level": 3,
+            "period": 3491595
+        },
+        {
+            "compileId": "2406",
+            "name": "2406: cafesat.sat.Solver.addClause(scala.collection.immutable.Set)",
+            "level": 3,
+            "period": 3483365
+        },
+        {
+            "compileId": "2410",
+            "name": "2410: cafesat.sat.Solver$Clause.<init>(int[])",
+            "level": 3,
+            "period": 3540918
+        },
+        {
+            "compileId": null,
+            "name": "itable stub",
+            "level": null,
+            "period": 7494605
+        },
+        {
+            "compileId": "2407",
+            "name": "2407: scala.collection.IterableOnceOps.toArray(scala.reflect.ClassTag)",
+            "level": 3,
+            "period": 6970804
+        },
+        {
+            "compileId": "2413",
+            "name": "2413: scala.collection.immutable.BitmapIndexedSetNode.foreach(scala.Function1)",
+            "level": 3,
+            "period": 21313413
+        },
+        {
+            "compileId": null,
+            "name": "Stub<identity_hashcode(Object)int>",
+            "level": null,
+            "period": 51506908
+        },
+        {
+            "compileId": "2414",
+            "name": "2414: scala.collection.immutable.ChampBaseIterator.searchNextValueNode()",
+            "level": 3,
+            "period": 45429703
+        },
+        {
+            "compileId": "2249",
+            "name": "2249: scala.collection.immutable.Set$SetNIterator.hasNext()",
+            "level": 4,
+            "period": 3453767
+        },
+        {
+            "compileId": "2426",
+            "name": "2426: scala.collection.immutable.BitmapIndexedSetNode.hasNodes()",
+            "level": 3,
+            "period": 3494929
+        },
+        {
+            "compileId": "2422",
+            "name": "2422: scala.collection.immutable.SetIterator.next()",
+            "level": 3,
+            "period": 41940497
+        },
+        {
+            "compileId": "2427",
+            "name": "2427: scala.collection.immutable.BitmapIndexedSetNode.hasPayload()",
+            "level": 3,
+            "period": 6989240
+        },
+        {
+            "compileId": "2429",
+            "name": "2429: scala.collection.immutable.BitmapIndexedSetNode.getNode(int)",
+            "level": 3,
+            "period": 17476208
+        },
+        {
+            "compileId": "2446",
+            "name": "2446: scala.collection.ArrayOps$ArrayIterator.hasNext()",
+            "level": 2,
+            "period": 3488197
+        },
+        {
+            "compileId": "2473",
+            "name": "2473: scala.runtime.java8.JFunction1$mcZI$sp.apply(java.lang.Object)",
+            "level": 3,
+            "period": 13979911
+        },
+        {
+            "compileId": "2476",
+            "name": "2476: cafesat.sat.Solver$$Lambda.0x000000008b1a6e08.apply$mcZI$sp(int)",
+            "level": 3,
+            "period": 17476171
+        },
+        {
+            "compileId": "2478",
+            "name": "2478: scala.collection.IterableOnceOps.count(scala.Function1)",
+            "level": 3,
+            "period": 41938183
+        },
+        {
+            "compileId": null,
+            "name": "itable stub",
+            "level": null,
+            "period": 3493875
+        },
+        {
+            "compileId": "2479",
+            "name": "2479: scala.collection.ArrayOps$ArrayIterator$mcI$sp.next()",
+            "level": 3,
+            "period": 13976520
+        },
+        {
+            "compileId": "2480",
+            "name": "2480: scala.collection.ArrayOps$ArrayIterator$mcI$sp.next$mcI$sp()",
+            "level": 3,
+            "period": 3493947
+        },
+        {
+            "compileId": "2481",
+            "name": "2481: cafesat.sat.Solver$$Lambda.0x000000008b1a6a10.apply$mcZI$sp(int)",
+            "level": 3,
+            "period": 3493447
+        },
+        {
+            "compileId": "2472",
+            "name": "2472: scala.collection.immutable.Set$Set3.size()",
+            "level": 1,
+            "period": 3493845
+        },
+        {
+            "compileId": "2484",
+            "name": "2484: scala.collection.mutable.ArraySeq.knownSize()",
+            "level": 3,
+            "period": 3493447
+        },
+        {
+            "compileId": "2488",
+            "name": "2488: cafesat.sat.Solver.$anonfun$initClauses$1(cafesat.sat.Solver, scala.runtime.ObjectRef, cafesat.sat.Solver$Clause)",
+            "level": 3,
+            "period": 17461482
+        },
+        {
+            "compileId": "2251",
+            "name": "2251: scala.collection.immutable.Set$SetNIterator.next()",
+            "level": 4,
+            "period": 3486084
+        },
+        {
+            "compileId": "2500",
+            "name": "2500: scala.collection.immutable.ChampBaseIterator.pushNode(scala.collection.immutable.Node)",
+            "level": 3,
+            "period": 6989839
+        },
+        {
+            "compileId": "2165",
+            "name": "2165: scala.collection.immutable.SetBuilderImpl.addOne(java.lang.Object)",
+            "level": 4,
+            "period": 468249585
+        },
+        {
+            "compileId": "2504",
+            "name": "2504: scala.collection.IterableOnceOps.count(scala.Function1)",
+            "level": 4,
+            "period": 62200612452
+        },
+        {
+            "compileId": "2508",
+            "name": "2508: scala.collection.immutable.ChampBaseIterator.searchNextValueNode()",
+            "level": 4,
+            "period": 891226446
+        },
+        {
+            "compileId": "2502",
+            "name": "2502: scala.collection.immutable.ChampBaseIterator.hasNext()",
+            "level": 4,
+            "period": 3495069
+        },
+        {
+            "compileId": "2494",
+            "name": "2494: scala.runtime.java8.JFunction1$mcZI$sp.apply(java.lang.Object)",
+            "level": 4,
+            "period": 3493835
+        },
+        {
+            "compileId": "2503",
+            "name": "2503: scala.collection.immutable.SetIterator.next()",
+            "level": 4,
+            "period": 3495447
+        },
+        {
+            "compileId": "2505",
+            "name": "2505: scala.collection.immutable.BitmapIndexedSetNode.hasNodes()",
+            "level": 4,
+            "period": 6990576
+        },
+        {
+            "compileId": "2506",
+            "name": "2506: scala.collection.immutable.BitmapIndexedSetNode.hasPayload()",
+            "level": 4,
+            "period": 6981737
+        },
+        {
+            "compileId": "2507",
+            "name": "2507: scala.collection.immutable.BitmapIndexedSetNode.getNode(int)",
+            "level": 4,
+            "period": 20969463
+        },
+        {
+            "compileId": "2347",
+            "name": "2347: scala.runtime.ScalaRunTime$.array_update(java.lang.Object, int, java.lang.Object)",
+            "level": 4,
+            "period": 20947205
+        },
+        {
+            "compileId": "2250",
+            "name": "2250: scala.collection.immutable.HashSetBuilder.update(scala.collection.immutable.SetNode, java.lang.Object, int, int, int)",
+            "level": 4,
+            "period": 51969094
+        },
+        {
+            "compileId": "2420",
+            "name": "2420: scala.collection.immutable.Set$Set2.iterator()",
+            "level": 4,
+            "period": 6955855
+        },
+        {
+            "compileId": "1993",
+            "name": "1993: scala.collection.StrictOptimizedLinearSeqOps$$anon$1.next()",
+            "level": 4,
+            "period": 93720724
+        },
+        {
+            "compileId": "2512",
+            "name": "2512: scala.collection.immutable.ChampBaseIterator.initNodes()",
+            "level": 4,
+            "period": 3488718
+        },
+        {
+            "compileId": "2436",
+            "name": "2436: cafesat.sat.Solver$Clause$$anonfun$$lessinit$greater$1.apply(java.lang.Object)",
+            "level": 4,
+            "period": 3474660
+        },
+        {
+            "compileId": "1982",
+            "name": "1982: cafesat.asts.fol.Trees$Implies$.unapply(cafesat.asts.core.Trees$ConnectiveApplication)",
+            "level": 4,
+            "period": 29105829
+        },
+        {
+            "compileId": "2160",
+            "name": "2160: cafesat.asts.core.Trees$PredicateApplication.equals(java.lang.Object)",
+            "level": 4,
+            "period": 41900141
+        },
+        {
+            "compileId": "1789",
+            "name": "1789: scala.collection.immutable.RangeIterator.next()",
+            "level": 4,
+            "period": 3494083
+        },
+        {
+            "compileId": "2007",
+            "name": "2007: scala.runtime.BoxesRunTime.equals(java.lang.Object, java.lang.Object)",
+            "level": 4,
+            "period": 3492832
+        },
+        {
+            "compileId": "2430",
+            "name": "2430: scala.collection.immutable.BitmapIndexedSetNode.nodeArity()",
+            "level": 4,
+            "period": 3493969
+        },
+        {
+            "compileId": "2515",
+            "name": "2515: cafesat.sat.Solver.$anonfun$initClauses$2(scala.collection.immutable.Set, int)",
+            "level": 4,
+            "period": 53005429
+        },
+        {
+            "compileId": "2539",
+            "name": "2539: scala.collection.immutable.List.foreach(scala.Function1)",
+            "level": 3,
+            "period": 6980261
+        },
+        {
+            "compileId": "2549",
+            "name": "2549: scala.runtime.java8.JFunction1$mcZI$sp.apply(java.lang.Object)",
+            "level": 3,
+            "period": 10462051
+        },
+        {
+            "compileId": "2555",
+            "name": "2555: scala.collection.ArrayOps$.forall$extension(java.lang.Object, scala.Function1)",
+            "level": 2,
+            "period": 3467795
+        },
+        {
+            "compileId": "2550",
+            "name": "2550: scala.runtime.ScalaRunTime$.array_apply(java.lang.Object, int)",
+            "level": 3,
+            "period": 10469182
+        },
+        {
+            "compileId": "2565",
+            "name": "2565: cafesat.sat.Solver$CNFFormula$$Lambda.0x000000008b1a74b8.apply(java.lang.Object)",
+            "level": 3,
+            "period": 3491180
+        },
+        {
+            "compileId": "2575",
+            "name": "2575: cafesat.sat.Solver$CNFFormula$$Lambda.0x000000008b1a5000.apply(java.lang.Object)",
+            "level": 3,
+            "period": 6969671
+        },
+        {
+            "compileId": "2576%",
+            "name": "2576%: scala.collection.immutable.List.forall(scala.Function1)",
+            "level": 3,
+            "period": 6929461
+        },
+        {
+            "compileId": "2577",
+            "name": "2577: scala.collection.immutable.List.forall(scala.Function1)",
+            "level": 3,
+            "period": 27944035
+        },
+        {
+            "compileId": "2589",
+            "name": "2589: scala.collection.ArrayOps$.count$extension(java.lang.Object, scala.Function1)",
+            "level": 3,
+            "period": 38698384
+        },
+        {
+            "compileId": "2524",
+            "name": "2524: scala.collection.mutable.Growable.addAll(scala.collection.IterableOnce)",
+            "level": 4,
+            "period": 360385664
+        },
+        {
+            "compileId": "2567",
+            "name": "2567: scala.runtime.java8.JFunction1$mcZI$sp.apply(java.lang.Object)",
+            "level": 4,
+            "period": 10850544
+        },
+        {
+            "compileId": "2568",
+            "name": "2568: scala.runtime.ScalaRunTime$.array_apply(java.lang.Object, int)",
+            "level": 4,
+            "period": 28479076
+        },
+        {
+            "compileId": "2595",
+            "name": "2595: scala.collection.ArrayOps$.count$extension(java.lang.Object, scala.Function1)",
+            "level": 4,
+            "period": 202707507
+        },
+        {
+            "compileId": "2522",
+            "name": "2522: scala.collection.IterableOnceOps.toArray(scala.reflect.ClassTag)",
+            "level": 4,
+            "period": 301168049
+        },
+        {
+            "compileId": "2623",
+            "name": "2623: cafesat.common.FixedIntDoublePriorityQueue.siftUp(int, double)",
+            "level": 3,
+            "period": 13893598
+        },
+        {
+            "compileId": "2622",
+            "name": "2622: scala.collection.ArrayOps$.foreach$extension(java.lang.Object, scala.Function1)",
+            "level": 2,
+            "period": 3434861
+        },
+        {
+            "compileId": "2624",
+            "name": "2624: scala.runtime.java8.JFunction1$mcDI$sp.apply(java.lang.Object)",
+            "level": 3,
+            "period": 3469443
+        },
+        {
+            "compileId": "2625",
+            "name": "2625: cafesat.common.FixedIntDoublePriorityQueue.incScore(int, double)",
+            "level": 3,
+            "period": 6948932
+        },
+        {
+            "compileId": "2627",
+            "name": "2627: cafesat.sat.Solver$CNFFormula$$Lambda.0x000000008b1a8000.apply(java.lang.Object)",
+            "level": 3,
+            "period": 6972255
+        },
+        {
+            "compileId": "2626",
+            "name": "2626: scala.collection.ArrayOps$.foreach$extension(java.lang.Object, scala.Function1)",
+            "level": 3,
+            "period": 3492468
+        },
+        {
+            "compileId": "2643",
+            "name": "2643: cafesat.sat.Solver$$Lambda.0x000000008b1a87d0.apply(java.lang.Object)",
+            "level": 3,
+            "period": 6980790
+        },
+        {
+            "compileId": "2644",
+            "name": "2644: cafesat.sat.Solver.cafesat$sat$Solver$$recordClause(cafesat.sat.Solver$Clause)",
+            "level": 3,
+            "period": 10463607
+        },
+        {
+            "compileId": "2645",
+            "name": "2645: cafesat.sat.Vector.append(java.lang.Object)",
+            "level": 4,
+            "period": 118669449
+        },
+        {
+            "compileId": "2695%",
+            "name": "2695%: cafesat.sat.Solver.deduce()",
+            "level": 3,
+            "period": 3492941
+        },
+        {
+            "compileId": "2697",
+            "name": "2697: cafesat.sat.Solver.deduce()",
+            "level": 3,
+            "period": 27944006
+        },
+        {
+            "compileId": "2707",
+            "name": "2707: cafesat.common.FixedIntDoublePriorityQueue.siftDown(int, double)",
+            "level": 3,
+            "period": 3492979
+        },
+        {
+            "compileId": "2528",
+            "name": "2528: cafesat.sat.Solver$$Lambda.0x000000008b1a3970.apply(java.lang.Object)",
+            "level": 4,
+            "period": 24505877
+        },
+        {
+            "compileId": "2716",
+            "name": "2716: scala.collection.immutable.ChampBaseIterator.searchNextValueNode()",
+            "level": 3,
+            "period": 31443483
+        },
+        {
+            "compileId": "2726",
+            "name": "2726: cafesat.api.Solver$.$anonfun$solveForSatisfiability$2(boolean[], scala.Tuple2)",
+            "level": 2,
+            "period": 3493626
+        },
+        {
+            "compileId": "2732",
+            "name": "2732: scala.collection.immutable.BitmapIndexedMapNode.mergeTwoKeyValPairs(java.lang.Object, java.lang.Object, int, int, java.lang.Object, java.lang.Object, int, int, int)",
+            "level": 2,
+            "period": 3493909
+        },
+        {
+            "compileId": "2596",
+            "name": "2596: cafesat.sat.Solver$CNFFormula$$Lambda.0x000000008b1a53d0.apply(java.lang.Object)",
+            "level": 4,
+            "period": 3494196
+        },
+        {
+            "compileId": "2632",
+            "name": "2632: cafesat.sat.Solver$CNFFormula$$Lambda.0x000000008b1a8000.apply(java.lang.Object)",
+            "level": 4,
+            "period": 264915994
+        },
+        {
+            "compileId": "2769",
+            "name": "2769: cafesat.asts.core.Manip$.mapPostorder(cafesat.asts.core.Trees$Formula, scala.Function1, scala.Function1, scala.collection.immutable.List)",
+            "level": 4,
+            "period": 515288086
+        },
+        {
+            "compileId": "2773",
+            "name": "2773: cafesat.asts.fol.Manip$.simplifyOne$1(cafesat.asts.core.Trees$Formula)",
+            "level": 4,
+            "period": 152517226
+        },
+        {
+            "compileId": "2788",
+            "name": "2788: scala.collection.immutable.SetHashIterator.next()",
+            "level": 3,
+            "period": 3487058
+        },
+        {
+            "compileId": "2790",
+            "name": "2790: scala.util.hashing.MurmurHash3.unorderedHash(scala.collection.IterableOnce, int)",
+            "level": 4,
+            "period": 213181310
+        },
+        {
+            "compileId": "2791",
+            "name": "2791: scala.collection.AbstractSet.hashCode()",
+            "level": 4,
+            "period": 6923604
+        },
+        {
+            "compileId": "2797",
+            "name": "2797: java.lang.ClassValue$ClassValueMap.readAccess(java.lang.ClassValue)",
+            "level": 2,
+            "period": 3448849
+        },
+        {
+            "compileId": "2804",
+            "name": "2804: java.util.WeakHashMap.get(java.lang.Object)",
+            "level": 3,
+            "period": 3492297
+        },
+        {
+            "compileId": "2803",
+            "name": "2803: java.lang.ClassValue$ClassValueMap.readAccess(java.lang.ClassValue)",
+            "level": 3,
+            "period": 6970171
+        },
+        {
+            "compileId": "2721",
+            "name": "2721: scala.collection.AbstractSeq.hashCode()",
+            "level": 4,
+            "period": 21972312
+        },
+        {
+            "compileId": "2768",
+            "name": "2768: scala.collection.immutable.List.iterator()",
+            "level": 4,
+            "period": 6978486
+        },
+        {
+            "compileId": "2810",
+            "name": "2810: scala.collection.StrictOptimizedIterableOps.map(scala.Function1)",
+            "level": 4,
+            "period": 336848491
+        },
+        {
+            "compileId": "2818",
+            "name": "2818: cafesat.sat.Solver.$anonfun$initClauses$1(cafesat.sat.Solver, scala.runtime.ObjectRef, cafesat.sat.Solver$Clause)",
+            "level": 3,
+            "period": 17468744
+        },
+        {
+            "compileId": "2813",
+            "name": "2813: cafesat.api.Solver$$$Lambda.0x000000008b1a1d68.apply(java.lang.Object)",
+            "level": 4,
+            "period": 588338064
+        },
+        {
+            "compileId": "2824",
+            "name": "2824: scala.collection.immutable.ChampBaseIterator.searchNextValueNode()",
+            "level": 4,
+            "period": 43752018595
+        },
+        {
+            "compileId": "2814",
+            "name": "2814: scala.collection.immutable.HashSetBuilder.addOne(java.lang.Object)",
+            "level": 4,
+            "period": 3494189
+        },
+        {
+            "compileId": "2807",
+            "name": "2807: scala.reflect.ClassTag$GenericClassTag.newArray(int)",
+            "level": 4,
+            "period": 3606647
+        },
+        {
+            "compileId": "2772",
+            "name": "2772: cafesat.asts.fol.Manip$.isNot(cafesat.asts.core.Trees$Formula)",
+            "level": 4,
+            "period": 20824809
+        },
+        {
+            "compileId": "2794",
+            "name": "2794: scala.runtime.java8.JFunction0$mcI$sp.apply()",
+            "level": 4,
+            "period": 6989223
+        },
+        {
+            "compileId": "2787",
+            "name": "2787: cafesat.sat.ConjunctiveNormalForm$.rec$1(cafesat.asts.core.Trees$Formula, scala.collection.mutable.ListBuffer, scala.runtime.ObjectRef, scala.runtime.LazyRef)",
+            "level": 4,
+            "period": 186911686
+        },
+        {
+            "compileId": "2777",
+            "name": "2777: cafesat.asts.fol.Manip$$$Lambda.0x000000008b174b98.apply(java.lang.Object)",
+            "level": 4,
+            "period": 6206786
+        },
+        {
+            "compileId": "2781",
+            "name": "2781: cafesat.asts.core.Trees$ConnectiveApplication.equals(java.lang.Object)",
+            "level": 4,
+            "period": 209264189
+        },
+        {
+            "compileId": "2646",
+            "name": "2646: cafesat.sat.Solver$$Lambda.0x000000008b1a87d0.apply(java.lang.Object)",
+            "level": 4,
+            "period": 478148005
+        },
+        {
+            "compileId": "2696",
+            "name": "2696: cafesat.sat.Vector.apply(int)",
+            "level": 4,
+            "period": 3492383
+        },
+        {
+            "compileId": "2537",
+            "name": "2537: scala.collection.immutable.Set$Set2.exists(scala.Function1)",
+            "level": 4,
+            "period": 13785781
+        },
+        {
+            "compileId": "2594",
+            "name": "2594: cafesat.sat.Solver$CNFFormula.$anonfun$new$5(cafesat.sat.Solver$Clause, int)",
+            "level": 4,
+            "period": 4714664407
+        },
+        {
+            "compileId": "2828",
+            "name": "2828: scala.collection.immutable.ChampBaseIterator.<init>(scala.collection.immutable.Node)",
+            "level": 4,
+            "period": 21197041
+        },
+        {
+            "compileId": "2836",
+            "name": "2836: scala.collection.immutable.Set$Set4.buildTo(scala.collection.mutable.Builder)",
+            "level": 3,
+            "period": 7160628
+        },
+        {
+            "compileId": "2837",
+            "name": "2837: scala.collection.IterableOnceOps.exists(scala.Function1)",
+            "level": 3,
+            "period": 14007990
+        },
+        {
+            "compileId": "2829",
+            "name": "2829: scala.collection.immutable.Set$Set3.exists(scala.Function1)",
+            "level": 4,
+            "period": 6878816
+        },
+        {
+            "compileId": "2841",
+            "name": "2841: scala.collection.ArrayOps$.forall$extension(java.lang.Object, scala.Function1)",
+            "level": 3,
+            "period": 10482400
+        },
+        {
+            "compileId": "2830",
+            "name": "2830: cafesat.sat.Solver.$anonfun$initClauses$1(cafesat.sat.Solver, scala.runtime.ObjectRef, cafesat.sat.Solver$Clause)",
+            "level": 4,
+            "period": 130788956
+        },
+        {
+            "compileId": "2843",
+            "name": "2843: scala.collection.ArrayOps$.forall$extension(java.lang.Object, scala.Function1)",
+            "level": 4,
+            "period": 225255164
+        },
+        {
+            "compileId": "2842%",
+            "name": "2842%: scala.collection.immutable.List.forall(scala.Function1)",
+            "level": 4,
+            "period": 13966150
+        },
+        {
+            "compileId": "2846",
+            "name": "2846: scala.collection.immutable.List.foreach(scala.Function1)",
+            "level": 4,
+            "period": 191750017
+        },
+        {
+            "compileId": "2844",
+            "name": "2844: cafesat.sat.Solver$CNFFormula$$Lambda.0x000000008b1a5000.apply(java.lang.Object)",
+            "level": 4,
+            "period": 3489773
+        },
+        {
+            "compileId": "2848",
+            "name": "2848: cafesat.sat.Vector.allocate(int)",
+            "level": 3,
+            "period": 3493768
+        },
+        {
+            "compileId": "2849",
+            "name": "2849: cafesat.sat.Solver.enqueueLiteral(int, cafesat.sat.Solver$Clause)",
+            "level": 4,
+            "period": 24424330
+        },
+        {
+            "compileId": "2887",
+            "name": "2887: scala.collection.immutable.List.map(scala.Function1)",
+            "level": 3,
+            "period": 10467202
+        },
+        {
+            "compileId": "2850%",
+            "name": "2850%: cafesat.sat.Solver.deduce()",
+            "level": 4,
+            "period": 24454645
+        },
+        {
+            "compileId": "2894",
+            "name": "2894: cafesat.sat.Solver$$Lambda.0x000000008b1a0a18.apply()",
+            "level": 4,
+            "period": 82930811
+        },
+        {
+            "compileId": "2896",
+            "name": "2896: scala.collection.immutable.BitmapIndexedSetNode.foreach(scala.Function1)",
+            "level": 4,
+            "period": 6986866
+        },
+        {
+            "compileId": "2888",
+            "name": "2888: scala.collection.immutable.BitmapIndexedSetNode.migrateFromInlineToNodeInPlace(int, int, scala.collection.immutable.SetNode)",
+            "level": 4,
+            "period": 108399800
+        },
+        {
+            "compileId": "2854",
+            "name": "2854: cafesat.asts.core.Trees$PredicateSymbol.hashCode()",
+            "level": 4,
+            "period": 6984918
+        },
+        {
+            "compileId": "2855",
+            "name": "2855: cafesat.asts.core.Trees$PredicateApplication.hashCode()",
+            "level": 4,
+            "period": 13914990
+        },
+        {
+            "compileId": "2874",
+            "name": "2874: scala.collection.mutable.HashMap.get(java.lang.Object)",
+            "level": 4,
+            "period": 46625794
+        },
+        {
+            "compileId": "2885",
+            "name": "2885: cafesat.asts.fol.Trees$PropositionalVariable$.unapply(cafesat.asts.core.Trees$PredicateApplication)",
+            "level": 4,
+            "period": 10500463
+        },
+        {
+            "compileId": "2870",
+            "name": "2870: cafesat.asts.fol.Manip$.simplifyOneOr$1(cafesat.asts.core.Trees$Formula)",
+            "level": 4,
+            "period": 41740976
+        },
+        {
+            "compileId": "2872",
+            "name": "2872: cafesat.asts.fol.Manip$.simplifyOneImplies$1(cafesat.asts.core.Trees$Formula)",
+            "level": 4,
+            "period": 28268381
+        },
+        {
+            "compileId": "2852",
+            "name": "2852: cafesat.common.FixedIntDoublePriorityQueue.deleteMax()",
+            "level": 4,
+            "period": 69871819
+        },
+        {
+            "compileId": "2866",
+            "name": "2866: cafesat.api.Formulas$Formula.$bar$bar(cafesat.api.Formulas$Formula)",
+            "level": 4,
+            "period": 3484817
+        },
+        {
+            "compileId": "2897",
+            "name": "2897: scala.collection.immutable.List.forall(scala.Function1)",
+            "level": 4,
+            "period": 463475051
+        },
+        {
+            "compileId": "2899",
+            "name": "2899: scala.collection.ArrayOps$.map$extension(java.lang.Object, scala.Function1, scala.reflect.ClassTag)",
+            "level": 3,
+            "period": 3494128
+        },
+        {
+            "compileId": "2903",
+            "name": "2903: scala.collection.immutable.MapKeyValueTupleIterator.next()",
+            "level": 3,
+            "period": 3494340
+        },
+        {
+            "compileId": "2898",
+            "name": "2898: cafesat.sat.Solver.deduce()",
+            "level": 4,
+            "period": 646307819
+        },
+        {
+            "compileId": "2941%",
+            "name": "2941%: scala.collection.immutable.List.exists(scala.Function1)",
+            "level": 4,
+            "period": 3535452
+        },
+        {
+            "compileId": "2954",
+            "name": "2954: scala.collection.immutable.BitmapIndexedSetNode.mergeTwoKeyValPairs(java.lang.Object, int, int, java.lang.Object, int, int, int)",
+            "level": 3,
+            "period": 13832261
+        },
+        {
+            "compileId": "2952",
+            "name": "2952: scala.collection.immutable.HashSetBuilder.update(scala.collection.immutable.SetNode, java.lang.Object, int, int, int)",
+            "level": 3,
+            "period": 20818475
+        },
+        {
+            "compileId": "2958",
+            "name": "2958: scala.collection.immutable.HashMapBuilder.addOne(java.lang.Object, java.lang.Object)",
+            "level": 3,
+            "period": 3494362
+        },
+        {
+            "compileId": "2957",
+            "name": "2957: scala.collection.immutable.HashSetBuilder.update(scala.collection.immutable.SetNode, java.lang.Object, int, int, int)",
+            "level": 4,
+            "period": 693441586
+        },
+        {
+            "compileId": "2968",
+            "name": "2968: scala.collection.immutable.BitmapIndexedSetNode.foreach(scala.Function1)",
+            "level": 3,
+            "period": 3541267
+        },
+        {
+            "compileId": "2965",
+            "name": "2965: java.lang.ClassValue$ClassValueMap.readAccess(java.lang.ClassValue)",
+            "level": 4,
+            "period": 31468866
+        },
+        {
+            "compileId": "2966",
+            "name": "2966: scala.runtime.java8.JFunction0$mcZ$sp.apply()",
+            "level": 4,
+            "period": 7023722
+        },
+        {
+            "compileId": "2948",
+            "name": "2948: cafesat.sat.ConjunctiveNormalForm$$$Lambda.0x000000008b18a008.apply(java.lang.Object)",
+            "level": 4,
+            "period": 16117087
+        },
+        {
+            "compileId": "2917",
+            "name": "2917: scala.collection.immutable.VectorBuilder.addAll(scala.collection.IterableOnce)",
+            "level": 4,
+            "period": 13615615
+        },
+        {
+            "compileId": "2924",
+            "name": "2924: java.util.Arrays.copyOf(java.lang.Object[], int, java.lang.Class)",
+            "level": 4,
+            "period": 6648644
+        },
+        {
+            "compileId": "2900",
+            "name": "2900: scala.collection.immutable.HashMapBuilder.update(scala.collection.immutable.MapNode, java.lang.Object, java.lang.Object, int, int, int)",
+            "level": 4,
+            "period": 10483029
+        },
+        {
+            "compileId": "2971%",
+            "name": "2971%: scala.collection.immutable.Range.foreach$mVc$sp(scala.Function1)",
+            "level": 3,
+            "period": 3495322
+        },
+        {
+            "compileId": "2976",
+            "name": "2976: org.renaissance.scala.sat.Solver$$$Lambda.0x000000008b1af5a8.apply(java.lang.Object)",
+            "level": 3,
+            "period": 3486767
+        },
+        {
+            "compileId": "2995",
+            "name": "2995: scala.collection.immutable.List.exists(scala.Function1)",
+            "level": 4,
+            "period": 173689732
+        },
+        {
+            "compileId": "3002",
+            "name": "3002: scala.collection.immutable.BitmapIndexedSetNode.foreach(scala.Function1)",
+            "level": 4,
+            "period": 182095649
+        },
+        {
+            "compileId": "3000",
+            "name": "3000: scala.collection.immutable.BitmapIndexedSetNode.mergeTwoKeyValPairs(java.lang.Object, int, int, java.lang.Object, int, int, int)",
+            "level": 4,
+            "period": 31229355
+        },
+        {
+            "compileId": "2996",
+            "name": "2996: scala.collection.immutable.List.flatMap(scala.Function1)",
+            "level": 4,
+            "period": 45328090
+        },
+        {
+            "compileId": "2998",
+            "name": "2998: cafesat.sat.ConjunctiveNormalForm$$$Lambda.0x000000008b18a3e0.apply(java.lang.Object)",
+            "level": 4,
+            "period": 4066663
+        },
+        {
+            "compileId": "3012",
+            "name": "3012: scala.collection.immutable.VectorBuilder.result()",
+            "level": 3,
+            "period": 2629441
+        },
+        {
+            "compileId": "3013",
+            "name": "3013: scala.collection.immutable.VectorBuilder.result()",
+            "level": 3,
+            "period": 3488568
+        },
+        {
+            "compileId": "3011",
+            "name": "3011: scala.collection.immutable.Range.map(scala.Function1)",
+            "level": 4,
+            "period": 19498524
+        },
+        {
+            "compileId": "3009",
+            "name": "3009: scala.Array$.fill(int, scala.Function0, scala.reflect.ClassTag)",
+            "level": 4,
+            "period": 34961063
+        },
+        {
+            "compileId": "3010",
+            "name": "3010: scala.collection.StrictOptimizedIterableOps.flatMap(scala.Function1)",
+            "level": 4,
+            "period": 3612864
+        },
+        {
+            "compileId": "3026",
+            "name": "3026: scala.collection.ArrayOps$.map$extension(java.lang.Object, scala.Function1, scala.reflect.ClassTag)",
+            "level": 4,
+            "period": 3493708
+        },
+        {
+            "compileId": "3039",
+            "name": "3039: org.renaissance.scala.sat.Solver$.$anonfun$solve$24(cafesat.api.Formulas$PropVar[][][], int, int, int, int)",
+            "level": 4,
+            "period": 11119506
+        },
+        {
+            "compileId": "3040",
+            "name": "3040: org.renaissance.scala.sat.Solver$.$anonfun$solve$28(cafesat.api.Formulas$PropVar[][][], int, int, int, int)",
+            "level": 4,
+            "period": 1737690
+        },
+        {
+            "compileId": "3035",
+            "name": "3035: org.renaissance.scala.sat.Solver$.$anonfun$solve$20(cafesat.api.Formulas$PropVar[][][], int, int, int, int, int, int, int)",
+            "level": 4,
+            "period": 10641409
+        },
+        {
+            "compileId": "3036",
+            "name": "3036: org.renaissance.scala.sat.Solver$$$Lambda.0x000000008b165f60.apply(java.lang.Object)",
+            "level": 4,
+            "period": 3494466
+        },
+        {
+            "compileId": "3028",
+            "name": "3028: scala.collection.immutable.BitmapIndexedMapNode.getNode(int)",
+            "level": 4,
+            "period": 3494137
+        },
+        {
+            "compileId": "3043",
+            "name": "3043: cafesat.sat.Solver.decide()",
+            "level": 4,
+            "period": 3494295
+        },
+        {
+            "compileId": "3046",
+            "name": "3046: scala.collection.immutable.VectorBuilder.result()",
+            "level": 4,
+            "period": 3654863
+        },
+        {
+            "compileId": "3049%",
+            "name": "3049%: scala.collection.immutable.List.map(scala.Function1)",
+            "level": 4,
+            "period": 3335891
+        },
+        {
+            "compileId": "3044",
+            "name": "3044: cafesat.sat.Solver$$Lambda.0x000000008b1ab178.apply$mcZI$sp(int)",
+            "level": 4,
+            "period": 6975676
+        },
+        {
+            "compileId": "3060",
+            "name": "3060: org.renaissance.scala.sat.Solver$.$anonfun$solve$17$adapted(cafesat.api.Formulas$PropVar[][][], int, int, int, java.lang.Object)",
+            "level": 3,
+            "period": 3538488
+        },
+        {
+            "compileId": "3051",
+            "name": "3051: cafesat.api.Formulas$Formula.hashCode()",
+            "level": 4,
+            "period": 10483349
+        },
+        {
+            "compileId": "3065",
+            "name": "3065: scala.collection.immutable.ArraySeq.map(scala.Function1)",
+            "level": 4,
+            "period": 7043391
+        },
+        {
+            "compileId": "3069",
+            "name": "3069: scala.collection.immutable.HashSetBuilder.result()",
+            "level": 3,
+            "period": 3504443
+        },
+        {
+            "compileId": "3067",
+            "name": "3067: scala.collection.immutable.List.map(scala.Function1)",
+            "level": 4,
+            "period": 41426342
+        },
+        {
+            "compileId": "3052",
+            "name": "3052: scala.collection.immutable.BitmapIndexedMapNode.apply(java.lang.Object, int, int, int)",
+            "level": 4,
+            "period": 6988525
+        },
+        {
+            "compileId": "3070",
+            "name": "3070: scala.collection.IterableOnceOps.exists(scala.Function1)",
+            "level": 4,
+            "period": 45439444
+        },
+        {
+            "compileId": "3074",
+            "name": "3074: scala.collection.immutable.ArraySeq$.unsafeWrapArray(java.lang.Object)",
+            "level": 3,
+            "period": 3194568
+        },
+        {
+            "compileId": "3075",
+            "name": "3075: org.renaissance.scala.sat.Solver$.$anonfun$solve$13(cafesat.api.Formulas$PropVar[][][], int, int, int, int, int, int)",
+            "level": 4,
+            "period": 3566467
+        },
+        {
+            "compileId": "3087",
+            "name": "3087: cafesat.api.Solver$$$Lambda.0x000000008b1ab568.apply(java.lang.Object)",
+            "level": 4,
+            "period": 6988382
+        },
+        {
+            "compileId": "3095",
+            "name": "3095: scala.collection.immutable.MapBuilderImpl.addOne(java.lang.Object, java.lang.Object)",
+            "level": 4,
+            "period": 3494057
+        },
+        {
+            "compileId": "3100",
+            "name": "3100: scala.collection.immutable.MapKeyValueTupleIterator.next()",
+            "level": 4,
+            "period": 3494901
+        },
+        {
+            "compileId": "3108",
+            "name": "3108: scala.collection.mutable.HashMap$$anon$1.extract(scala.collection.mutable.HashMap$Node)",
+            "level": 4,
+            "period": 3506377
+        },
+        {
+            "compileId": "3137",
+            "name": "3137: scala.collection.mutable.HashMap.growTable(int)",
+            "level": 3,
+            "period": 3416377
+        },
+        {
+            "compileId": "3184",
+            "name": "3184: org.renaissance.scala.sat.Solver$.$anonfun$solve$16(cafesat.api.Formulas$PropVar[][][], int, int, int)",
+            "level": 3,
+            "period": 3315443
+        },
+        {
+            "compileId": "3197",
+            "name": "3197: org.renaissance.scala.sat.Solver$.$anonfun$solve$31(cafesat.api.Formulas$PropVar[][][], int, scala.Option[][], int)",
+            "level": 3,
+            "period": 3493528
+        }
+    ]
+}

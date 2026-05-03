@@ -1,0 +1,28 @@
+<div class="general-run-metadata">
+  @for (group of metadataGroups(); track group.title) {
+    <div class="metadata-group-wrapper">
+      <h3>{{ group.title }}</h3>
+      
+      <mat-grid-list class="metadata-grid" [cols]="cols()" rowHeight="25px">
+        @for (metadata of group.items; track metadata.label) {
+          <mat-grid-tile>
+            <div class="tile-content">
+              <span class="tile-label">
+                <b>{{ metadata.label }}:&nbsp;</b>
+              </span>
+              <span class="tile-value" [matTooltip]="metadata.value" appShowIfTruncated>
+                @if (metadata.url) {
+                  <a [href]="metadata.url" class="metadata-link">{{ metadata.value }}</a>
+                } @else {
+                  {{ metadata.value }}
+                }
+              </span>
+            </div>
+          </mat-grid-tile>
+        }
+      </mat-grid-list>
+    </div>
+  } @empty {
+    <div>No metadata available.</div>
+  }
+</div>

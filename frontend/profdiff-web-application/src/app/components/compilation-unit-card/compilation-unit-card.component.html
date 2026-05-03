@@ -1,0 +1,42 @@
+<mat-card
+  class="compilation-card"
+  (click)="onCardClick()"
+  [class.ui-blocked]="disabled()"
+  [class.selected]="isSelected()"
+>
+    <mat-card-header 
+        [matTooltip]="fragmentTooltip()"
+        matTooltipPosition="above"
+    >
+    <mat-card-subtitle>
+      Compilation {{ compilation().id }}
+    </mat-card-subtitle>
+  </mat-card-header>
+  
+  <mat-card-content class="compilations-content">
+    @if (isProfilerAvailable()) {
+      <div>
+        @if (totalPeriod()) {
+          <span>
+          Hotness: {{ (compilation().period || 0) / totalPeriod()! | percent: '1.2' }}
+          </span>
+        }
+        <div class="cu-markers">
+          @if (compilation().isHot) {
+            <mat-chip>Hot</mat-chip>
+          }
+          @if (compilation().isFragment) {
+            <mat-chip 
+              class="clickable-fragment-chip" 
+              (click)="onParentClick($event)"
+              [matTooltip]="'Go to parent compilation unit.'"
+            >
+              Fragment
+              <mat-icon matChipTrailingIcon>call_made</mat-icon> 
+            </mat-chip>
+          }
+        </div>
+      </div>
+    }
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,31 @@
+/* Fixed footer container anchored to the bottom of the viewport. */
+.floating-dock {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+
+  /* Flexbox for spacing actions (left) and content (right) apart. */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+
+  /* High z-index ensures the dock sits above scrolling page content. */
+  z-index: 99;
+}
+
+/* Wrapper for action buttons (Left aligned). */
+.dock-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+/* Wrapper for projected content (Right aligned). */
+.dock-content {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}

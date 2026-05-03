@@ -1,0 +1,24 @@
+services:
+  backend:
+    image: danekjiri/profdiff-visualizer-backend:latest
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    ports:
+      - "${BACKEND_PORT:-8080}:8080"
+    volumes:
+      - "${BENCHMARKS_DIR:?Error: BENCHMARKS_DIR must be set!}:/workspace:ro"
+    environment:
+      - MICRONAUT_ENVIRONMENTS=docker
+
+  frontend:
+    image: danekjiri/profdiff-visualizer-frontend:latest
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    ports:
+      - "${FRONTEND_PORT:-4200}:80"
+    environment:
+      - BACKEND_URL=http://backend:8080
+    depends_on:
+      - backend

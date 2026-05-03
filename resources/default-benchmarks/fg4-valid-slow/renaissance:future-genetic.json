@@ -1,0 +1,3073 @@
+{
+    "compilationKind": "JIT",
+    "totalPeriod": 591357175393,
+    "executionId": "1639563",
+    "code": [
+        {
+            "compileId": null,
+            "name": "flush_icache_final_stub",
+            "level": null,
+            "period": 3261171
+        },
+        {
+            "compileId": null,
+            "name": "dpow",
+            "level": null,
+            "period": 13139400
+        },
+        {
+            "compileId": null,
+            "name": "Shared Runtime resolve_opt_virtual_call_blob",
+            "level": null,
+            "period": 3318095
+        },
+        {
+            "compileId": null,
+            "name": "I2C/C2I adapters(0xb)",
+            "level": null,
+            "period": 22291170
+        },
+        {
+            "compileId": null,
+            "name": "I2C/C2I adapters(0xba)",
+            "level": null,
+            "period": 3262199
+        },
+        {
+            "compileId": null,
+            "name": "I2C/C2I adapters(0xbb)",
+            "level": null,
+            "period": 10708543
+        },
+        {
+            "compileId": null,
+            "name": "Interpreter",
+            "level": null,
+            "period": 764060300
+        },
+        {
+            "compileId": null,
+            "name": "I2C/C2I adapters(0xbbe)",
+            "level": null,
+            "period": 3315130
+        },
+        {
+            "compileId": null,
+            "name": "I2C/C2I adapters(0xbbb)",
+            "level": null,
+            "period": 3306374
+        },
+        {
+            "compileId": null,
+            "name": "I2C/C2I adapters(0xaa)",
+            "level": null,
+            "period": 3634500
+        },
+        {
+            "compileId": null,
+            "name": "I2C/C2I adapters(0xbbbb)",
+            "level": null,
+            "period": 4238856
+        },
+        {
+            "compileId": null,
+            "name": "jbyte_disjoint_arraycopy",
+            "level": null,
+            "period": 4234091
+        },
+        {
+            "compileId": null,
+            "name": "oop_disjoint_arraycopy",
+            "level": null,
+            "period": 3949306505
+        },
+        {
+            "compileId": null,
+            "name": "oop_arraycopy",
+            "level": null,
+            "period": 113179691
+        },
+        {
+            "compileId": null,
+            "name": "I2C/C2I adapters(0xbaa)",
+            "level": null,
+            "period": 3430725
+        },
+        {
+            "compileId": null,
+            "name": "I2C/C2I adapters(0xbab)",
+            "level": null,
+            "period": 4982309
+        },
+        {
+            "compileId": null,
+            "name": "I2C/C2I adapters(0xbabb)",
+            "level": null,
+            "period": 3301432
+        },
+        {
+            "compileId": null,
+            "name": "C1 Runtime slow_subtype_check_blob",
+            "level": null,
+            "period": 109203435
+        },
+        {
+            "compileId": null,
+            "name": "g1_post_barrier_slow",
+            "level": null,
+            "period": 23778651
+        },
+        {
+            "compileId": null,
+            "name": "itable stub",
+            "level": null,
+            "period": 16492367278
+        },
+        {
+            "compileId": null,
+            "name": "itable stub",
+            "level": null,
+            "period": 23076367
+        },
+        {
+            "compileId": null,
+            "name": "I2C/C2I adapters(0xbb7eb)",
+            "level": null,
+            "period": 3462790
+        },
+        {
+            "compileId": null,
+            "name": "itable stub",
+            "level": null,
+            "period": 644724372
+        },
+        {
+            "compileId": "50",
+            "name": "50: java.util.concurrent.ConcurrentHashMap.putVal(java.lang.Object, java.lang.Object, boolean)",
+            "level": 3,
+            "period": 3739503
+        },
+        {
+            "compileId": "18",
+            "name": "18: java.lang.Object.<init>()",
+            "level": 4,
+            "period": 3379119
+        },
+        {
+            "compileId": "156",
+            "name": "156: java.util.HashMap.resize()",
+            "level": 3,
+            "period": 3350888
+        },
+        {
+            "compileId": null,
+            "name": "Stub<new_instance_or_null(KlassPointer)Object>",
+            "level": null,
+            "period": 28681096
+        },
+        {
+            "compileId": "263",
+            "name": "263: java.lang.StringCoding.countNonZeroAsciiLatin1(byte[], int, int)",
+            "level": 3,
+            "period": 3341147
+        },
+        {
+            "compileId": "269",
+            "name": "269: java.lang.StringBuilder.append(java.lang.String)",
+            "level": 3,
+            "period": 2794443
+        },
+        {
+            "compileId": "350",
+            "name": "350: java.nio.Buffer.limit()",
+            "level": 1,
+            "period": 3905304
+        },
+        {
+            "compileId": "362",
+            "name": "362: java.lang.invoke.MethodHandleNatives.resolve(java.lang.invoke.MemberName, java.lang.Class, int, boolean)",
+            "level": 0,
+            "period": 3490332
+        },
+        {
+            "compileId": "371",
+            "name": "371: java.lang.StringLatin1.replace(byte[], char, char)",
+            "level": 3,
+            "period": 3358259
+        },
+        {
+            "compileId": "378",
+            "name": "378: java.lang.invoke.MemberName.getReferenceKind()",
+            "level": 3,
+            "period": 2923532
+        },
+        {
+            "compileId": "380",
+            "name": "380: java.lang.StringLatin1.newString(byte[], int, int)",
+            "level": 3,
+            "period": 3473427
+        },
+        {
+            "compileId": "383",
+            "name": "383: java.util.ArrayList.add(java.lang.Object)",
+            "level": 3,
+            "period": 4170839
+        },
+        {
+            "compileId": "385",
+            "name": "385: java.util.ArrayList.size()",
+            "level": 1,
+            "period": 3102787
+        },
+        {
+            "compileId": "386",
+            "name": "386: java.util.Arrays.copyOf(java.lang.Object[], int, java.lang.Class)",
+            "level": 3,
+            "period": 10237167
+        },
+        {
+            "compileId": "392",
+            "name": "392: java.util.regex.Pattern$BmpCharPropertyGreedy.match(java.util.regex.Matcher, int, java.lang.CharSequence)",
+            "level": 3,
+            "period": 3378696
+        },
+        {
+            "compileId": "415",
+            "name": "415: sun.invoke.util.VerifyAccess.ensureTypeVisible(java.lang.Class, java.lang.Class)",
+            "level": 3,
+            "period": 7200819
+        },
+        {
+            "compileId": "450",
+            "name": "450: jdk.internal.classfile.impl.BufWriterImpl.writeUtfEntry(java.lang.String)",
+            "level": 3,
+            "period": 3470191
+        },
+        {
+            "compileId": "405",
+            "name": "405: java.lang.String.equals(java.lang.Object)",
+            "level": 4,
+            "period": 2619217
+        },
+        {
+            "compileId": null,
+            "name": "itable stub",
+            "level": null,
+            "period": 283700390
+        },
+        {
+            "compileId": "497",
+            "name": "497: java.lang.invoke.LambdaForm$BasicType.basicType(java.lang.Class)",
+            "level": 3,
+            "period": 5971679
+        },
+        {
+            "compileId": "507",
+            "name": "507: java.lang.invoke.MethodTypeForm.canonicalize(java.lang.invoke.MethodType, int)",
+            "level": 3,
+            "period": 3317247
+        },
+        {
+            "compileId": "550",
+            "name": "550: java.lang.StringConcatHelper.prepend(int, byte, byte[], java.lang.String, java.lang.String)",
+            "level": 3,
+            "period": 59465
+        },
+        {
+            "compileId": null,
+            "name": "itable stub",
+            "level": null,
+            "period": 542198668
+        },
+        {
+            "compileId": "595",
+            "name": "595: jdk.internal.classfile.impl.AbstractPoolEntry$ClassEntryImpl.hashCode()",
+            "level": 3,
+            "period": 112627
+        },
+        {
+            "compileId": "611",
+            "name": "611: jdk.internal.classfile.impl.SplitConstantPool.classEntryForClassOrInterface(java.lang.constant.ClassDesc)",
+            "level": 3,
+            "period": 9813500
+        },
+        {
+            "compileId": "629",
+            "name": "629: java.lang.ThreadLocal$ThreadLocalMap.getEntry(java.lang.ThreadLocal)",
+            "level": 3,
+            "period": 3493497
+        },
+        {
+            "compileId": "627",
+            "name": "627: java.lang.ThreadLocal.get(java.lang.Thread)",
+            "level": 3,
+            "period": 7225023
+        },
+        {
+            "compileId": "643",
+            "name": "643: java.nio.MappedByteBuffer.position(int)",
+            "level": 3,
+            "period": 3492548
+        },
+        {
+            "compileId": "653",
+            "name": "653: java.lang.String.startsWith(java.lang.String, int)",
+            "level": 3,
+            "period": 6702270
+        },
+        {
+            "compileId": "673",
+            "name": "673: jdk.internal.misc.Unsafe.copyMemory(java.lang.Object, long, java.lang.Object, long, long)",
+            "level": 3,
+            "period": 3492274
+        },
+        {
+            "compileId": "710",
+            "name": "710: java.util.zip.ZipFile$ZipFileInputStream.read(byte[], int, int)",
+            "level": 3,
+            "period": 3359505
+        },
+        {
+            "compileId": "757",
+            "name": "757: java.util.ArrayList.grow(int)",
+            "level": 3,
+            "period": 16684152
+        },
+        {
+            "compileId": "773",
+            "name": "773: java.util.zip.ZipUtils.get16(byte[], int)",
+            "level": 4,
+            "period": 3398321
+        },
+        {
+            "compileId": "809",
+            "name": "809: jdk.internal.util.ArraysSupport.mismatch(byte[], int, byte[], int, int)",
+            "level": 3,
+            "period": 3475758
+        },
+        {
+            "compileId": "830",
+            "name": "830: java.util.zip.ZipFile$Source.getEntryPos(java.lang.String, boolean, java.util.zip.ZipCoder)",
+            "level": 3,
+            "period": 6464682
+        },
+        {
+            "compileId": "832",
+            "name": "832: java.util.zip.ZipFile.getEntry(java.lang.String)",
+            "level": 3,
+            "period": 3405977
+        },
+        {
+            "compileId": "834",
+            "name": "834: java.lang.String.concat(java.lang.String)",
+            "level": 3,
+            "period": 3461424
+        },
+        {
+            "compileId": "839",
+            "name": "839: jdk.internal.loader.URLClassPath$JarLoader.getResource(java.lang.String)",
+            "level": 3,
+            "period": 3407575
+        },
+        {
+            "compileId": "853",
+            "name": "853: java.lang.String.regionMatches(boolean, int, java.lang.String, int, int)",
+            "level": 3,
+            "period": 3482666
+        },
+        {
+            "compileId": "885",
+            "name": "885: java.util.zip.Inflater.reset(long)",
+            "level": 0,
+            "period": 3484125
+        },
+        {
+            "compileId": null,
+            "name": "Stub<new_array_or_null(KlassPointer,int)Object>",
+            "level": null,
+            "period": 9161674
+        },
+        {
+            "compileId": "913",
+            "name": "913: java.lang.Math.max(long, long)",
+            "level": 3,
+            "period": 3928941
+        },
+        {
+            "compileId": "930",
+            "name": "930: jdk.internal.ref.CleanerImpl$CleanableList.insert(jdk.internal.ref.PhantomCleanable)",
+            "level": 3,
+            "period": 3199378
+        },
+        {
+            "compileId": "934",
+            "name": "934: java.lang.String.getBytesNoRepl1(java.lang.String, java.nio.charset.Charset)",
+            "level": 3,
+            "period": 3698746
+        },
+        {
+            "compileId": "949",
+            "name": "949: sun.net.util.IPAddressUtil.checkHost(java.lang.String)",
+            "level": 3,
+            "period": 3473180
+        },
+        {
+            "compileId": "1009",
+            "name": "1009: java.lang.ClassLoader.preDefineClass(java.lang.String, java.security.ProtectionDomain)",
+            "level": 3,
+            "period": 3468922
+        },
+        {
+            "compileId": "1030",
+            "name": "1030: java.security.SecureClassLoader.defineClass(java.lang.String, byte[], int, int, java.security.CodeSource)",
+            "level": 3,
+            "period": 3025650
+        },
+        {
+            "compileId": "1057",
+            "name": "1057: jdk.internal.classfile.impl.AttributeHolder.withAttribute(java.lang.classfile.Attribute)",
+            "level": 3,
+            "period": 3349897
+        },
+        {
+            "compileId": "1059",
+            "name": "1059: jdk.internal.misc.Unsafe.allocateInstance(java.lang.Class)",
+            "level": 0,
+            "period": 20333173
+        },
+        {
+            "compileId": "1070",
+            "name": "1070: jdk.internal.constant.PrimitiveClassDescImpl.descriptorString()",
+            "level": 1,
+            "period": 3132009
+        },
+        {
+            "compileId": "1046",
+            "name": "1046: java.util.concurrent.ConcurrentHashMap.putVal(java.lang.Object, java.lang.Object, boolean)",
+            "level": 4,
+            "period": 3413272
+        },
+        {
+            "compileId": "1123",
+            "name": "1123: jdk.internal.constant.ClassOrInterfaceDescImpl.equals(java.lang.Object)",
+            "level": 3,
+            "period": 883603
+        },
+        {
+            "compileId": null,
+            "name": "itable stub",
+            "level": null,
+            "period": 5510428
+        },
+        {
+            "compileId": "1138",
+            "name": "1138: java.lang.invoke.MethodHandles$Lookup.checkAccess(byte, java.lang.Class, java.lang.invoke.MemberName)",
+            "level": 3,
+            "period": 3150960
+        },
+        {
+            "compileId": "1155",
+            "name": "1155: jdk.internal.constant.MethodTypeDescImpl.buildDescriptorString()",
+            "level": 3,
+            "period": 3807304
+        },
+        {
+            "compileId": "1165",
+            "name": "1165: jdk.internal.classfile.impl.DirectCodeBuilder.loadLocal(java.lang.classfile.TypeKind, int)",
+            "level": 3,
+            "period": 3644776
+        },
+        {
+            "compileId": "1166",
+            "name": "1166: jdk.internal.classfile.impl.SplitConstantPool.entryByIndex(int)",
+            "level": 4,
+            "period": 2794443
+        },
+        {
+            "compileId": "1174",
+            "name": "1174: java.lang.invoke.AbstractValidatingLambdaMetafactory.isAdaptableTo(java.lang.Class, java.lang.Class, boolean)",
+            "level": 3,
+            "period": 2489188
+        },
+        {
+            "compileId": "1252",
+            "name": "1252: scala.collection.immutable.List.isEmpty()",
+            "level": 3,
+            "period": 3469730
+        },
+        {
+            "compileId": "1255",
+            "name": "1255: jdk.internal.classfile.impl.EntryMap.firstToken(int)",
+            "level": 4,
+            "period": 5400996
+        },
+        {
+            "compileId": "1207",
+            "name": "1207: jdk.internal.classfile.impl.UnboundAttribute$AdHocAttribute.writeTo(jdk.internal.classfile.impl.BufWriterImpl)",
+            "level": 3,
+            "period": 3481771
+        },
+        {
+            "compileId": "1212",
+            "name": "1212: jdk.internal.classfile.impl.StackMapGenerator.of(jdk.internal.classfile.impl.DirectCodeBuilder, jdk.internal.classfile.impl.BufWriterImpl)",
+            "level": 3,
+            "period": 342824
+        },
+        {
+            "compileId": "1280",
+            "name": "1280: java.lang.invoke.MemberName.getInvocationType()",
+            "level": 3,
+            "period": 3049319
+        },
+        {
+            "compileId": "1376",
+            "name": "1376: java.util.stream.ReduceOps$3ReducingSink.accept(java.lang.Object)",
+            "level": 3,
+            "period": 3415037
+        },
+        {
+            "compileId": "1392",
+            "name": "1392: java.lang.invoke.Invokers$Holder.linkToTargetMethod(java.lang.Object)",
+            "level": 3,
+            "period": 3314551
+        },
+        {
+            "compileId": "1396",
+            "name": "1396: java.util.stream.AbstractPipeline.getStreamAndOpFlags()",
+            "level": 1,
+            "period": 3334062
+        },
+        {
+            "compileId": "1412",
+            "name": "1412: java.lang.System.currentTimeMillis()",
+            "level": 0,
+            "period": 3414326
+        },
+        {
+            "compileId": "1413%",
+            "name": "1413%: org.renaissance.harness.RenaissanceSuite$.getVmStartNanos()",
+            "level": 3,
+            "period": 3488156
+        },
+        {
+            "compileId": "1415%",
+            "name": "1415%: org.renaissance.harness.RenaissanceSuite$.getVmStartNanos()",
+            "level": 4,
+            "period": 6991811
+        },
+        {
+            "compileId": "1428",
+            "name": "1428: java.util.stream.ReferencePipeline$3$1.accept(java.lang.Object)",
+            "level": 3,
+            "period": 4145728
+        },
+        {
+            "compileId": "1435",
+            "name": "1435: java.lang.invoke.MemberName.<init>(byte, java.lang.Class, java.lang.String, java.lang.Object)",
+            "level": 3,
+            "period": 537518
+        },
+        {
+            "compileId": "1434",
+            "name": "1434: jdk.internal.classfile.impl.SplitConstantPool.canWriteDirect(java.lang.classfile.constantpool.ConstantPool)",
+            "level": 4,
+            "period": 3275092
+        },
+        {
+            "compileId": "1460",
+            "name": "1460: java.lang.StringCoding.countPositives(byte[], int, int)",
+            "level": 3,
+            "period": 3118367
+        },
+        {
+            "compileId": "1483",
+            "name": "1483: java.lang.Double.compare(double, double)",
+            "level": 3,
+            "period": 6963328
+        },
+        {
+            "compileId": "1494",
+            "name": "1494: io.jenetics.internal.collection.Array.set(int, java.lang.Object)",
+            "level": 3,
+            "period": 3459361
+        },
+        {
+            "compileId": "1462",
+            "name": "1462: jdk.internal.classfile.impl.SplitConstantPool.internalAdd(java.lang.classfile.constantpool.PoolEntry, int)",
+            "level": 4,
+            "period": 3490938
+        },
+        {
+            "compileId": "1554",
+            "name": "1554: java.util.concurrent.atomic.AtomicLong.compareAndSet(long, long)",
+            "level": 3,
+            "period": 7790397
+        },
+        {
+            "compileId": "1555",
+            "name": "1555: java.util.Random.next(int)",
+            "level": 2,
+            "period": 50294630
+        },
+        {
+            "compileId": "1563",
+            "name": "1563: io.jenetics.internal.collection.Array.<init>(io.jenetics.internal.collection.Array$Store$Ref, int, int)",
+            "level": 3,
+            "period": 10334780
+        },
+        {
+            "compileId": "1573",
+            "name": "1573: io.jenetics.internal.collection.ObjectStore.get(int)",
+            "level": 2,
+            "period": 27621395
+        },
+        {
+            "compileId": "1591",
+            "name": "1591: java.lang.Thread.onSpinWait()",
+            "level": 2,
+            "period": 766006
+        },
+        {
+            "compileId": "1556",
+            "name": "1556: java.util.concurrent.atomic.AtomicLong.compareAndSet(long, long)",
+            "level": 4,
+            "period": 63424954
+        },
+        {
+            "compileId": "1641",
+            "name": "1641: io.jenetics.internal.collection.ArraySeq.get(int)",
+            "level": 3,
+            "period": 8543912
+        },
+        {
+            "compileId": "1642",
+            "name": "1642: io.jenetics.internal.collection.Array.checkIndex(int)",
+            "level": 3,
+            "period": 3671680
+        },
+        {
+            "compileId": "1644",
+            "name": "1644: io.jenetics.internal.collection.BaseSeqIterator.hasNext()",
+            "level": 3,
+            "period": 6606960
+        },
+        {
+            "compileId": "1566",
+            "name": "1566: io.jenetics.internal.collection.ObjectStore.set(int, java.lang.Object)",
+            "level": 4,
+            "period": 52856771
+        },
+        {
+            "compileId": "1647",
+            "name": "1647: io.jenetics.DoubleGene.isValid()",
+            "level": 3,
+            "period": 4974398
+        },
+        {
+            "compileId": "1664",
+            "name": "1664: io.jenetics.internal.collection.ArraySeq.length()",
+            "level": 4,
+            "period": 10632764737
+        },
+        {
+            "compileId": "1725",
+            "name": "1725: java.util.stream.ReferencePipeline$4$1.accept(java.lang.Object)",
+            "level": 2,
+            "period": 13715934
+        },
+        {
+            "compileId": "1726",
+            "name": "1726: java.util.stream.ReduceOps$5ReducingSink.accept(int)",
+            "level": 2,
+            "period": 20163705
+        },
+        {
+            "compileId": "1739",
+            "name": "1739: io.jenetics.MutatorResult.<init>(java.lang.Object, int)",
+            "level": 3,
+            "period": 3463299
+        },
+        {
+            "compileId": "1741",
+            "name": "1741: io.jenetics.Mutator$$Lambda.0x00000000a011dd08.apply(java.lang.Object)",
+            "level": 3,
+            "period": 18011228
+        },
+        {
+            "compileId": "1569",
+            "name": "1569: java.util.Random.nextDouble()",
+            "level": 4,
+            "period": 6906152
+        },
+        {
+            "compileId": "1577",
+            "name": "1577: io.jenetics.internal.math.Randoms.nextDouble(double, double, java.util.Random)",
+            "level": 4,
+            "period": 21502032
+        },
+        {
+            "compileId": "1784",
+            "name": "1784: io.jenetics.DoubleGene.newInstance()",
+            "level": 3,
+            "period": 14525246
+        },
+        {
+            "compileId": "1783",
+            "name": "1783: io.jenetics.util.Context.get()",
+            "level": 3,
+            "period": 2288093
+        },
+        {
+            "compileId": "1774",
+            "name": "1774: java.util.stream.Sink$ChainedReference.end()",
+            "level": 2,
+            "period": 3064327
+        },
+        {
+            "compileId": "1777",
+            "name": "1777: java.util.stream.Sink.end()",
+            "level": 2,
+            "period": 3168043
+        },
+        {
+            "compileId": null,
+            "name": "itable stub",
+            "level": null,
+            "period": 3512235
+        },
+        {
+            "compileId": "1754",
+            "name": "1754: io.jenetics.internal.collection.ArraySeq.get(int)",
+            "level": 4,
+            "period": 35312786
+        },
+        {
+            "compileId": "1808",
+            "name": "1808: io.jenetics.internal.collection.ArrayMSeq.set(int, java.lang.Object)",
+            "level": 3,
+            "period": 55509766
+        },
+        {
+            "compileId": "1812",
+            "name": "1812: io.jenetics.util.Seq.size()",
+            "level": 2,
+            "period": 6493385
+        },
+        {
+            "compileId": "1881",
+            "name": "1881: io.jenetics.internal.collection.ArraySeq.forAll(java.util.function.Predicate)",
+            "level": 3,
+            "period": 87332799
+        },
+        {
+            "compileId": "1797",
+            "name": "1797: io.jenetics.internal.collection.BaseSeqIterator.next()",
+            "level": 4,
+            "period": 81947180
+        },
+        {
+            "compileId": "1900",
+            "name": "1900: io.jenetics.internal.collection.BaseSeqSpliterator.forEachRemaining(java.util.function.Consumer)",
+            "level": 3,
+            "period": 39150726
+        },
+        {
+            "compileId": "1877",
+            "name": "1877: io.jenetics.internal.collection.ArrayMSeq.setAll(java.util.Iterator)",
+            "level": 3,
+            "period": 202626815
+        },
+        {
+            "compileId": "1816",
+            "name": "1816: java.util.stream.Sink$ChainedReference.begin(long)",
+            "level": 2,
+            "period": 6839161
+        },
+        {
+            "compileId": "1826",
+            "name": "1826: io.jenetics.internal.collection.BaseSeqSpliterator.estimateSize()",
+            "level": 2,
+            "period": 2700762
+        },
+        {
+            "compileId": "1841",
+            "name": "1841: io.jenetics.Phenotype.of(io.jenetics.Genotype, long)",
+            "level": 2,
+            "period": 2186697
+        },
+        {
+            "compileId": "1807",
+            "name": "1807: io.jenetics.internal.collection.BaseSeqIterator.hasNext()",
+            "level": 4,
+            "period": 38059278
+        },
+        {
+            "compileId": "1875",
+            "name": "1875: java.util.stream.ReduceOps$3ReducingSink.begin(long)",
+            "level": 2,
+            "period": 6769525
+        },
+        {
+            "compileId": "1966",
+            "name": "1966: jdk.internal.misc.Unsafe.park(boolean, long)",
+            "level": 0,
+            "period": 392141609
+        },
+        {
+            "compileId": "1970",
+            "name": "1970: jdk.internal.misc.Unsafe.unpark(java.lang.Object)",
+            "level": 0,
+            "period": 165525551
+        },
+        {
+            "compileId": "1866",
+            "name": "1866: io.jenetics.AbstractChromosome$$Lambda.0x00000000a0113a58.test(java.lang.Object)",
+            "level": 4,
+            "period": 37705011
+        },
+        {
+            "compileId": "1965",
+            "name": "1965: io.jenetics.internal.collection.ArrayISeq.map(java.util.function.Function)",
+            "level": 3,
+            "period": 89651608
+        },
+        {
+            "compileId": "1972",
+            "name": "1972: io.jenetics.util.BaseSeq.isEmpty()",
+            "level": 3,
+            "period": 3709936
+        },
+        {
+            "compileId": "1910",
+            "name": "1910: java.util.stream.ReferencePipeline.mapToInt(java.util.function.ToIntFunction)",
+            "level": 2,
+            "period": 1834711
+        },
+        {
+            "compileId": "1889",
+            "name": "1889: jdk.internal.misc.Unsafe.weakCompareAndSetInt(java.lang.Object, long, int, int)",
+            "level": 2,
+            "period": 5929116
+        },
+        {
+            "compileId": "1855",
+            "name": "1855: io.jenetics.AbstractChromosome.get(int)",
+            "level": 4,
+            "period": 9498742
+        },
+        {
+            "compileId": "1986",
+            "name": "1986: io.jenetics.internal.collection.Array.seal()",
+            "level": 3,
+            "period": 8654882
+        },
+        {
+            "compileId": "1920",
+            "name": "1920: java.util.stream.ReduceOps$5ReducingSink.begin(long)",
+            "level": 2,
+            "period": 7390723
+        },
+        {
+            "compileId": "1948",
+            "name": "1948: io.jenetics.Mutator.mutate(io.jenetics.Genotype, double, java.util.Random)",
+            "level": 2,
+            "period": 3201955
+        },
+        {
+            "compileId": "2003",
+            "name": "2003: jdk.internal.misc.Unsafe.compareAndExchangeLong(java.lang.Object, long, long, long)",
+            "level": 0,
+            "period": 2729125
+        },
+        {
+            "compileId": "1969",
+            "name": "1969: jdk.internal.misc.Unsafe.putReferenceOpaque(java.lang.Object, long, java.lang.Object)",
+            "level": 2,
+            "period": 3190515
+        },
+        {
+            "compileId": "1961",
+            "name": "1961: java.util.ArrayList$Itr.next()",
+            "level": 4,
+            "period": 2507625
+        },
+        {
+            "compileId": "2013",
+            "name": "2013: io.jenetics.util.BaseSeq.listIterator()",
+            "level": 3,
+            "period": 6127988
+        },
+        {
+            "compileId": "2006",
+            "name": "2006: java.lang.invoke.LambdaForm$MH.0x00000000a0121400.linkToTargetMethod(java.lang.Object, java.lang.Object, int, java.lang.Object)",
+            "level": 2,
+            "period": 235372
+        },
+        {
+            "compileId": "2016",
+            "name": "2016: java.util.stream.AbstractPipeline.<init>(java.util.stream.AbstractPipeline, int)",
+            "level": 3,
+            "period": 8968106
+        },
+        {
+            "compileId": "2020",
+            "name": "2020: io.jenetics.internal.collection.ArrayMSeq.toISeq()",
+            "level": 3,
+            "period": 3107682
+        },
+        {
+            "compileId": "2019",
+            "name": "2019: java.util.concurrent.ForkJoinPool.deactivate(java.util.concurrent.ForkJoinPool$WorkQueue, int)",
+            "level": 3,
+            "period": 193416059
+        },
+        {
+            "compileId": "1982",
+            "name": "1982: io.jenetics.util.ISeq$$Lambda.0x00000000a0106018.accept(java.lang.Object, java.lang.Object)",
+            "level": 4,
+            "period": 15540558694
+        },
+        {
+            "compileId": "2025",
+            "name": "2025: java.util.stream.AbstractPipeline.wrapSink(java.util.stream.Sink)",
+            "level": 3,
+            "period": 3009829
+        },
+        {
+            "compileId": "2023",
+            "name": "2023: java.util.Spliterator.getExactSizeIfKnown()",
+            "level": 3,
+            "period": 3508311
+        },
+        {
+            "compileId": "2026",
+            "name": "2026: java.util.stream.AbstractPipeline.wrapAndCopyInto(java.util.stream.Sink, java.util.Spliterator)",
+            "level": 3,
+            "period": 2731122
+        },
+        {
+            "compileId": "2029",
+            "name": "2029: java.util.stream.AbstractPipeline.sourceSpliterator(int)",
+            "level": 3,
+            "period": 3816991
+        },
+        {
+            "compileId": "2030",
+            "name": "2030: java.util.stream.AbstractPipeline.copyInto(java.util.stream.Sink, java.util.Spliterator)",
+            "level": 3,
+            "period": 3610059
+        },
+        {
+            "compileId": "2024",
+            "name": "2024: java.util.stream.AbstractPipeline.evaluate(java.util.stream.TerminalOp)",
+            "level": 3,
+            "period": 19624717
+        },
+        {
+            "compileId": "1974",
+            "name": "1974: java.util.stream.IntPipeline$$Lambda.0x00000000a0034270.applyAsInt(int, int)",
+            "level": 4,
+            "period": 2362647638
+        },
+        {
+            "compileId": "2035",
+            "name": "2035: java.util.stream.StreamSupport.stream(java.util.Spliterator, boolean)",
+            "level": 3,
+            "period": 3878537
+        },
+        {
+            "compileId": "2039",
+            "name": "2039: java.util.stream.ReduceOps$ReduceOp.evaluateSequential(java.util.stream.PipelineHelper, java.util.Spliterator)",
+            "level": 3,
+            "period": 7490923
+        },
+        {
+            "compileId": "2010",
+            "name": "2010: java.lang.invoke.Invokers$Holder.linkToTargetMethod(java.lang.Object, java.lang.Object, java.lang.Object, java.lang.Object)",
+            "level": 2,
+            "period": 299917
+        },
+        {
+            "compileId": "2040",
+            "name": "2040: io.jenetics.engine.Timing.stop()",
+            "level": 2,
+            "period": 3348368
+        },
+        {
+            "compileId": "2051",
+            "name": "2051: io.jenetics.util.ISeq.of(java.lang.Iterable)",
+            "level": 3,
+            "period": 10256086
+        },
+        {
+            "compileId": "2052",
+            "name": "2052: io.jenetics.Phenotype.<init>(io.jenetics.Genotype, long, java.lang.Comparable)",
+            "level": 3,
+            "period": 6160229
+        },
+        {
+            "compileId": "2037",
+            "name": "2037: io.jenetics.util.Seq.asISeq()",
+            "level": 2,
+            "period": 3291662
+        },
+        {
+            "compileId": "2058",
+            "name": "2058: io.jenetics.util.MSeq.of(java.lang.Iterable)",
+            "level": 3,
+            "period": 44994986
+        },
+        {
+            "compileId": "2059",
+            "name": "2059: io.jenetics.internal.collection.ArrayMSeq.setAll(java.lang.Iterable)",
+            "level": 3,
+            "period": 6214766
+        },
+        {
+            "compileId": "2078",
+            "name": "2078: io.jenetics.Phenotype.compareTo(io.jenetics.Phenotype)",
+            "level": 3,
+            "period": 1905602
+        },
+        {
+            "compileId": "2072",
+            "name": "2072: io.jenetics.engine.RetryConstraint$$Lambda.0x00000000a0109300.test(java.lang.Object)",
+            "level": 3,
+            "period": 6701497
+        },
+        {
+            "compileId": "2087",
+            "name": "2087: io.jenetics.engine.ConcurrentEvaluator$$Lambda.0x00000000a011f580.test(java.lang.Object)",
+            "level": 3,
+            "period": 3319860
+        },
+        {
+            "compileId": null,
+            "name": "vtable stub",
+            "level": null,
+            "period": 80918406
+        },
+        {
+            "compileId": "2104",
+            "name": "2104: io.jenetics.internal.collection.ArrayMSeq.swap(int, int, io.jenetics.util.MSeq, int)",
+            "level": 3,
+            "period": 84020058
+        },
+        {
+            "compileId": "1964",
+            "name": "1964: java.util.stream.ReferencePipeline$3$1.accept(java.lang.Object)",
+            "level": 4,
+            "period": 240591865
+        },
+        {
+            "compileId": "2119",
+            "name": "2119: java.util.concurrent.ForkJoinPool$WorkQueue.unlockPhase()",
+            "level": 2,
+            "period": 3756641
+        },
+        {
+            "compileId": "2127",
+            "name": "2127: io.jenetics.engine.Engine.filter(io.jenetics.util.Seq, long)",
+            "level": 2,
+            "period": 3331915
+        },
+        {
+            "compileId": "1988",
+            "name": "1988: io.jenetics.Mutator$$Lambda.0x00000000a011e1a0.applyAsInt(java.lang.Object)",
+            "level": 4,
+            "period": 6141929637
+        },
+        {
+            "compileId": "2152",
+            "name": "2152: io.jenetics.Mutator.lambda$alter$0(java.util.Random, int, long, double, io.jenetics.Phenotype)",
+            "level": 3,
+            "period": 9265648
+        },
+        {
+            "compileId": "2155",
+            "name": "2155: io.jenetics.Mutator$$Lambda.0x00000000a011ecc8.applyAsInt(java.lang.Object)",
+            "level": 3,
+            "period": 3030623
+        },
+        {
+            "compileId": "2157",
+            "name": "2157: io.jenetics.Mutator$$Lambda.0x00000000a011ea80.apply(java.lang.Object)",
+            "level": 3,
+            "period": 6846208
+        },
+        {
+            "compileId": "2166",
+            "name": "2166: java.util.stream.ReduceOps$3.getOpFlags()",
+            "level": 3,
+            "period": 3501314
+        },
+        {
+            "compileId": "2169",
+            "name": "2169: java.util.stream.ReduceOps$3.makeSink()",
+            "level": 3,
+            "period": 2460447
+        },
+        {
+            "compileId": "2170",
+            "name": "2170: java.util.stream.ReferencePipeline.collect(java.util.stream.Collector)",
+            "level": 3,
+            "period": 16313724
+        },
+        {
+            "compileId": "2171",
+            "name": "2171: java.util.stream.ReduceOps.makeRef(java.util.stream.Collector)",
+            "level": 3,
+            "period": 3606821
+        },
+        {
+            "compileId": "2173",
+            "name": "2173: java.util.stream.ReduceOps$5ReducingSink.get()",
+            "level": 3,
+            "period": 6923955
+        },
+        {
+            "compileId": "2174",
+            "name": "2174: java.util.stream.ReferencePipeline.mapToInt(java.util.function.ToIntFunction)",
+            "level": 3,
+            "period": 16614250
+        },
+        {
+            "compileId": "2176",
+            "name": "2176: java.util.stream.ReferencePipeline$4.opWrapSink(int, java.util.stream.Sink)",
+            "level": 3,
+            "period": 13052442
+        },
+        {
+            "compileId": "2177",
+            "name": "2177: java.util.stream.ReferencePipeline.map(java.util.function.Function)",
+            "level": 3,
+            "period": 9837211
+        },
+        {
+            "compileId": "2175",
+            "name": "2175: java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(java.util.concurrent.ForkJoinTask, int)",
+            "level": 2,
+            "period": 3667113
+        },
+        {
+            "compileId": "1998",
+            "name": "1998: io.jenetics.Mutator$$Lambda.0x00000000a011dd08.apply(java.lang.Object)",
+            "level": 4,
+            "period": 52556385425
+        },
+        {
+            "compileId": "2178",
+            "name": "2178: java.util.stream.Collector.of(java.util.function.Supplier, java.util.function.BiConsumer, java.util.function.BinaryOperator, java.util.function.Function, java.util.stream.Collector$Characteristics[])",
+            "level": 3,
+            "period": 15662357
+        },
+        {
+            "compileId": "2185",
+            "name": "2185: java.util.stream.ReduceOps$6.makeSink()",
+            "level": 3,
+            "period": 3114589
+        },
+        {
+            "compileId": "2190",
+            "name": "2190: io.jenetics.util.ISeq$$Lambda.0x00000000a0105df0.get()",
+            "level": 3,
+            "period": 3444304
+        },
+        {
+            "compileId": "2187",
+            "name": "2187: java.util.stream.ReduceOps.makeInt(int, java.util.function.IntBinaryOperator)",
+            "level": 3,
+            "period": 6731015
+        },
+        {
+            "compileId": "2189",
+            "name": "2189: java.util.stream.ReferencePipeline$3.opWrapSink(int, java.util.stream.Sink)",
+            "level": 3,
+            "period": 19380914
+        },
+        {
+            "compileId": "2194",
+            "name": "2194: java.lang.invoke.LambdaForm$MH.0x00000000a0118400.linkToTargetMethod(java.lang.Object, java.lang.Object, long, java.lang.Object)",
+            "level": 2,
+            "period": 3813758
+        },
+        {
+            "compileId": "2207",
+            "name": "2207: java.util.concurrent.ForkJoinPool$WorkQueue.updateBase(int)",
+            "level": 2,
+            "period": 2908660
+        },
+        {
+            "compileId": "2208",
+            "name": "2208: java.util.concurrent.ForkJoinTask.compareAndSetForkJoinTaskTag(short, short)",
+            "level": 2,
+            "period": 3416293
+        },
+        {
+            "compileId": "2113",
+            "name": "2113: java.lang.ThreadLocal.get()",
+            "level": 4,
+            "period": 7622180
+        },
+        {
+            "compileId": "2212",
+            "name": "2212: io.jenetics.engine.ConcurrentEvaluator$PhenotypeFitness.run()",
+            "level": 3,
+            "period": 9799405
+        },
+        {
+            "compileId": "2213",
+            "name": "2213: org.renaissance.jdk.concurrent.JavaJenetics$$Lambda.0x00000000a0107660.apply(java.lang.Object)",
+            "level": 3,
+            "period": 2719402
+        },
+        {
+            "compileId": "2214",
+            "name": "2214: org.renaissance.jdk.concurrent.JavaJenetics.fitness(io.jenetics.Genotype)",
+            "level": 3,
+            "period": 10169458
+        },
+        {
+            "compileId": "2216",
+            "name": "2216: io.jenetics.AbstractBoundedChromosome.<init>(io.jenetics.util.ISeq, io.jenetics.util.IntRange)",
+            "level": 3,
+            "period": 17429224
+        },
+        {
+            "compileId": "2217",
+            "name": "2217: io.jenetics.Genotype$$Lambda.0x00000000a0113800.test(java.lang.Object)",
+            "level": 3,
+            "period": 3625837
+        },
+        {
+            "compileId": "2218",
+            "name": "2218: io.jenetics.AbstractChromosome.isValid()",
+            "level": 3,
+            "period": 19077143
+        },
+        {
+            "compileId": "2221",
+            "name": "2221: io.jenetics.AbstractChromosome.<init>(io.jenetics.util.ISeq)",
+            "level": 3,
+            "period": 3625191
+        },
+        {
+            "compileId": "2222",
+            "name": "2222: io.jenetics.VariableChromosome.checkLengthRange(io.jenetics.util.IntRange, int)",
+            "level": 3,
+            "period": 9362101
+        },
+        {
+            "compileId": "2246",
+            "name": "2246: io.jenetics.Mutator.mutate(io.jenetics.Genotype, double, java.util.Random)",
+            "level": 3,
+            "period": 26984390
+        },
+        {
+            "compileId": "2251",
+            "name": "2251: io.jenetics.Mutator.lambda$mutate$2(java.util.Random, int, double, io.jenetics.Chromosome)",
+            "level": 3,
+            "period": 3382971
+        },
+        {
+            "compileId": "2260",
+            "name": "2260: java.util.Comparators$NaturalOrderComparator.compare(java.lang.Object, java.lang.Object)",
+            "level": 2,
+            "period": 3255685
+        },
+        {
+            "compileId": "2235",
+            "name": "2235: io.jenetics.engine.EvolutionParams.offspringSelector()",
+            "level": 1,
+            "period": 3725823
+        },
+        {
+            "compileId": "2265",
+            "name": "2265: io.jenetics.engine.Timing$$Lambda.0x00000000a010e188.getAsLong()",
+            "level": 3,
+            "period": 4076077
+        },
+        {
+            "compileId": "2268",
+            "name": "2268: io.jenetics.Mutator.mutate(io.jenetics.Phenotype, long, double, java.util.Random)",
+            "level": 3,
+            "period": 3085995
+        },
+        {
+            "compileId": "2270",
+            "name": "2270: java.time.Duration.create(long, int)",
+            "level": 3,
+            "period": 3212165
+        },
+        {
+            "compileId": "2275",
+            "name": "2275: io.jenetics.engine.Timing.duration()",
+            "level": 3,
+            "period": 3323274
+        },
+        {
+            "compileId": "2277",
+            "name": "2277: java.util.concurrent.CompletableFuture.biApply(java.lang.Object, java.lang.Object, java.util.function.BiFunction, java.util.concurrent.CompletableFuture$BiApply)",
+            "level": 2,
+            "period": 3587991
+        },
+        {
+            "compileId": "2278",
+            "name": "2278: java.util.concurrent.locks.LockSupport.setCurrentBlocker(java.lang.Object)",
+            "level": 3,
+            "period": 3283452
+        },
+        {
+            "compileId": "2281",
+            "name": "2281: java.util.concurrent.ForkJoinPool.getAndAddCtl(long)",
+            "level": 2,
+            "period": 3103984
+        },
+        {
+            "compileId": "2282",
+            "name": "2282: java.util.concurrent.ForkJoinPool$WorkQueue.push(java.util.concurrent.ForkJoinTask, java.util.concurrent.ForkJoinPool, boolean)",
+            "level": 3,
+            "period": 6220251
+        },
+        {
+            "compileId": "2289",
+            "name": "2289: io.jenetics.internal.util.RunnablesAction.compute()",
+            "level": 3,
+            "period": 15203288
+        },
+        {
+            "compileId": "2291",
+            "name": "2291: java.util.concurrent.ForkJoinTask.signalWaiters()",
+            "level": 3,
+            "period": 3393605
+        },
+        {
+            "compileId": "2295",
+            "name": "2295: java.lang.ThreadLocal.set(java.lang.Object)",
+            "level": 3,
+            "period": 6724474
+        },
+        {
+            "compileId": "2296",
+            "name": "2296: java.lang.ThreadLocal$ThreadLocalMap.set(java.lang.ThreadLocal, java.lang.Object)",
+            "level": 3,
+            "period": 6064554
+        },
+        {
+            "compileId": "2300",
+            "name": "2300: java.util.concurrent.ForkJoinPool.signalWork()",
+            "level": 3,
+            "period": 2540386
+        },
+        {
+            "compileId": "2306",
+            "name": "2306: java.util.stream.StreamSupport.intStream(java.util.Spliterator$OfInt, boolean)",
+            "level": 2,
+            "period": 3252666
+        },
+        {
+            "compileId": "2381",
+            "name": "2381: io.jenetics.CompositeAlterer.alter(io.jenetics.util.Seq, long)",
+            "level": 2,
+            "period": 3044931
+        },
+        {
+            "compileId": "2319",
+            "name": "2319: io.jenetics.internal.util.Concurrency$ForkJoinPoolConcurrency.execute(io.jenetics.util.Seq)",
+            "level": 2,
+            "period": 3482494
+        },
+        {
+            "compileId": "2283",
+            "name": "2283: io.jenetics.internal.collection.ArrayMSeq.setAll(java.util.Iterator)",
+            "level": 4,
+            "period": 104799956905
+        },
+        {
+            "compileId": "2451",
+            "name": "2451: io.jenetics.Mutator.mutate(io.jenetics.Chromosome, double, java.util.Random)",
+            "level": 3,
+            "period": 26509975
+        },
+        {
+            "compileId": "2401",
+            "name": "2401: io.jenetics.engine.Engine$$Lambda.0x00000000a0116228.apply(java.lang.Object)",
+            "level": 2,
+            "period": 3064706
+        },
+        {
+            "compileId": "2371",
+            "name": "2371: org.renaissance.jdk.concurrent.JavaJenetics$$Lambda.0x00000000a0106fb0.select(io.jenetics.util.Seq, int, io.jenetics.Optimize)",
+            "level": 2,
+            "period": 3379000
+        },
+        {
+            "compileId": "2426",
+            "name": "2426: io.jenetics.engine.Engine$$Lambda.0x00000000a011f350.<init>(io.jenetics.engine.Engine, io.jenetics.util.ISeq)",
+            "level": 2,
+            "period": 3470243
+        },
+        {
+            "compileId": "2435",
+            "name": "2435: io.jenetics.engine.EvolutionResult$$Lambda.0x00000000a0124230.get()",
+            "level": 2,
+            "period": 3425895
+        },
+        {
+            "compileId": "2294",
+            "name": "2294: io.jenetics.internal.collection.BaseSeqSpliterator.forEachRemaining(java.util.function.Consumer)",
+            "level": 4,
+            "period": 26494776291
+        },
+        {
+            "compileId": "2459",
+            "name": "2459: java.util.concurrent.ForkJoinPool.poolSubmit(boolean, java.util.concurrent.ForkJoinTask)",
+            "level": 3,
+            "period": 2955702
+        },
+        {
+            "compileId": "2460",
+            "name": "2460: io.jenetics.util.Seq.asISeq()",
+            "level": 3,
+            "period": 9375186
+        },
+        {
+            "compileId": "2458",
+            "name": "2458: io.jenetics.engine.Timing.of(java.time.Clock)",
+            "level": 3,
+            "period": 3309146
+        },
+        {
+            "compileId": "2462",
+            "name": "2462: java.util.concurrent.CompletableFuture.waitingGet(boolean)",
+            "level": 2,
+            "period": 3259374
+        },
+        {
+            "compileId": "2467",
+            "name": "2467: java.util.concurrent.CompletableFuture.postComplete()",
+            "level": 3,
+            "period": 7143180
+        },
+        {
+            "compileId": "2479",
+            "name": "2479: io.jenetics.internal.math.Combinatorics.subset(int, int[], java.util.Random)",
+            "level": 3,
+            "period": 13492242
+        },
+        {
+            "compileId": "2477",
+            "name": "2477: java.util.concurrent.ForkJoinPool.execute(java.lang.Runnable)",
+            "level": 3,
+            "period": 3168953
+        },
+        {
+            "compileId": "2481",
+            "name": "2481: io.jenetics.Crossover.recombine(io.jenetics.util.MSeq, int[], long)",
+            "level": 3,
+            "period": 28035747
+        },
+        {
+            "compileId": "2476",
+            "name": "2476: io.jenetics.SinglePointCrossover.crossover(io.jenetics.util.MSeq, io.jenetics.util.MSeq)",
+            "level": 3,
+            "period": 6790210
+        },
+        {
+            "compileId": "2482",
+            "name": "2482: java.util.concurrent.CompletableFuture.reportJoin(java.lang.Object, java.lang.String)",
+            "level": 3,
+            "period": 3890477
+        },
+        {
+            "compileId": "2484",
+            "name": "2484: java.util.concurrent.CompletableFuture$UniApply.tryFire(int)",
+            "level": 3,
+            "period": 7318546
+        },
+        {
+            "compileId": "2487",
+            "name": "2487: java.util.concurrent.ForkJoinPool$WorkQueue.tryLockPhase()",
+            "level": 3,
+            "period": 13451480
+        },
+        {
+            "compileId": "2490",
+            "name": "2490: java.util.concurrent.ForkJoinPool.awaitWork(java.util.concurrent.ForkJoinPool$WorkQueue, int)",
+            "level": 3,
+            "period": 3337777
+        },
+        {
+            "compileId": "2493",
+            "name": "2493: java.util.concurrent.ForkJoinPool.submissionQueue(int, boolean)",
+            "level": 3,
+            "period": 3474920
+        },
+        {
+            "compileId": "2497",
+            "name": "2497: java.util.concurrent.ForkJoinTask.awaitDone(boolean, long)",
+            "level": 3,
+            "period": 13423530
+        },
+        {
+            "compileId": "2498",
+            "name": "2498: java.util.concurrent.ForkJoinPool.helpJoin(java.util.concurrent.ForkJoinTask, java.util.concurrent.ForkJoinPool$WorkQueue, boolean)",
+            "level": 3,
+            "period": 16008436
+        },
+        {
+            "compileId": "2499",
+            "name": "2499: java.util.concurrent.ForkJoinPool$WorkQueue.tryRemoveAndExec(java.util.concurrent.ForkJoinTask, boolean)",
+            "level": 3,
+            "period": 6185430
+        },
+        {
+            "compileId": "2504%",
+            "name": "2504%: java.util.concurrent.ForkJoinPool.runWorker(java.util.concurrent.ForkJoinPool$WorkQueue)",
+            "level": 3,
+            "period": 47786296
+        },
+        {
+            "compileId": "2505",
+            "name": "2505: java.util.concurrent.ForkJoinPool.runWorker(java.util.concurrent.ForkJoinPool$WorkQueue)",
+            "level": 3,
+            "period": 33037388
+        },
+        {
+            "compileId": "2506",
+            "name": "2506: java.util.concurrent.CompletableFuture.tryPushStack(java.util.concurrent.CompletableFuture$Completion)",
+            "level": 3,
+            "period": 20409434
+        },
+        {
+            "compileId": "2452",
+            "name": "2452: io.jenetics.internal.collection.ArrayISeq.map(java.util.function.Function)",
+            "level": 4,
+            "period": 520829462
+        },
+        {
+            "compileId": "2507",
+            "name": "2507: java.util.concurrent.CompletableFuture$Signaller.isReleasable()",
+            "level": 3,
+            "period": 6948862
+        },
+        {
+            "compileId": "2509%",
+            "name": "2509%: java.util.concurrent.ForkJoinPool.runWorker(java.util.concurrent.ForkJoinPool$WorkQueue)",
+            "level": 3,
+            "period": 71668561
+        },
+        {
+            "compileId": "2510",
+            "name": "2510: java.util.concurrent.ForkJoinTask.fork()",
+            "level": 3,
+            "period": 3158044
+        },
+        {
+            "compileId": "2511",
+            "name": "2511: java.util.concurrent.ForkJoinWorkerThread$InnocuousForkJoinWorkerThread.onThreadLocalReset()",
+            "level": 3,
+            "period": 5323066
+        },
+        {
+            "compileId": "2513",
+            "name": "2513: io.jenetics.util.RandomRegistry$$Lambda.0x00000000a010d678.apply(java.lang.Object)",
+            "level": 3,
+            "period": 5606644
+        },
+        {
+            "compileId": "2515",
+            "name": "2515: io.jenetics.internal.collection.Array.append(io.jenetics.internal.collection.Array)",
+            "level": 3,
+            "period": 2580112
+        },
+        {
+            "compileId": "2517",
+            "name": "2517: io.jenetics.util.Context.with(java.lang.Object, java.util.function.Function)",
+            "level": 3,
+            "period": 9489947
+        },
+        {
+            "compileId": "2518",
+            "name": "2518: java.util.concurrent.ForkJoinPool.getSurplusQueuedTaskCount()",
+            "level": 3,
+            "period": 3416409
+        },
+        {
+            "compileId": "2519",
+            "name": "2519: java.util.concurrent.ForkJoinTask.invokeAll(java.util.concurrent.ForkJoinTask, java.util.concurrent.ForkJoinTask)",
+            "level": 3,
+            "period": 8805143
+        },
+        {
+            "compileId": "2521",
+            "name": "2521: java.lang.StrictMath.rint(double)",
+            "level": 3,
+            "period": 3059314
+        },
+        {
+            "compileId": "2523",
+            "name": "2523: java.util.concurrent.ForkJoinPool$WorkQueue.nextLocalTask(int)",
+            "level": 3,
+            "period": 2917254
+        },
+        {
+            "compileId": "2501",
+            "name": "2501: io.jenetics.internal.collection.ArraySeq.forAll(java.util.function.Predicate)",
+            "level": 4,
+            "period": 55694321285
+        },
+        {
+            "compileId": "2528",
+            "name": "2528: java.util.concurrent.CompletableFuture.postFire(java.util.concurrent.CompletableFuture, int)",
+            "level": 3,
+            "period": 4236017
+        },
+        {
+            "compileId": "2530",
+            "name": "2530: java.util.concurrent.ForkJoinTask.compareAndSetForkJoinTaskTag(short, short)",
+            "level": 3,
+            "period": 6701465
+        },
+        {
+            "compileId": "2206",
+            "name": "2206: io.jenetics.internal.collection.ArrayMSeq.set(int, java.lang.Object)",
+            "level": 4,
+            "period": 7195195
+        },
+        {
+            "compileId": "2531",
+            "name": "2531: java.util.concurrent.ForkJoinPool.deactivate(java.util.concurrent.ForkJoinPool$WorkQueue, int)",
+            "level": 4,
+            "period": 66051822881
+        },
+        {
+            "compileId": "2537",
+            "name": "2537: io.jenetics.engine.Engine.filter(io.jenetics.util.Seq, long)",
+            "level": 3,
+            "period": 17142559
+        },
+        {
+            "compileId": "2536",
+            "name": "2536: io.jenetics.MonteCarloSelector.select(io.jenetics.util.Seq, int, io.jenetics.Optimize)",
+            "level": 3,
+            "period": 9163054
+        },
+        {
+            "compileId": "2286",
+            "name": "2286: java.lang.ref.Reference.refersToImpl(java.lang.Object)",
+            "level": 4,
+            "period": 3062942
+        },
+        {
+            "compileId": "2540",
+            "name": "2540: java.util.concurrent.locks.LockSupport.park(java.lang.Object)",
+            "level": 2,
+            "period": 3961981
+        },
+        {
+            "compileId": "2542",
+            "name": "2542: io.jenetics.internal.collection.ArrayISeq.copy()",
+            "level": 3,
+            "period": 6678044
+        },
+        {
+            "compileId": "2546",
+            "name": "2546: io.jenetics.engine.EvolutionResult.<init>(io.jenetics.Optimize, io.jenetics.util.ISeq, long, long, io.jenetics.engine.EvolutionDurations, int, int, int, boolean)",
+            "level": 3,
+            "period": 3275386
+        },
+        {
+            "compileId": "2547",
+            "name": "2547: java.util.concurrent.CompletableFuture$BiApply.tryFire(int)",
+            "level": 3,
+            "period": 7091068
+        },
+        {
+            "compileId": "2539",
+            "name": "2539: java.util.stream.ReferencePipeline$2$1.accept(java.lang.Object)",
+            "level": 4,
+            "period": 1046668344
+        },
+        {
+            "compileId": "2549",
+            "name": "2549: java.util.Arrays.copyOfRange(java.lang.Object[], int, int, java.lang.Class)",
+            "level": 3,
+            "period": 6474521
+        },
+        {
+            "compileId": "2538",
+            "name": "2538: java.util.ArrayList.grow(int)",
+            "level": 4,
+            "period": 4597830766
+        },
+        {
+            "compileId": "1557",
+            "name": "1557: java.util.Random.next(int)",
+            "level": 4,
+            "period": 22755011693
+        },
+        {
+            "compileId": "2550",
+            "name": "2550: java.util.Random.nextInt(int)",
+            "level": 4,
+            "period": 26369338
+        },
+        {
+            "compileId": "1743",
+            "name": "1743: java.util.stream.ReduceOps$5ReducingSink.accept(int)",
+            "level": 4,
+            "period": 7375682632
+        },
+        {
+            "compileId": "1745",
+            "name": "1745: java.util.stream.ReferencePipeline$4$1.accept(java.lang.Object)",
+            "level": 4,
+            "period": 6705040342
+        },
+        {
+            "compileId": "2552",
+            "name": "2552: io.jenetics.internal.collection.Array.seal()",
+            "level": 4,
+            "period": 2973262
+        },
+        {
+            "compileId": "2554",
+            "name": "2554: io.jenetics.util.BaseSeq.listIterator()",
+            "level": 4,
+            "period": 728798025
+        },
+        {
+            "compileId": "2555",
+            "name": "2555: io.jenetics.internal.collection.ArrayMSeq.swap(int, int, io.jenetics.util.MSeq, int)",
+            "level": 4,
+            "period": 9980460725
+        },
+        {
+            "compileId": "2556",
+            "name": "2556: java.util.stream.AbstractPipeline.<init>(java.util.stream.AbstractPipeline, int)",
+            "level": 4,
+            "period": 5405652
+        },
+        {
+            "compileId": "2557",
+            "name": "2557: io.jenetics.internal.collection.ArrayMSeq.toISeq()",
+            "level": 4,
+            "period": 10002345
+        },
+        {
+            "compileId": "2560",
+            "name": "2560: java.util.stream.ReferencePipeline.filter(java.util.function.Predicate)",
+            "level": 3,
+            "period": 3286558
+        },
+        {
+            "compileId": "2561",
+            "name": "2561: java.util.stream.ReferencePipeline$2.opWrapSink(int, java.util.stream.Sink)",
+            "level": 3,
+            "period": 3943526
+        },
+        {
+            "compileId": "2567",
+            "name": "2567: java.util.concurrent.CompletableFuture$AsyncSupply.exec()",
+            "level": 3,
+            "period": 2848003
+        },
+        {
+            "compileId": "2570",
+            "name": "2570: io.jenetics.engine.EvolutionDurations.of(java.time.Duration, java.time.Duration, java.time.Duration, java.time.Duration, java.time.Duration, java.time.Duration, java.time.Duration)",
+            "level": 3,
+            "period": 3032108
+        },
+        {
+            "compileId": "2572",
+            "name": "2572: io.jenetics.engine.EvolutionTiming.toDurations()",
+            "level": 3,
+            "period": 3377757
+        },
+        {
+            "compileId": "2575",
+            "name": "2575: io.jenetics.internal.collection.ArraySeq.__append(java.lang.Iterable)",
+            "level": 3,
+            "period": 3442496
+        },
+        {
+            "compileId": "2573",
+            "name": "2573: java.util.concurrent.CompletableFuture$AsyncSupply.run()",
+            "level": 3,
+            "period": 9801418
+        },
+        {
+            "compileId": "2576",
+            "name": "2576: java.util.Comparators$NaturalOrderComparator.compare(java.lang.Object, java.lang.Object)",
+            "level": 3,
+            "period": 6032915
+        },
+        {
+            "compileId": "2574",
+            "name": "2574: io.jenetics.internal.collection.ArrayISeq.append(java.lang.Iterable)",
+            "level": 3,
+            "period": 6832005
+        },
+        {
+            "compileId": "2577",
+            "name": "2577: io.jenetics.engine.EvolutionResult.compareTo(java.lang.Object)",
+            "level": 3,
+            "period": 3384432
+        },
+        {
+            "compileId": "2558",
+            "name": "2558: io.jenetics.util.ISeq.of(java.lang.Iterable)",
+            "level": 4,
+            "period": 2907433238
+        },
+        {
+            "compileId": "2581",
+            "name": "2581: java.util.stream.Streams$RangeIntSpliterator.forEachRemaining(java.util.function.IntConsumer)",
+            "level": 3,
+            "period": 7171823
+        },
+        {
+            "compileId": "2582",
+            "name": "2582: java.util.concurrent.CompletableFuture.biApply(java.lang.Object, java.lang.Object, java.util.function.BiFunction, java.util.concurrent.CompletableFuture$BiApply)",
+            "level": 3,
+            "period": 2999823
+        },
+        {
+            "compileId": "2578",
+            "name": "2578: java.util.stream.AbstractPipeline.wrapSink(java.util.stream.Sink)",
+            "level": 4,
+            "period": 12527641
+        },
+        {
+            "compileId": "2586",
+            "name": "2586: java.util.stream.AbstractPipeline.evaluate(java.util.stream.TerminalOp)",
+            "level": 4,
+            "period": 49950326
+        },
+        {
+            "compileId": "2590",
+            "name": "2590: java.util.stream.StreamSupport.stream(java.util.Spliterator, boolean)",
+            "level": 4,
+            "period": 16869637
+        },
+        {
+            "compileId": "2593",
+            "name": "2593: io.jenetics.Phenotype.compareTo(java.lang.Object)",
+            "level": 4,
+            "period": 409490565
+        },
+        {
+            "compileId": "2595",
+            "name": "2595: io.jenetics.util.BaseSeq.stream()",
+            "level": 4,
+            "period": 7554203
+        },
+        {
+            "compileId": "2594",
+            "name": "2594: io.jenetics.engine.ConcurrentEvaluator$$Lambda.0x00000000a010e808.test(java.lang.Object)",
+            "level": 4,
+            "period": 655484503
+        },
+        {
+            "compileId": "2597",
+            "name": "2597: java.util.stream.ReduceOps$2ReducingSink.accept(java.lang.Object)",
+            "level": 4,
+            "period": 11010412
+        },
+        {
+            "compileId": "2596",
+            "name": "2596: io.jenetics.engine.ConcurrentEvaluator$$Lambda.0x00000000a011f580.test(java.lang.Object)",
+            "level": 4,
+            "period": 512983479
+        },
+        {
+            "compileId": "2608",
+            "name": "2608: io.jenetics.Genotype.get(int)",
+            "level": 4,
+            "period": 1044018638
+        },
+        {
+            "compileId": "2605",
+            "name": "2605: io.jenetics.util.MSeq.of(java.lang.Iterable)",
+            "level": 4,
+            "period": 1639117570
+        },
+        {
+            "compileId": "2028",
+            "name": "2028: java.util.stream.Sink.end()",
+            "level": 4,
+            "period": 312323231
+        },
+        {
+            "compileId": "2609",
+            "name": "2609: java.util.stream.IntPipeline$10$1.accept(int)",
+            "level": 4,
+            "period": 3074579
+        },
+        {
+            "compileId": "2611",
+            "name": "2611: io.jenetics.Mutator.lambda$alter$0(java.util.Random, int, long, double, io.jenetics.Phenotype)",
+            "level": 4,
+            "period": 328937735
+        },
+        {
+            "compileId": "2612",
+            "name": "2612: io.jenetics.Mutator$$Lambda.0x00000000a011ecc8.applyAsInt(java.lang.Object)",
+            "level": 4,
+            "period": 169453119
+        },
+        {
+            "compileId": "2027",
+            "name": "2027: java.util.stream.Sink$ChainedReference.end()",
+            "level": 4,
+            "period": 103328372
+        },
+        {
+            "compileId": "2615",
+            "name": "2615: java.util.stream.ReferencePipeline.map(java.util.function.Function)",
+            "level": 4,
+            "period": 3540473
+        },
+        {
+            "compileId": "2618",
+            "name": "2618: io.jenetics.util.ISeq$$Lambda.0x00000000a0105df0.get()",
+            "level": 4,
+            "period": 292906373
+        },
+        {
+            "compileId": "2617",
+            "name": "2617: io.jenetics.util.ISeq.toISeq()",
+            "level": 4,
+            "period": 5600866
+        },
+        {
+            "compileId": "2620",
+            "name": "2620: java.util.stream.ReferencePipeline.mapToInt(java.util.function.ToIntFunction)",
+            "level": 4,
+            "period": 2939510
+        },
+        {
+            "compileId": "2629",
+            "name": "2629: io.jenetics.internal.util.Requires.probability(double)",
+            "level": 3,
+            "period": 3486965
+        },
+        {
+            "compileId": "2632",
+            "name": "2632: java.util.stream.StreamSupport.intStream(java.util.Spliterator$OfInt, boolean)",
+            "level": 3,
+            "period": 2606745
+        },
+        {
+            "compileId": "2630",
+            "name": "2630: java.util.concurrent.ForkJoinTask.awaitDone(java.util.concurrent.ForkJoinPool, int, boolean, long)",
+            "level": 3,
+            "period": 6901532
+        },
+        {
+            "compileId": "2651",
+            "name": "2651: io.jenetics.CompositeAlterer.alter(io.jenetics.util.Seq, long)",
+            "level": 3,
+            "period": 20127399
+        },
+        {
+            "compileId": "2635",
+            "name": "2635: io.jenetics.engine.Engine.eval(io.jenetics.util.Seq)",
+            "level": 3,
+            "period": 3238110
+        },
+        {
+            "compileId": "2637",
+            "name": "2637: io.jenetics.internal.util.Concurrency.with(java.util.concurrent.Executor)",
+            "level": 3,
+            "period": 6957959
+        },
+        {
+            "compileId": "2636",
+            "name": "2636: io.jenetics.engine.ConcurrentEvaluator.eval(io.jenetics.util.Seq)",
+            "level": 3,
+            "period": 5833215
+        },
+        {
+            "compileId": "2640",
+            "name": "2640: java.util.concurrent.ForkJoinTask.get()",
+            "level": 3,
+            "period": 3271036
+        },
+        {
+            "compileId": "2653",
+            "name": "2653: java.util.stream.IntPipeline.mapToObj(java.util.function.IntFunction, int)",
+            "level": 3,
+            "period": 3086916
+        },
+        {
+            "compileId": "2655",
+            "name": "2655: java.util.Spliterator$OfInt.forEachRemaining(java.util.function.Consumer)",
+            "level": 3,
+            "period": 5995035
+        },
+        {
+            "compileId": "2663",
+            "name": "2663: java.util.stream.IntStream.range(int, int)",
+            "level": 3,
+            "period": 3115961
+        },
+        {
+            "compileId": "2642",
+            "name": "2642: io.jenetics.engine.Engine$$Lambda.0x00000000a0115080.get()",
+            "level": 3,
+            "period": 9376669
+        },
+        {
+            "compileId": "2627",
+            "name": "2627: io.jenetics.internal.math.Combinatorics.subset(int, int[], java.util.Random)",
+            "level": 4,
+            "period": 1301222616
+        },
+        {
+            "compileId": "2667",
+            "name": "2667: io.jenetics.internal.util.Concurrency$ForkJoinPoolConcurrency.execute(io.jenetics.util.Seq)",
+            "level": 3,
+            "period": 8084563
+        },
+        {
+            "compileId": "2646",
+            "name": "2646: io.jenetics.engine.Engine$$Lambda.0x00000000a01154e0.get()",
+            "level": 3,
+            "period": 7915261
+        },
+        {
+            "compileId": "2649",
+            "name": "2649: org.renaissance.jdk.concurrent.JavaJenetics$$Lambda.0x00000000a0117208.apply(java.lang.Object)",
+            "level": 3,
+            "period": 6506586
+        },
+        {
+            "compileId": "2650",
+            "name": "2650: io.jenetics.engine.Engine$$Lambda.0x00000000a0117458.execute()",
+            "level": 3,
+            "period": 3157348
+        },
+        {
+            "compileId": "2652",
+            "name": "2652: org.renaissance.jdk.concurrent.JavaJenetics$$Lambda.0x00000000a0104d90.alter(io.jenetics.util.Seq, long)",
+            "level": 3,
+            "period": 3560932
+        },
+        {
+            "compileId": "2665",
+            "name": "2665: io.jenetics.Mutator.alter(io.jenetics.util.Seq, long)",
+            "level": 3,
+            "period": 3236650
+        },
+        {
+            "compileId": "2671",
+            "name": "2671: org.renaissance.jdk.concurrent.JavaJenetics.lambda$evolveChromosome$11(java.util.Random, io.jenetics.MonteCarloSelector, io.jenetics.util.Seq, int, io.jenetics.Optimize)",
+            "level": 3,
+            "period": 6818109
+        },
+        {
+            "compileId": "2673",
+            "name": "2673: org.renaissance.jdk.concurrent.JavaJenetics.lambda$evolveChromosome$5(java.util.Random, io.jenetics.Alterer, io.jenetics.util.Seq, long)",
+            "level": 3,
+            "period": 7195441
+        },
+        {
+            "compileId": "2674",
+            "name": "2674: io.jenetics.internal.math.Randoms.indexes(java.util.Random, int, int, double)",
+            "level": 3,
+            "period": 6032594
+        },
+        {
+            "compileId": "2683",
+            "name": "2683: java.util.concurrent.ForkJoinPool$WorkQueue.helpAsyncBlocker(java.util.concurrent.ForkJoinPool$ManagedBlocker)",
+            "level": 3,
+            "period": 17824559
+        },
+        {
+            "compileId": "2684",
+            "name": "2684: io.jenetics.engine.Engine.selectOffspring(io.jenetics.util.ISeq)",
+            "level": 3,
+            "period": 2854786
+        },
+        {
+            "compileId": "2662",
+            "name": "2662: io.jenetics.engine.Engine$$Lambda.0x00000000a011f350.execute()",
+            "level": 3,
+            "period": 3724260
+        },
+        {
+            "compileId": "2675",
+            "name": "2675: io.jenetics.engine.Engine$$Lambda.0x00000000a0116228.apply(java.lang.Object)",
+            "level": 3,
+            "period": 3731913
+        },
+        {
+            "compileId": "2658",
+            "name": "2658: org.renaissance.jdk.concurrent.JavaJenetics$$Lambda.0x00000000a01178b8.apply(java.lang.Object)",
+            "level": 3,
+            "period": 3473385
+        },
+        {
+            "compileId": "2676",
+            "name": "2676: io.jenetics.engine.Engine$$Lambda.0x00000000a0116478.apply(java.lang.Object)",
+            "level": 3,
+            "period": 15937498
+        },
+        {
+            "compileId": "2672",
+            "name": "2672: io.jenetics.engine.Engine$$Lambda.0x00000000a0115940.apply(java.lang.Object)",
+            "level": 3,
+            "period": 9558281
+        },
+        {
+            "compileId": "2681",
+            "name": "2681: io.jenetics.Recombinator.alter(io.jenetics.util.Seq, long)",
+            "level": 3,
+            "period": 9312619
+        },
+        {
+            "compileId": "2668",
+            "name": "2668: io.jenetics.engine.EvolutionResult.of(io.jenetics.Optimize, io.jenetics.util.ISeq, long, long, io.jenetics.engine.EvolutionDurations, int, int, int)",
+            "level": 3,
+            "period": 3276255
+        },
+        {
+            "compileId": "2686",
+            "name": "2686: org.renaissance.jdk.concurrent.JavaJenetics.lambda$evolveChromosome$9(java.util.Random, io.jenetics.MonteCarloSelector, io.jenetics.util.Seq, int, io.jenetics.Optimize)",
+            "level": 3,
+            "period": 5811810
+        },
+        {
+            "compileId": "2679",
+            "name": "2679: java.util.stream.ReferencePipeline.max(java.util.Comparator)",
+            "level": 3,
+            "period": 3111928
+        },
+        {
+            "compileId": "2680",
+            "name": "2680: io.jenetics.engine.EvolutionResult$$Lambda.0x00000000a0124230.get()",
+            "level": 3,
+            "period": 6108973
+        },
+        {
+            "compileId": "2678",
+            "name": "2678: io.jenetics.engine.EvolutionResult$$Lambda.0x00000000a010b4d8.accept(java.lang.Object, java.lang.Object)",
+            "level": 3,
+            "period": 3274280
+        },
+        {
+            "compileId": "2695",
+            "name": "2695: java.util.concurrent.CompletableFuture$CoCompletion.tryFire(int)",
+            "level": 3,
+            "period": 7644761
+        },
+        {
+            "compileId": "2687",
+            "name": "2687: io.jenetics.engine.Engine.evolve(io.jenetics.engine.EvolutionStart)",
+            "level": 3,
+            "period": 31311684
+        },
+        {
+            "compileId": "2628%",
+            "name": "2628%: java.util.concurrent.ForkJoinPool.runWorker(java.util.concurrent.ForkJoinPool$WorkQueue)",
+            "level": 4,
+            "period": 2117623116
+        },
+        {
+            "compileId": "2697",
+            "name": "2697: java.util.concurrent.CompletableFuture.postFire(java.util.concurrent.CompletableFuture, java.util.concurrent.CompletableFuture, int)",
+            "level": 3,
+            "period": 3077821
+        },
+        {
+            "compileId": "2696",
+            "name": "2696: io.jenetics.engine.ConcurrentEvaluator$$Lambda.0x00000000a010eec0.apply(java.lang.Object)",
+            "level": 4,
+            "period": 126710182
+        },
+        {
+            "compileId": "2703",
+            "name": "2703: java.lang.ThreadLocal$ThreadLocalMap.<init>(java.lang.ThreadLocal, java.lang.Object)",
+            "level": 3,
+            "period": 4036802
+        },
+        {
+            "compileId": "2700",
+            "name": "2700: java.util.concurrent.ForkJoinPool.runWorker(java.util.concurrent.ForkJoinPool$WorkQueue)",
+            "level": 4,
+            "period": 212782481
+        },
+        {
+            "compileId": "2701",
+            "name": "2701: io.jenetics.AbstractChromosome.isValid()",
+            "level": 4,
+            "period": 531702017
+        },
+        {
+            "compileId": "2705",
+            "name": "2705: java.util.concurrent.CompletableFuture.waitingGet(boolean)",
+            "level": 3,
+            "period": 5940577
+        },
+        {
+            "compileId": "2704",
+            "name": "2704: io.jenetics.engine.ConcurrentEvaluator$PhenotypeFitness.run()",
+            "level": 4,
+            "period": 9268287
+        },
+        {
+            "compileId": "2168",
+            "name": "2168: java.util.stream.ReduceOps$3ReducingSink.begin(long)",
+            "level": 4,
+            "period": 192862488
+        },
+        {
+            "compileId": "2186",
+            "name": "2186: java.util.stream.ReduceOps$5ReducingSink.begin(long)",
+            "level": 4,
+            "period": 259843793
+        },
+        {
+            "compileId": "2054",
+            "name": "2054: java.util.stream.Sink$ChainedReference.begin(long)",
+            "level": 4,
+            "period": 102272320
+        },
+        {
+            "compileId": "2524",
+            "name": "2524: io.jenetics.Phenotype.withFitness(java.lang.Comparable)",
+            "level": 4,
+            "period": 254543875
+        },
+        {
+            "compileId": "2280",
+            "name": "2280: jdk.internal.misc.Unsafe.weakCompareAndSetInt(java.lang.Object, long, int, int)",
+            "level": 4,
+            "period": 3441503
+        },
+        {
+            "compileId": "2457",
+            "name": "2457: io.jenetics.engine.Timing.stop()",
+            "level": 4,
+            "period": 13453299
+        },
+        {
+            "compileId": "2712",
+            "name": "2712: io.jenetics.Mutator.mutate(io.jenetics.Genotype, double, java.util.Random)",
+            "level": 4,
+            "period": 1374384670
+        },
+        {
+            "compileId": "2719",
+            "name": "2719: io.jenetics.internal.collection.Array.append(io.jenetics.internal.collection.Array)",
+            "level": 4,
+            "period": 1294299724
+        },
+        {
+            "compileId": "2713",
+            "name": "2713: io.jenetics.Mutator$$Lambda.0x00000000a011dab8.apply(java.lang.Object)",
+            "level": 4,
+            "period": 225123555
+        },
+        {
+            "compileId": "2726",
+            "name": "2726: java.util.stream.IntPipeline$1$1.<init>(java.util.stream.IntPipeline$1, java.util.stream.Sink, java.util.function.IntFunction)",
+            "level": 3,
+            "period": 3243380
+        },
+        {
+            "compileId": "2724",
+            "name": "2724: io.jenetics.engine.Engine.filter(io.jenetics.util.Seq, long)",
+            "level": 4,
+            "period": 2014657488
+        },
+        {
+            "compileId": "2728",
+            "name": "2728: io.jenetics.MonteCarloSelector.select(io.jenetics.util.Seq, int, io.jenetics.Optimize)",
+            "level": 4,
+            "period": 1855831621
+        },
+        {
+            "compileId": "2715",
+            "name": "2715: io.jenetics.Mutator$$Lambda.0x00000000a011e610.applyAsInt(java.lang.Object)",
+            "level": 4,
+            "period": 126669309
+        },
+        {
+            "compileId": "2716",
+            "name": "2716: io.jenetics.engine.Timing$$Lambda.0x00000000a010e188.getAsLong()",
+            "level": 4,
+            "period": 77485565
+        },
+        {
+            "compileId": "2723",
+            "name": "2723: io.jenetics.engine.Timing.duration()",
+            "level": 4,
+            "period": 5768372
+        },
+        {
+            "compileId": "2731",
+            "name": "2731: java.util.concurrent.ForkJoinPool$WorkQueue.push(java.util.concurrent.ForkJoinTask, java.util.concurrent.ForkJoinPool, boolean)",
+            "level": 4,
+            "period": 11170880
+        },
+        {
+            "compileId": "2722",
+            "name": "2722: java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(java.util.concurrent.ForkJoinTask, int)",
+            "level": 4,
+            "period": 439783002
+        },
+        {
+            "compileId": "2733",
+            "name": "2733: io.jenetics.internal.util.RunnablesAction.compute()",
+            "level": 4,
+            "period": 3840215194
+        },
+        {
+            "compileId": "2736",
+            "name": "2736: java.util.concurrent.ForkJoinPool.helpJoin(java.util.concurrent.ForkJoinTask, java.util.concurrent.ForkJoinPool$WorkQueue, boolean)",
+            "level": 4,
+            "period": 5855344
+        },
+        {
+            "compileId": "2738",
+            "name": "2738: java.util.concurrent.CompletableFuture$Signaller.tryFire(int)",
+            "level": 3,
+            "period": 7125525
+        },
+        {
+            "compileId": "2739",
+            "name": "2739: java.util.concurrent.ForkJoinPool.compensatedBlock(java.util.concurrent.ForkJoinPool$ManagedBlocker)",
+            "level": 3,
+            "period": 2609427
+        },
+        {
+            "compileId": "2742",
+            "name": "2742: java.util.concurrent.locks.LockSupport.park(java.lang.Object)",
+            "level": 3,
+            "period": 5703052
+        },
+        {
+            "compileId": "2737",
+            "name": "2737: io.jenetics.Mutator.mutate(io.jenetics.Chromosome, double, java.util.Random)",
+            "level": 4,
+            "period": 1043906549
+        },
+        {
+            "compileId": "2525",
+            "name": "2525: java.util.concurrent.ForkJoinTask.casStatus(int, int)",
+            "level": 4,
+            "period": 6038806
+        },
+        {
+            "compileId": "2743",
+            "name": "2743: java.util.stream.Streams$RangeIntSpliterator.forEachRemaining(java.util.function.IntConsumer)",
+            "level": 4,
+            "period": 6128681
+        },
+        {
+            "compileId": "2748",
+            "name": "2748: java.util.concurrent.ForkJoinPool.poolSubmit(boolean, java.util.concurrent.ForkJoinTask)",
+            "level": 4,
+            "period": 2952466
+        },
+        {
+            "compileId": "2751",
+            "name": "2751: java.util.concurrent.CompletableFuture.postComplete()",
+            "level": 4,
+            "period": 2891728
+        },
+        {
+            "compileId": "2752",
+            "name": "2752: io.jenetics.Recombinator$$Lambda.0x00000000a011c8f8.apply(int)",
+            "level": 4,
+            "period": 204359868
+        },
+        {
+            "compileId": "2753",
+            "name": "2753: io.jenetics.Recombinator$$Lambda.0x00000000a011cd60.applyAsInt(java.lang.Object)",
+            "level": 4,
+            "period": 144151972
+        },
+        {
+            "compileId": "2756",
+            "name": "2756: io.jenetics.Crossover.recombine(io.jenetics.util.MSeq, int[], long)",
+            "level": 4,
+            "period": 2495013087
+        },
+        {
+            "compileId": "2758",
+            "name": "2758: java.util.concurrent.ForkJoinPool.execute(java.lang.Runnable)",
+            "level": 4,
+            "period": 2810264
+        },
+        {
+            "compileId": "2750",
+            "name": "2750: java.util.concurrent.CompletableFuture$UniApply.tryFire(int)",
+            "level": 4,
+            "period": 3339393
+        },
+        {
+            "compileId": "2763",
+            "name": "2763: java.util.concurrent.ForkJoinPool.signalWork()",
+            "level": 4,
+            "period": 26574557
+        },
+        {
+            "compileId": "2764",
+            "name": "2764: java.util.concurrent.ForkJoinWorkerThread$InnocuousForkJoinWorkerThread.onThreadLocalReset()",
+            "level": 4,
+            "period": 128250107
+        },
+        {
+            "compileId": "2765",
+            "name": "2765: io.jenetics.util.Context.with(java.lang.Object, java.util.function.Function)",
+            "level": 4,
+            "period": 422849202
+        },
+        {
+            "compileId": "2767",
+            "name": "2767: java.util.concurrent.ForkJoinPool$WorkQueue.helpAsyncBlocker(java.util.concurrent.ForkJoinPool$ManagedBlocker)",
+            "level": 4,
+            "period": 683951305
+        },
+        {
+            "compileId": "2769",
+            "name": "2769: java.util.concurrent.ForkJoinTask.invokeAll(java.util.concurrent.ForkJoinTask, java.util.concurrent.ForkJoinTask)",
+            "level": 4,
+            "period": 407709501
+        },
+        {
+            "compileId": "2454",
+            "name": "2454: java.util.concurrent.ForkJoinPool.compareAndSetCtl(long, long)",
+            "level": 4,
+            "period": 4840707
+        },
+        {
+            "compileId": "2599",
+            "name": "2599: java.util.concurrent.ForkJoinPool.getAndAddCtl(long)",
+            "level": 4,
+            "period": 2789156
+        },
+        {
+            "compileId": "2566",
+            "name": "2566: java.util.stream.Sink$ChainedInt.end()",
+            "level": 4,
+            "period": 63279057
+        },
+        {
+            "compileId": "2654",
+            "name": "2654: java.util.stream.Sink$ChainedInt.begin(long)",
+            "level": 4,
+            "period": 73887056
+        },
+        {
+            "compileId": "2638",
+            "name": "2638: io.jenetics.internal.util.Concurrency$ForkJoinPoolConcurrency.close()",
+            "level": 4,
+            "period": 9610210
+        },
+        {
+            "compileId": "2772",
+            "name": "2772: java.util.concurrent.ForkJoinTask.doExec()",
+            "level": 4,
+            "period": 81546382
+        },
+        {
+            "compileId": "2773",
+            "name": "2773: java.util.concurrent.CompletableFuture.uniApplyStage(java.util.concurrent.Executor, java.util.function.Function)",
+            "level": 4,
+            "period": 2528522
+        },
+        {
+            "compileId": "2777",
+            "name": "2777: java.util.concurrent.locks.LockSupport.setCurrentBlocker(java.lang.Object)",
+            "level": 4,
+            "period": 3483118
+        },
+        {
+            "compileId": "2781",
+            "name": "2781: java.util.concurrent.ForkJoinPool.tryTrim(java.util.concurrent.ForkJoinPool$WorkQueue, int, long)",
+            "level": 4,
+            "period": 45869624
+        },
+        {
+            "compileId": "2786",
+            "name": "2786: io.jenetics.util.BaseSeq.nonEmpty()",
+            "level": 4,
+            "period": 3949596
+        },
+        {
+            "compileId": "2789",
+            "name": "2789: io.jenetics.internal.util.Lazy.evaluate()",
+            "level": 4,
+            "period": 73184704
+        },
+        {
+            "compileId": "2797",
+            "name": "2797: java.util.concurrent.CompletableFuture$UniApply.tryFire(int)",
+            "level": 3,
+            "period": 10773125
+        },
+        {
+            "compileId": "2790",
+            "name": "2790: io.jenetics.engine.Engine.evolve(io.jenetics.engine.EvolutionStart)",
+            "level": 4,
+            "period": 2324859
+        },
+        {
+            "compileId": "2796",
+            "name": "2796: io.jenetics.engine.EvolutionTiming.toDurations()",
+            "level": 4,
+            "period": 496687806
+        },
+        {
+            "compileId": "2793",
+            "name": "2793: io.jenetics.internal.collection.ArrayISeq.append(java.lang.Iterable)",
+            "level": 4,
+            "period": 3751563
+        },
+        {
+            "compileId": "2800",
+            "name": "2800: java.util.concurrent.ForkJoinPool.tryCompensate(long)",
+            "level": 4,
+            "period": 3529578
+        },
+        {
+            "compileId": "2808",
+            "name": "2808: io.jenetics.CompositeAlterer.alter(io.jenetics.util.Seq, long)",
+            "level": 4,
+            "period": 379394224
+        },
+        {
+            "compileId": "2811",
+            "name": "2811: java.util.concurrent.CompletableFuture$AsyncSupply.run()",
+            "level": 4,
+            "period": 51828165
+        },
+        {
+            "compileId": "2812",
+            "name": "2812: java.util.concurrent.ForkJoinPool.helpJoin(java.util.concurrent.ForkJoinTask, java.util.concurrent.ForkJoinPool$WorkQueue, boolean)",
+            "level": 4,
+            "period": 29589741
+        },
+        {
+            "compileId": "2819",
+            "name": "2819: java.util.stream.Streams$RangeIntSpliterator.forEachRemaining(java.util.function.IntConsumer)",
+            "level": 3,
+            "period": 2991870
+        },
+        {
+            "compileId": "2820",
+            "name": "2820: java.util.stream.ReferencePipeline$3$1.accept(java.lang.Object)",
+            "level": 3,
+            "period": 3710459
+        },
+        {
+            "compileId": "2813",
+            "name": "2813: java.util.concurrent.CompletableFuture.waitingGet(boolean)",
+            "level": 4,
+            "period": 9271342
+        },
+        {
+            "compileId": "2855",
+            "name": "2855: io.jenetics.internal.math.Randoms.nextDouble(double, double, java.util.Random)",
+            "level": 3,
+            "period": 6915794
+        },
+        {
+            "compileId": "2857",
+            "name": "2857: io.jenetics.DoubleGene$$Lambda.0x00000000a00fe9f8.get()",
+            "level": 3,
+            "period": 3152202
+        },
+        {
+            "compileId": "2858",
+            "name": "2858: io.jenetics.internal.collection.ArrayMSeq.fill(java.util.function.Supplier)",
+            "level": 3,
+            "period": 33017803
+        },
+        {
+            "compileId": "2866",
+            "name": "2866: io.jenetics.internal.collection.ArrayISeq.map(java.util.function.Function)",
+            "level": 3,
+            "period": 27552296
+        },
+        {
+            "compileId": "2869",
+            "name": "2869: java.util.stream.AbstractPipeline.sourceSpliterator(int)",
+            "level": 3,
+            "period": 2864522
+        },
+        {
+            "compileId": "2873",
+            "name": "2873: java.util.stream.AbstractPipeline.evaluate(java.util.stream.TerminalOp)",
+            "level": 3,
+            "period": 6803983
+        },
+        {
+            "compileId": "2872",
+            "name": "2872: java.util.stream.AbstractPipeline.copyInto(java.util.stream.Sink, java.util.Spliterator)",
+            "level": 3,
+            "period": 3237722
+        },
+        {
+            "compileId": "2885",
+            "name": "2885: java.util.stream.ReferencePipeline.collect(java.util.stream.Collector)",
+            "level": 3,
+            "period": 11389602
+        },
+        {
+            "compileId": "2889",
+            "name": "2889: io.jenetics.engine.Engine.evolve(io.jenetics.engine.EvolutionStart)",
+            "level": 3,
+            "period": 11400189
+        },
+        {
+            "compileId": "2883",
+            "name": "2883: java.util.stream.ReferencePipeline$3$1.accept(java.lang.Object)",
+            "level": 4,
+            "period": 10519017569
+        },
+        {
+            "compileId": "2892",
+            "name": "2892: io.jenetics.engine.ConcurrentEvaluator.eval(io.jenetics.util.Seq)",
+            "level": 3,
+            "period": 3225995
+        },
+        {
+            "compileId": "2893",
+            "name": "2893: io.jenetics.internal.collection.ArrayISeq.map(java.util.function.Function)",
+            "level": 4,
+            "period": 25652105386
+        },
+        {
+            "compileId": "2895",
+            "name": "2895: java.util.stream.AbstractPipeline.wrapSink(java.util.stream.Sink)",
+            "level": 4,
+            "period": 794906551
+        },
+        {
+            "compileId": "2897",
+            "name": "2897: java.util.stream.AbstractPipeline.evaluate(java.util.stream.TerminalOp)",
+            "level": 4,
+            "period": 532038433
+        },
+        {
+            "compileId": "2899",
+            "name": "2899: java.util.stream.ReduceOps$ReduceOp.evaluateSequential(java.util.stream.PipelineHelper, java.util.Spliterator)",
+            "level": 4,
+            "period": 2678833616
+        },
+        {
+            "compileId": "2903",
+            "name": "2903: java.util.stream.ReduceOps$2ReducingSink.accept(java.lang.Object)",
+            "level": 4,
+            "period": 688642442
+        },
+        {
+            "compileId": "2904",
+            "name": "2904: java.util.concurrent.CompletableFuture$UniApply.tryFire(int)",
+            "level": 4,
+            "period": 391546373
+        },
+        {
+            "compileId": "2905",
+            "name": "2905: java.lang.ThreadLocal.setInitialValue(java.lang.Thread)",
+            "level": 4,
+            "period": 68437572
+        },
+        {
+            "compileId": "2908",
+            "name": "2908: java.util.concurrent.ForkJoinPool.poolSubmit(boolean, java.util.concurrent.ForkJoinTask)",
+            "level": 4,
+            "period": 1201218088
+        },
+        {
+            "compileId": "2909",
+            "name": "2909: java.util.concurrent.CompletableFuture.postComplete()",
+            "level": 4,
+            "period": 388878519
+        },
+        {
+            "compileId": "2910",
+            "name": "2910: java.util.concurrent.CompletableFuture.biApplyStage(java.util.concurrent.Executor, java.util.concurrent.CompletionStage, java.util.function.BiFunction)",
+            "level": 4,
+            "period": 16575676
+        },
+        {
+            "compileId": "2913",
+            "name": "2913: java.util.stream.Streams$RangeIntSpliterator.forEachRemaining(java.util.function.IntConsumer)",
+            "level": 4,
+            "period": 347417957
+        },
+        {
+            "compileId": "2914",
+            "name": "2914: java.util.concurrent.ForkJoinTask.awaitDone(java.util.concurrent.ForkJoinPool, int, boolean, long)",
+            "level": 4,
+            "period": 279836322
+        },
+        {
+            "compileId": "2915",
+            "name": "2915: java.util.Spliterator$OfInt.forEachRemaining(java.util.function.Consumer)",
+            "level": 4,
+            "period": 111075282
+        },
+        {
+            "compileId": "2917",
+            "name": "2917: io.jenetics.engine.Engine$$Lambda.0x00000000a0115080.get()",
+            "level": 4,
+            "period": 191806344
+        },
+        {
+            "compileId": "2918",
+            "name": "2918: io.jenetics.stat.MinMax.accept(java.lang.Object)",
+            "level": 4,
+            "period": 241452397
+        },
+        {
+            "compileId": "2920",
+            "name": "2920: io.jenetics.internal.util.Concurrency$ForkJoinPoolConcurrency.execute(io.jenetics.util.Seq)",
+            "level": 4,
+            "period": 3096424
+        },
+        {
+            "compileId": "2921",
+            "name": "2921: io.jenetics.engine.EvolutionTiming.<init>(java.time.Clock)",
+            "level": 4,
+            "period": 95357823
+        },
+        {
+            "compileId": "2924",
+            "name": "2924: org.renaissance.jdk.concurrent.JavaJenetics$$Lambda.0x00000000a0116fb8.apply(java.lang.Object)",
+            "level": 4,
+            "period": 40329240
+        },
+        {
+            "compileId": "2925",
+            "name": "2925: io.jenetics.engine.Engine$$Lambda.0x00000000a01154e0.get()",
+            "level": 4,
+            "period": 185149840
+        },
+        {
+            "compileId": "2927",
+            "name": "2927: org.renaissance.jdk.concurrent.JavaJenetics$$Lambda.0x00000000a0117208.apply(java.lang.Object)",
+            "level": 4,
+            "period": 58824691
+        },
+        {
+            "compileId": null,
+            "name": "Stub<AMD64MathStub.pow>",
+            "level": null,
+            "period": 83961230
+        },
+        {
+            "compileId": "2929",
+            "name": "2929: io.jenetics.Mutator.alter(io.jenetics.util.Seq, long)",
+            "level": 4,
+            "period": 180537460
+        },
+        {
+            "compileId": "2931",
+            "name": "2931: java.util.stream.ReferencePipeline$2.opWrapSink(int, java.util.stream.Sink)",
+            "level": 4,
+            "period": 39496738
+        },
+        {
+            "compileId": "2934",
+            "name": "2934: io.jenetics.internal.engine.EvolutionSpliterator.tryAdvance(java.util.function.Consumer)",
+            "level": 4,
+            "period": 10637066
+        },
+        {
+            "compileId": "2937",
+            "name": "2937: org.renaissance.jdk.concurrent.JavaJenetics$$Lambda.0x00000000a011d1a8.apply(java.lang.Object)",
+            "level": 4,
+            "period": 65880798
+        },
+        {
+            "compileId": "2939",
+            "name": "2939: io.jenetics.engine.Engine$$Lambda.0x00000000a0116228.apply(java.lang.Object)",
+            "level": 4,
+            "period": 201938046
+        },
+        {
+            "compileId": "2940",
+            "name": "2940: org.renaissance.jdk.concurrent.JavaJenetics$$Lambda.0x00000000a01178b8.apply(java.lang.Object)",
+            "level": 4,
+            "period": 70295128
+        },
+        {
+            "compileId": "2943",
+            "name": "2943: io.jenetics.Recombinator.alter(io.jenetics.util.Seq, long)",
+            "level": 4,
+            "period": 289596712
+        },
+        {
+            "compileId": "2944",
+            "name": "2944: io.jenetics.engine.EvolutionResult$$Lambda.0x00000000a010b4d8.accept(java.lang.Object, java.lang.Object)",
+            "level": 4,
+            "period": 22113155
+        },
+        {
+            "compileId": "2942",
+            "name": "2942: io.jenetics.engine.Engine$$Lambda.0x00000000a0115940.apply(java.lang.Object)",
+            "level": 4,
+            "period": 203319467
+        },
+        {
+            "compileId": "2941",
+            "name": "2941: io.jenetics.engine.Engine$$Lambda.0x00000000a0116478.apply(java.lang.Object)",
+            "level": 4,
+            "period": 189954178
+        },
+        {
+            "compileId": "2945",
+            "name": "2945: java.util.stream.SliceOps$1$1.cancellationRequested()",
+            "level": 4,
+            "period": 3327578
+        },
+        {
+            "compileId": "2946",
+            "name": "2946: io.jenetics.engine.Engine.evolve(io.jenetics.engine.EvolutionStart)",
+            "level": 4,
+            "period": 776432637
+        },
+        {
+            "compileId": "2947",
+            "name": "2947: io.jenetics.engine.ConcurrentEvaluator.eval(io.jenetics.util.Seq)",
+            "level": 4,
+            "period": 300846578
+        },
+        {
+            "compileId": "2948",
+            "name": "2948: java.util.concurrent.CompletableFuture$CoCompletion.tryFire(int)",
+            "level": 4,
+            "period": 2285525
+        },
+        {
+            "compileId": "2949",
+            "name": "2949: java.util.stream.IntPipeline$1.opWrapSink(int, java.util.stream.Sink)",
+            "level": 4,
+            "period": 43492542
+        },
+        {
+            "compileId": "2950",
+            "name": "2950: java.util.stream.IntPipeline$10.opWrapSink(int, java.util.stream.Sink)",
+            "level": 4,
+            "period": 42313783
+        },
+        {
+            "compileId": "2968",
+            "name": "2968: io.jenetics.internal.math.Randoms.nextDouble(double, double, java.util.Random)",
+            "level": 3,
+            "period": 3319789
+        },
+        {
+            "compileId": "2964",
+            "name": "2964: java.util.stream.DoublePipeline$2$1.accept(double)",
+            "level": 3,
+            "period": 3919137
+        },
+        {
+            "compileId": "2974",
+            "name": "2974: io.jenetics.DoubleChromosome.of(double, double, io.jenetics.util.IntRange)",
+            "level": 3,
+            "period": 3352986
+        },
+        {
+            "compileId": "2982",
+            "name": "2982: java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.fillBuffer()",
+            "level": 3,
+            "period": 2752236
+        },
+        {
+            "compileId": "2975",
+            "name": "2975: io.jenetics.DoubleGene.seq(double, double, io.jenetics.util.IntRange)",
+            "level": 3,
+            "period": 5395821
+        },
+        {
+            "compileId": "2981",
+            "name": "2981: java.util.stream.StreamSpliterators$AbstractWrappingSpliterator.doAdvance()",
+            "level": 3,
+            "period": 2697706
+        },
+        {
+            "compileId": "2987",
+            "name": "2987: org.renaissance.jdk.concurrent.JavaJenetics$$Lambda.0x00000000a010cb28.apply(java.lang.Object)",
+            "level": 3,
+            "period": 4017618
+        },
+        {
+            "compileId": "3001",
+            "name": "3001: java.util.concurrent.CompletableFuture$Signaller.isReleasable()",
+            "level": 3,
+            "period": 6424596
+        },
+        {
+            "compileId": "3002",
+            "name": "3002: java.util.concurrent.CompletableFuture.waitingGet(boolean)",
+            "level": 3,
+            "period": 6105935
+        },
+        {
+            "compileId": "2973",
+            "name": "2973: io.jenetics.DoubleGene$$Lambda.0x00000000a00fe9f8.get()",
+            "level": 4,
+            "period": 2673465
+        },
+        {
+            "compileId": "3006",
+            "name": "3006: java.util.concurrent.locks.LockSupport.setBlocker(java.lang.Thread, java.lang.Object)",
+            "level": 4,
+            "period": 3797149
+        },
+        {
+            "compileId": "3007",
+            "name": "3007: java.util.concurrent.CompletableFuture$Signaller.tryFire(int)",
+            "level": 4,
+            "period": 23244624
+        },
+        {
+            "compileId": "3008",
+            "name": "3008: java.util.stream.ReferencePipeline.forEachWithCancel(java.util.Spliterator, java.util.stream.Sink)",
+            "level": 3,
+            "period": 6169503
+        },
+        {
+            "compileId": "3010",
+            "name": "3010: java.util.concurrent.CompletableFuture$BiApply.tryFire(int)",
+            "level": 4,
+            "period": 350379962
+        },
+        {
+            "compileId": "3012",
+            "name": "3012: java.util.concurrent.ForkJoinPool.managedBlock(java.util.concurrent.ForkJoinPool$ManagedBlocker)",
+            "level": 4,
+            "period": 172948864
+        },
+        {
+            "compileId": "3014",
+            "name": "3014: java.util.concurrent.CompletableFuture.waitingGet(boolean)",
+            "level": 4,
+            "period": 146273948
+        },
+        {
+            "compileId": "3015",
+            "name": "3015: java.util.concurrent.CompletableFuture.uniApplyNow(java.lang.Object, java.util.concurrent.Executor, java.util.function.Function)",
+            "level": 3,
+            "period": 7350823
+        },
+        {
+            "compileId": "3016",
+            "name": "3016: java.util.concurrent.locks.LockSupport.unpark(java.lang.Thread)",
+            "level": 4,
+            "period": 3133603
+        },
+        {
+            "compileId": "3023",
+            "name": "3023: java.util.concurrent.CompletableFuture$CoCompletion.tryFire(int)",
+            "level": 3,
+            "period": 2866034
+        },
+        {
+            "compileId": "3024",
+            "name": "3024: java.util.concurrent.CompletableFuture$CoCompletion.tryFire(int)",
+            "level": 4,
+            "period": 7245362
+        },
+        {
+            "compileId": "3026",
+            "name": "3026: java.util.concurrent.ForkJoinPool.tryCompensate(long)",
+            "level": 3,
+            "period": 2927312
+        },
+        {
+            "compileId": "3027",
+            "name": "3027: java.util.concurrent.ForkJoinPool.helpJoin(java.util.concurrent.ForkJoinTask, java.util.concurrent.ForkJoinPool$WorkQueue, boolean)",
+            "level": 4,
+            "period": 645037808
+        },
+        {
+            "compileId": "3031",
+            "name": "3031: io.jenetics.internal.collection.ArrayMSeq.fill(java.util.function.Supplier)",
+            "level": 4,
+            "period": 69587980
+        },
+        {
+            "compileId": "3038",
+            "name": "3038: java.lang.StringLatin1.inflate(byte[], int, char[], int, int)",
+            "level": 3,
+            "period": 3393513
+        },
+        {
+            "compileId": "3040",
+            "name": "3040: java.util.concurrent.ForkJoinPool.tryCompensate(long)",
+            "level": 3,
+            "period": 2841420
+        },
+        {
+            "compileId": "3042",
+            "name": "3042: java.util.concurrent.ForkJoinPool.tryCompensate(long)",
+            "level": 4,
+            "period": 97988285
+        },
+        {
+            "compileId": "3043",
+            "name": "3043: java.util.stream.ReferencePipeline.forEachWithCancel(java.util.Spliterator, java.util.stream.Sink)",
+            "level": 4,
+            "period": 107276661
+        },
+        {
+            "compileId": "3044",
+            "name": "3044: java.util.HashSet.add(java.lang.Object)",
+            "level": 4,
+            "period": 3212292
+        },
+        {
+            "compileId": "3062",
+            "name": "3062: java.util.stream.AbstractPipeline.wrapAndCopyInto(java.util.stream.Sink, java.util.Spliterator)",
+            "level": 3,
+            "period": 3373934
+        },
+        {
+            "compileId": "3065",
+            "name": "3065: java.util.concurrent.CompletableFuture.uniApplyNow(java.lang.Object, java.util.concurrent.Executor, java.util.function.Function)",
+            "level": 4,
+            "period": 17271300
+        },
+        {
+            "compileId": "3127",
+            "name": "3127: java.util.concurrent.CompletableFuture.biApplyStage(java.util.concurrent.Executor, java.util.concurrent.CompletionStage, java.util.function.BiFunction)",
+            "level": 3,
+            "period": 3688559
+        },
+        {
+            "compileId": "3131",
+            "name": "3131: java.util.concurrent.CompletableFuture.biApplyStage(java.util.concurrent.Executor, java.util.concurrent.CompletionStage, java.util.function.BiFunction)",
+            "level": 4,
+            "period": 37743785
+        },
+        {
+            "compileId": "3132%",
+            "name": "3132%: java.util.concurrent.ForkJoinPool.runWorker(java.util.concurrent.ForkJoinPool$WorkQueue)",
+            "level": 4,
+            "period": 926694278
+        },
+        {
+            "compileId": "3133%",
+            "name": "3133%: java.util.concurrent.ForkJoinPool.runWorker(java.util.concurrent.ForkJoinPool$WorkQueue)",
+            "level": 4,
+            "period": 781894919
+        },
+        {
+            "compileId": "3148",
+            "name": "3148: io.jenetics.DoubleChromosome$$Lambda.0x00000000a0125d00.apply(java.lang.Object)",
+            "level": 4,
+            "period": 2633524
+        }
+    ]
+}

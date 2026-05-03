@@ -1,0 +1,47 @@
+@if (topMethods(); as methods) {
+  <table mat-table [dataSource]="methods" [class.table-disabled]="disabled()">
+    <ng-container matColumnDef="executionPercentage">
+      <th mat-header-cell *matHeaderCellDef>Execution</th>
+      <td mat-cell *matCellDef="let method">
+        {{ method.executionPercentage }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="cycles">
+      <th mat-header-cell *matHeaderCellDef>Cycles</th>
+      <td mat-cell *matCellDef="let method">{{ method.cycles }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>ID</th>
+      <td mat-cell *matCellDef="let method">{{ method.id }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Method</th>
+      <td mat-cell *matCellDef="let method" [matTooltip]="method.name" appShowIfTruncated>
+        {{ method.name }}
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns()"></tr>
+
+    <tr
+      mat-row
+      *matRowDef="let row; columns: displayedColumns()"
+      class="clickable-row"
+      [class.twin-highlight]="row.name === highlightedMethodName()"
+      [style.background-color]="row.color"
+      (click)="onRowClick(row)"
+      (mouseenter)="onRowMouseEnter(row)"
+      (mouseleave)="onRowMouseLeave()"
+    >
+    </tr>
+
+    <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell" [attr.colspan]="displayedColumns().length">No methods found.</td>
+    </tr>
+  </table>
+} @else {
+  <p>Data is not available.</p>
+}

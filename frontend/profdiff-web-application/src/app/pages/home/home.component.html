@@ -1,0 +1,110 @@
+<app-view-header pageTitle="Home"></app-view-header>
+
+<div class="container page-with-floating-dock">
+  <div class="path-input-container">
+    <mat-form-field class="root-directory-input" appearance="outline">
+      <mat-label>Benchmark directory</mat-label>
+      <input
+        matInput
+        type="text"
+        [ngModel]="path()"
+        (ngModelChange)="onPathChange($event)"
+        #trigger="matAutocompleteTrigger"
+        (keydown.enter)="onEnter($event, trigger)"
+        (keydown.tab)="onTab($event, trigger)"
+        [matAutocomplete]="auto"
+        placeholder="/workspace/..."
+      />
+      <mat-autocomplete #auto="matAutocomplete" (optionSelected)="loadRuns()">
+        @for (dir of directorySuggestions(); track dir.path; let i = $index) {
+          <mat-option [value]="dir.path" [class.tab-highlighted]="i === tabCycleIndex()">
+            <div>
+              <span>{{ dir.path }}</span>
+              @if (dir.hasRuns) {
+                <mat-icon class="has-runs-icon">done</mat-icon>
+              }
+            </div>
+          </mat-option>
+        }
+      </mat-autocomplete>
+    </mat-form-field>
+
+    <button
+      mat-flat-button
+      class="btn-large"
+      color="primary"
+      (click)="loadRuns()"
+      [disabled]="isLoading()"
+    >
+      SHOW RUNS
+    </button>
+
+    <button
+      mat-icon-button
+      color="primary"
+      class="refresh-button"
+      (click)="refreshRuns()"
+      [disabled]="isLoading() || !path()"
+      matTooltip="Refresh directory cache"
+      matTooltipPosition="above"
+    >
+      <mat-icon>refresh</mat-icon>
+    </button>
+  </div>
+
+  <div class="content-container">
+    @if (isLoading()) {
+      <p>Loading data...</p>
+    } @else if (errorMessage()) {
+      <app-error-message [error]="errorMessage()!" />
+    } @else if (runs(); as r) {
+      <app-runs-table
+        [runs]="r.benchmarkRuns"
+        [warmupIterations]="warmupIterations"
+        (report)="doReport($event)"
+      />
+      <br />
+      <app-warnings [warnings]="r.generalWarnings" />
+    } @else {
+      <p class="no-data-message">Please select a root directory to load runs.</p>
+    }
+  </div>
+
+  <app-floating-dock>
+    <div dock-actions>
+      <button
+        mat-flat-button
+        class="btn-large"
+        color="primary"
+        [disabled]="isLoading() || runsTable()?.selection?.selected?.length !== 2"
+        (click)="doCompare()"
+      >
+        <mat-icon>compare_arrows</mat-icon>
+        COMPARE
+      </button>
+    </div>
+
+    <div dock-actions>
+      <button
+        mat-flat-button
+        class="btn-large"
+        [disabled]="isLoading() || runsTable()?.selection?.selected?.length === 0"
+        (click)="runsTable()?.selection?.clear()"
+      >
+        DESELECT ALL
+      </button>
+    </div>
+
+    <div dock-content>
+      <div dock-content class="slider-container">
+        <label>Warmup Iterations: <strong>{{ warmupIterations }}</strong></label>
+        <mat-slider class="warmup-slider" [max]="maxIterations" min="0" step="1" discrete>
+          <input matSliderThumb [(ngModel)]="warmupIterations" (ngModelChange)="onWarmupChange()">
+        </mat-slider>
+      </div>
+    </div>
+    <div dock-content>
+      <app-metric-chart [chartData]="chartData()" />
+    </div>
+  </app-floating-dock>
+</div>

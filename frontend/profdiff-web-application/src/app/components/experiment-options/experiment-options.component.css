@@ -1,0 +1,44 @@
+/* Wrapper establishes context for the absolute positioning of the popup. */
+.options-container-wrapper {
+  position: relative;
+}
+
+/* Floating panel styling anchored to the bottom-left. */
+.options-panel {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+
+  padding: 15px;
+  margin-bottom: 10px;
+
+  display: flex;
+  flex-direction: column;
+
+  /* Absolute position: floats above content, anchored to button. */
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  width: 400px;
+
+  /* Ensure it floats above other content. */
+  z-index: 10;
+}
+
+/* Vertical stack for checkboxes. */
+.checkbox-column {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Right-aligned action buttons. */
+.actions-row {
+  margin-top: 20px;
+  text-align: right;
+}
+
+/* Helper for input width. */
+.full-width {
+  width: 100%;
+}

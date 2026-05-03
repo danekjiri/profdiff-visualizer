@@ -1,0 +1,74 @@
+<mat-form-field class="method-selector-field" style="width: 100%">
+  <mat-label>{{ label() }}</mat-label>
+
+  <mat-select
+    [value]="selectedName"
+    [disabled]="disabled()"
+    (selectionChange)="onSelectionChange($event.value)"
+    (openedChange)="onOpenedChange($event)"
+  >
+    <mat-select-trigger>
+      {{ selectedItem()?.name }}
+    </mat-select-trigger>
+
+    @for (item of (selectedItem() ? [selectedItem()] : []); track item!.name) {
+      <mat-option [value]="item!.name" style="display: none" aria-hidden="true">
+        {{ item!.name }}
+      </mat-option>
+    }
+
+    <div class="dropdown-search-container" (keydown)="$event.stopPropagation()">
+      <mat-form-field appearance="outline" class="dropdown-search-field" subscriptSizing="dynamic">
+        <mat-icon matPrefix>search</mat-icon>
+        <input
+          matInput
+          placeholder="Type to search..."
+          [value]="searchQuery()"
+          (input)="onSearchInput($event)"
+        />
+
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="clearSearch($event)"
+          aria-label="Clear"
+          [style.visibility]="searchQuery() ? 'visible' : 'hidden'"
+        >
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+
+    <cdk-virtual-scroll-viewport
+      itemSize="48"
+      minBufferPx="400"
+      maxBufferPx="800"
+      [style.height.px]="180"
+      class="virtual-viewport"
+    >
+      <mat-option *cdkVirtualFor="let item of filteredItems()" [value]="item.name">
+        <span [class.unpaired]="item.isUnpaired">
+          {{ item.name }}
+        </span>
+        <span class="methods-chips">
+          @if (item.hotness && item.hotness > 0) {
+            <mat-chip> Hotness: {{ item.hotness | percent: '1.2' }} </mat-chip>
+          }
+          @if (item.isUnpaired) {
+            <mat-chip selected> Unpaired </mat-chip>
+          }
+        </span>
+      </mat-option>
+
+      @if (filteredItems().length === 0) {
+        <div class="no-results-message">No methods match "{{ searchQuery() }}"</div>
+      }
+    </cdk-virtual-scroll-viewport>
+  </mat-select>
+</mat-form-field>
+
+<div class="test-no-results-mirror" style="display: none;" aria-hidden="true">
+  @if (searchQuery() && filteredItems().length === 0) {
+    No methods match "{{ searchQuery() }}"
+  }
+</div>

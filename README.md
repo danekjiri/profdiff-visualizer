@@ -58,7 +58,41 @@ The recommended way to run the application is via Docker. No Java or Node.js ins
 
 **Prerequisites:** [Docker](https://www.docker.com/products/docker-desktop/) running locally.
 
-### Option A — Clone and build
+### Option A — Pull from Docker Hub (no clone required)
+
+**1. Create a `docker-compose.yml`** anywhere on your machine:
+```yaml
+services:
+  backend:
+    image: danekjiri/profdiff-visualizer-backend:latest
+    ports:
+      - "${BACKEND_PORT:-8080}:8080"
+    volumes:
+      - "${BENCHMARKS_DIR:?Error: BENCHMARKS_DIR must be set!}:/workspace:ro,z"
+    environment:
+      - MICRONAUT_ENVIRONMENTS=docker 
+
+  frontend:
+    image: danekjiri/profdiff-visualizer-frontend:latest
+    ports:
+      - "${FRONTEND_PORT:-4200}:80"
+    environment:
+      - BACKEND_URL=http://backend:8080
+    depends_on:
+      - backend
+```
+
+**2. Create a `.env` file** next to it, with corresponding content:
+```
+BENCHMARKS_DIR=/absolute/path/to/your/benchmark/directory
+```
+
+**3. Pull and run:**
+```bash
+docker compose up
+```
+
+### Option B — Clone and build
 
 **1. Clone the repository:**
 ```bash
@@ -68,7 +102,7 @@ cd profdiff-visualizer
 
 **2. Point the app at your benchmark data:**
 
-Create a `.env` file in the project root (next to `docker-compose.yml`):
+Create a `.env` file in the project root (next to `docker-compose.yml`), with corresponding content:
 ```
 BENCHMARKS_DIR=/absolute/path/to/your/benchmark/directory
 ```
@@ -90,42 +124,6 @@ docker compose up --build
 
 > The `--build` flag is only needed the first time, or after pulling new changes. After that, `docker compose up` is enough.
 
----
-
-### Option B — Pull from Docker Hub (no clone required)
-
-**1. Create a `docker-compose.yml`** anywhere on your machine:
-```yaml
-services:
-  backend:
-    image: danekjiri/profdiff-visualizer-backend:latest
-    ports:
-      - "${BACKEND_PORT:-8080}:8080"
-    volumes:
-      - "${BENCHMARKS_DIR:?Error: BENCHMARKS_DIR must be set!}:/workspace:ro"
-    environment:
-      - MICRONAUT_ENVIRONMENTS=docker 
-
-  frontend:
-    image: danekjiri/profdiff-visualizer-frontend:latest
-    ports:
-      - "${FRONTEND_PORT:-4200}:80"
-    environment:
-      - BACKEND_URL=http://backend:8080
-    depends_on:
-      - backend
-```
-
-**2. Create a `.env` file** next to it:
-```
-BENCHMARKS_DIR=/absolute/path/to/your/benchmark/directory
-```
-
-**3. Pull and run:**
-```bash
-docker compose up
-```
- 
 ---
 
 > By default the frontend runs on port `4200` and the backend on `8080`. To change either, add `FRONTEND_PORT=<port>` or `BACKEND_PORT=<port>` to your `.env` file.
